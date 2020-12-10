@@ -1,0 +1,29 @@
+{
+  "name": "labinven",
+  "version": "1.0.0",
+  "description": "Test task for [Labinvent](http://labinvent.com/)",
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olhajduk/labinven.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olhajduk/labinven/issues"
+  },
+  "homepage": "https://github.com/olhajduk/labinven#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
