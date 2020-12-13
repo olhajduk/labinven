@@ -5,7 +5,7 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -24,6 +24,9 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+        new SpriteLoaderPlugin({
+            plainSprite: true
+        }),
         new HtmlWebpackPlugin({
             template: 'index.html'
         }),
@@ -35,25 +38,18 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'bundle.[contenthash].css'
-        }),
-        new SVGSpritemapPlugin({
-            input: {
-                options: {
-                    path: path.resolve(__dirname, 'src/assets/images/**/*.svg')
-                }
-            },
-            output: {
-                filename: 'icons.svg',
-                svg4everybody: true,
-                svgo: true,
-            },
-            sprite: {
-                prefix: 'svg-',
-            }
         })
     ],
     module: {
         rules: [{
+                test: /svg\/.*\.svg$/,
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    publicPath: '/'
+                }
+            },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader,
