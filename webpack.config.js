@@ -32,8 +32,8 @@ module.exports = {
         }),
         new copyWebpackPlugin({
             patterns: [{
-                from: path.resolve(__dirname, 'src/assets/favicon'),
-                to: path.resolve(__dirname, 'dist/favicon')
+                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                to: path.resolve(__dirname, 'dist')
             }],
         }),
         new MiniCssExtractPlugin({
@@ -45,8 +45,7 @@ module.exports = {
                 test: /svg\/.*\.svg$/,
                 loader: 'svg-sprite-loader',
                 options: {
-                    extract: true,
-                    publicPath: '/'
+                    extract: true
                 }
             },
             {
