@@ -10,5 +10,5 @@ requireAll(require.context('./../assets/images/svg', true, /\.svg$/));
 fetch('https://cdn.jsdelivr.net/gh/olhajduk/labinven@webpack/dist/sprite.svg').then(res => {
   return res.text();
 }).then(data => {
-  document.getElementById('svg-icons').innerHTML = data;
+  document.getElementById('sprite').innerHTML = data;
 });
