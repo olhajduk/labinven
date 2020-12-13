@@ -1,8 +1,8 @@
-$red: red;
+$red: #fff;
 
 body {
-    display: grid;
-    transition: all .5s;
-    user-select: none;
-    background: $red;
+  background: $red;
+  display: grid;
+  transition: .5s;
+  user-select: none;
 }

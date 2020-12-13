@@ -5,13 +5,14 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: './index.js',
     output: {
-        filename: 'bundle.[hash].js',
+        filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
@@ -28,12 +29,27 @@ module.exports = {
         }),
         new copyWebpackPlugin({
             patterns: [{
-                from: path.resolve(__dirname, 'src/assets'),
-                to: path.resolve(__dirname, 'dist')
+                from: path.resolve(__dirname, 'src/assets/favicon'),
+                to: path.resolve(__dirname, 'dist/favicon')
             }],
         }),
         new MiniCssExtractPlugin({
-            filename: 'bundle.[hash].css'
+            filename: 'bundle.[contenthash].css'
+        }),
+        new SVGSpritemapPlugin({
+            input: {
+                options: {
+                    path: path.resolve(__dirname, 'src/assets/images/**/*.svg')
+                }
+            },
+            output: {
+                filename: 'icons.svg',
+                svg4everybody: true,
+                svgo: true,
+            },
+            sprite: {
+                prefix: 'svg-',
+            }
         })
     ],
     module: {
