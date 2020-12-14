@@ -32,9 +32,14 @@ module.exports = {
         }),
         new copyWebpackPlugin({
             patterns: [{
-                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-                to: path.resolve(__dirname, 'dist')
-            }],
+                    from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                    to: path.resolve(__dirname, 'dist')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/fonts'),
+                    to: path.resolve(__dirname, 'dist/fonts')
+                }
+            ],
         }),
         new MiniCssExtractPlugin({
             filename: 'bundle.[contenthash].css'
