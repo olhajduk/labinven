@@ -6,7 +6,7 @@ function requireAll(r) {
 }
 requireAll(require.context('./../assets/images/svg', true, /\.svg$/));
 
-fetch('https://cdn.jsdelivr.net/gh/olhajduk/labinven@gh-pages/dist/sprite.svg').then(res => {
+fetch('https://cdn.jsdelivr.net/gh/olhajduk/labinven@gh-pages/sprite.svg').then(res => {
   return res.text();
 }).then(data => {
   document.getElementById('sprite').innerHTML = data;
