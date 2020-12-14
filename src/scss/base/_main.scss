@@ -1,0 +1,12 @@
+$red: #fff;
+
+body {
+  background: $red;
+  display: grid;
+  transition: .5s;
+  user-select: none;
+}
+
+#sprite {
+  display: none;
+}

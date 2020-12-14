@@ -1,12 +1,19 @@
-$red: #fff;
+@import './utilities/variables';
+@import './utilities/functions';
+@import './utilities/mixins';
+@import './utilities/extends';
 
-body {
-  background: $red;
-  display: grid;
-  transition: .5s;
-  user-select: none;
-}
+@import './base/normalize';
+@import './base/fonts';
+@import './base/breakpoints';
+@import './base/main';
 
-#sprite {
-  display: none;
-}
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/sidebar';
+@import './layout/cards';
+
+@import './components/buttons';
+@import './components/forms';
+@import './components/tables';
+@import './components/dropdowns';
