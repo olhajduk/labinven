@@ -1,7 +1,5 @@
- <svg width="73" height="95"
-      viewBox="0 0 73 95"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <svg id="icon-sampler" width="73" height="95"
+      viewBox="0 0 73 95">
 <g id="by_pass" fill="none">
     <line y1="-0.5" x2="41" y2="-0.5" transform="translate(29 5)" stroke="#00ABEE"/>
     <line y1="-0.5" x2="41" y2="-0.5" transform="translate(29 89)" stroke="#00ABEE"/>
