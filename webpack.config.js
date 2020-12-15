@@ -10,7 +10,7 @@ const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
-const filename = (ext) => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`
+const filename = (ext) => isDev ? `bundle.${ext}` : `bundle.[contenthash].${ext}`
 
 const jsLoaders = () => {
   const loaders = [{
@@ -55,12 +55,17 @@ module.exports = {
         collapseWhitespace: isProd
       }
     }),
-    new CopyWebpackPlugin({
-      patterns: [{
-        from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-        to: path.resolve(__dirname, 'dist')
-      }],
-    }),
+    new copyWebpackPlugin({
+            patterns: [{
+                    from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                    to: path.resolve(__dirname, 'dist')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/fonts'),
+                    to: path.resolve(__dirname, 'dist/fonts')
+                }
+            ],
+        }),
     new MiniCssExtractPlugin({
       filename: filename('css')
     })
