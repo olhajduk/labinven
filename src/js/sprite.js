@@ -6,8 +6,19 @@ function requireAll(r) {
 }
 requireAll(require.context('./../assets/images/svg', true, /\.svg$/))
 
-fetch('https://cdn.jsdelivr.net/gh/olhajduk/labinven@gh-pages/sprite.svg').then(res => {
-  return res.text()
-}).then(data => {
-  document.getElementById('sprite').innerHTML = data
-})
+// extract
+// import symbolData from './../assets/images/sprite.svg';
+
+// console.log(symbolData);
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   const usage = `<svg><use xlink:href="${symbolData.url}"></use></svg>`;
+
+//   document.body.innerHTML = `${usage}`;
+// });
+
+// fetch(symbolData).then(res => {
+//   return res.text()
+// }).then(data => {
+//   document.getElementById('sprite').innerHTML = data
+// })

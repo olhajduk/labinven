@@ -6,11 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
-const filename = (ext) => isDev ? `bundle.${ext}`:`bundle.[contenthash].${ext}`
+const filename = (ext) => isDev ? `bundle.${ext}` : `bundle.[contenthash].${ext}`
 
 const jsLoaders = () => {
     const loaders = [{
@@ -44,27 +45,27 @@ module.exports = {
     },
     devtool: isDev ? 'source-map' : false,
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/assets/images/sprite.svg')
+        }),
         new SpriteLoaderPlugin({
             plainSprite: true
         }),
         new HtmlWebpackPlugin({
+            title: 'Labinvent | HTML Test task',
             template: 'index.html',
             minify: {
                 removeComments: isProd,
                 collapseWhitespace: isProd
-            }
+            },
+            favicon: path.resolve(__dirname, 'src/assets/favicon.ico'),
         }),
+        new HtmlWebpackInlineSVGPlugin(),
         new CopyWebpackPlugin({
             patterns: [{
-                    from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
-                },
-                {
-                    from: path.resolve(__dirname, 'src/assets/fonts'),
-                    to: path.resolve(__dirname, 'dist/fonts')
-                }
-            ],
+                from: path.resolve(__dirname, 'src/assets/fonts'),
+                to: path.resolve(__dirname, 'dist/fonts')
+            }],
         }),
         new MiniCssExtractPlugin({
             filename: filename('css')
@@ -72,11 +73,16 @@ module.exports = {
     ],
     module: {
         rules: [{
-                test: /svg\/.*\.svg$/,
-                loader: 'svg-sprite-loader',
-                options: {
-                    extract: true
-                }
+                test: /\.svg$/,
+                use: [{
+                        loader: 'svg-sprite-loader',
+                        options: {
+                            extract: true,
+                            publicPath: './../src/assets/images/'
+                        }
+                    },
+                    'svgo-loader'
+                ]
             },
             {
                 test: /\.s[ac]ss$/i,
