@@ -95,6 +95,7 @@ module.exports = {
                             postcssOptions: {
                                 plugins: [
                                     [
+                                        // FIXME: doesn't work
                                         'autoprefixer'
                                     ]
                                 ]

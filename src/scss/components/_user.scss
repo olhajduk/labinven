@@ -1,0 +1,14 @@
+.user {
+  @extend %d-flex-al-ctr;
+  @extend %hover-txt;
+  @extend %tr-pr;
+
+  &:hover &-icon {
+    fill: currentColor;
+  }
+
+  &-icon {
+    fill: $clr-icon;
+    margin-right: rem(16px);
+  }
+}

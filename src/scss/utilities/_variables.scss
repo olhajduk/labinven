@@ -1,3 +1,32 @@
 // fonts
-$font-primary: 'Roboto', sans-serif;
-$font-secondary: 'HelveticaNeueCyr', sans-serif;
+$font-pr: 'Roboto',
+sans-serif;
+$font-sec: 'HelveticaNeueCyr',
+sans-serif;
+
+// colors
+$clr-white: #fff;
+
+$clr-bg-pr: #f1f3f2;
+$clr-bg-sec: $clr-white;
+
+$clr-bg-side-hdr: #2f3b4c;
+$clr-bg-side-body: #e1e5e8;
+$clr-bg-side-ftr: #2575aa;
+$clr-bg-side-run-pr: #d5d9db;
+$clr-bg-side-run-sec: #c1c4c5;
+
+$clr-icon: #afb0c3;
+
+$clr-btn-pr: #12a9eb;
+$clr-btn-sec: $clr-white;
+
+$clr-txt-pr: #727272;
+$clr-txt-sec: #2f3b4c;
+$clr-txt-event: #2574a9;
+
+$clr-br-hdr: #e1e7f0;
+$clr-br-side: #bdc9d1;
+
+// box-shadows
+$bs-hdr: 1px 2px 2px rgba(4, 4, 4, .09);
