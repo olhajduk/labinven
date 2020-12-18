@@ -73,10 +73,43 @@ __webpack_require__(/*! regenerator-runtime/runtime */ "../node_modules/regenera
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_sprite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/sprite */ "./js/sprite.js");
 /* harmony import */ var _js_sprite__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_sprite__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/index.scss */ "./scss/index.scss");
+/* harmony import */ var _js_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/sidebar */ "./js/sidebar.js");
+/* harmony import */ var _js_sidebar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_sidebar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/index.scss */ "./scss/index.scss");
+
 
 
 console.log('working!');
+
+/***/ }),
+
+/***/ "./js/sidebar.js":
+/*!***********************!*
+  !*** ./js/sidebar.js ***!
+  \***********************/
+/***/ (function() {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var burger = document.querySelector('.burger');
+  var sidebar = document.querySelector('.sidebar');
+  var open = 'is-open';
+  var close = 'is-close';
+  burger.addEventListener('click', function () {
+    console.log(burger.classList.contains(open));
+
+    if (burger.classList.contains(open)) {
+      burger.classList.remove(open);
+      burger.classList.add(close);
+      sidebar.classList.remove(open);
+      sidebar.classList.add(close);
+    } else if (burger.classList.contains(close)) {
+      burger.classList.remove(close);
+      burger.classList.add(open);
+      sidebar.classList.remove(close);
+      sidebar.classList.add(open);
+    }
+  });
+});
 
 /***/ }),
 

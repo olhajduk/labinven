@@ -5,11 +5,25 @@
 
 .sidebar {
   @extend %d-flex;
+  @extend %tr-pr;
+  @extend %ov-h-ws-n;
   background-color: $clr-bg-side-body;
   border-right: 1px solid $clr-br-side;
   flex-direction: column;
-  min-width: rem(280px);
-  width: rem(280px);
+
+  * {
+    flex-wrap: nowrap;
+  }
+
+  &.is-close {
+    min-width: 0;
+    width: 0;
+  }
+
+  &.is-open {
+    min-width: rem(280px);
+    width: rem(280px);
+  }
 
   &-title {
     @extend %d-flex-al-ctr;

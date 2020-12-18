@@ -30,6 +30,25 @@
     }
   }
 
+  &.is-close {
+    div {
+      right: rem(5px);
+      top: rem(3px);
+      transform: rotate(45deg);
+      width: 50%;
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        right: rem(-4px);
+        top: rem(4px);
+        transform: rotate(90deg);
+      }
+    }
+  }
+
   &:hover {
     div {
       &,

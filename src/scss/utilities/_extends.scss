@@ -38,6 +38,11 @@
   align-items: center;
 }
 
+%ov-h-ws-n {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 // text
 %hover-txt {
   &:hover {

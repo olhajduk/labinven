@@ -34,6 +34,11 @@ fieldset, *, *::after, *::before {
   align-items: center;
 }
 
+.sidebar, .visuallyhidden {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .menu-item:hover, .user:hover, a:hover {
   color: #2574a9;
 }
@@ -50,7 +55,7 @@ fieldset, *, *::after, *::before {
   color: #fff;
 }
 
-input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, a {
+input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, .sidebar, a {
   transition: 0.25s ease-in-out;
 }
 
@@ -447,8 +452,6 @@ svg {
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
-  overflow: hidden;
-  white-space: nowrap;
   width: 1px;
 }
 
@@ -484,6 +487,15 @@ svg {
   background-color: #e1e5e8;
   border-right: 1px solid #cfd7dc;
   flex-direction: column;
+}
+.sidebar * {
+  flex-wrap: nowrap;
+}
+.sidebar.is-close {
+  min-width: 0;
+  width: 0;
+}
+.sidebar.is-open {
   min-width: 17.5rem;
   width: 17.5rem;
 }
@@ -655,6 +667,20 @@ svg {
 }
 .burger div::after {
   bottom: 6px;
+}
+.burger.is-close div {
+  right: 0.3125rem;
+  top: 0.1875rem;
+  transform: rotate(45deg);
+  width: 50%;
+}
+.burger.is-close div::before {
+  opacity: 0;
+}
+.burger.is-close div::after {
+  right: -0.25rem;
+  top: 0.25rem;
+  transform: rotate(90deg);
 }
 .burger:hover div, .burger:hover div::before, .burger:hover div::after {
   background-color: #2f3b4c;

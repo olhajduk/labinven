@@ -54,11 +54,10 @@ svg {
   @extend %p-0;
   @extend %p-abs;
   @extend %br-0;
+  @extend %ov-h-ws-n;
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
-  overflow: hidden;
-  white-space: nowrap;
   width: 1px;
 }
 
