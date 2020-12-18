@@ -1,3 +1,13 @@
+// margin
+%m-0 {
+  margin: 0;
+}
+
+// padding
+%p-0 {
+  padding: 0;
+}
+
 // grid
 %p-rel {
   position: relative;
@@ -15,13 +25,17 @@
   height: 100%;
 }
 
+%d-none {
+  display: none;
+}
+
 %d-flex {
   display: flex;
 }
 
 %d-flex-al-ctr {
+  @extend %d-flex;
   align-items: center;
-  display: flex;
 }
 
 // text
@@ -33,6 +47,14 @@
 
 %uppercase {
   text-transform: uppercase;
+}
+
+%fw-500 {
+  font-weight: 500;
+}
+
+%clr-white {
+  color: $clr-white;
 }
 
 // event
@@ -47,4 +69,22 @@
 // pseudo
 %content {
   content: '';
+}
+
+// other
+%h-hdr-sdbr {
+  height: rem(50px);
+}
+
+%br-0 {
+  border: 0;
+}
+
+%brr-50 {
+  border-radius: 50%;
+}
+
+%bg-none-br-0 {
+  @extend %br-0;
+  background: none;
 }

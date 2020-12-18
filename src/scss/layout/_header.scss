@@ -12,7 +12,7 @@
 
   &-list {
     @extend %d-flex-al-ctr;
-    height: rem(50px);
+    @extend %h-hdr-sdbr;
   }
 
   &-nav {

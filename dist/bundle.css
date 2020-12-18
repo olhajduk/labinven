@@ -1,42 +1,81 @@
-.burger, .menu-title, .menu {
+fieldset, *, *::after, *::before {
+  margin: 0;
+}
+
+.visuallyhidden, *, *::after, *::before {
+  padding: 0;
+}
+
+.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress {
   position: relative;
 }
 
-.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after {
+.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .visuallyhidden {
   position: absolute;
 }
 
-.burger div, .burger div::before, .burger div::after {
+.burger div, .burger div::before, .burger div::after, .sidebar-progress-bar, .sidebar-search input, .main {
   width: 100%;
 }
 
-.header-item > a, .header-item {
+.sidebar-progress-bar, .header-item > a, .header-item, body {
   height: 100%;
 }
 
-.burger, .user, .header-lock, .header-item > a, .header-list, .header {
-  align-items: center;
+.sprite {
+  display: none;
+}
+
+.sidebar-progress-status, .sidebar, body, .burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
   display: flex;
+}
+
+.burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
+  align-items: center;
 }
 
 .menu-item:hover, .user:hover, a:hover {
   color: #2574a9;
 }
 
-.menu-lang {
+.menu-lang, .sidebar-status-btn, .sidebar-status-name, .sidebar-title {
   text-transform: uppercase;
 }
 
-.burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, a {
+.sidebar-search input, .sidebar-title {
+  font-weight: 500;
+}
+
+.sidebar-status-btn, .sidebar-status-name, .sidebar-title {
+  color: #fff;
+}
+
+input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, a {
   transition: 0.25s ease-in-out;
 }
 
-.burger, .menu {
+button, .burger, .menu {
   cursor: pointer;
 }
 
-.burger div::before, .burger div::after, .menu-title::before, .menu-title::after {
+.burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after {
   content: "";
+}
+
+.sidebar-status, .sidebar-title, .header-list {
+  height: 3.125rem;
+}
+
+fieldset, .visuallyhidden, .field-input, button {
+  border: 0;
+}
+
+.sidebar-status-btn::after, .sidebar-status-btn {
+  border-radius: 50%;
+}
+
+.field-input, button {
+  background: none;
 }
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -47,7 +86,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
@@ -58,17 +96,9 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-body {
-  margin: 0;
-}
-
 /**
  * Render the `main` element consistently in IE.
  */
-main {
-  display: block;
-}
-
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -259,10 +289,6 @@ button:-moz-focusring,
 /**
  * Correct the padding in Firefox.
  */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
@@ -381,8 +407,6 @@ template {
 
 *, *::after, *::before {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 *:focus {
   outline: none;
@@ -399,6 +423,7 @@ body {
   color: #727272;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
@@ -419,19 +444,12 @@ svg {
 }
 
 .visuallyhidden {
-  border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
-  padding: 0;
-  position: absolute;
   white-space: nowrap;
   width: 1px;
-}
-
-.sprite {
-  display: none;
 }
 
 .header {
@@ -443,9 +461,6 @@ svg {
 }
 .header-burger {
   margin-right: 1.25rem;
-}
-.header-list {
-  height: 3.125rem;
 }
 .header-nav .header-item {
   margin: 0 2.1875rem;
@@ -459,6 +474,114 @@ svg {
 }
 .header-general .header-item:last-child {
   padding-right: 0;
+}
+.sidebar-status, .sidebar-progress-status, .sidebar-search input {
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+.sidebar {
+  background-color: #e1e5e8;
+  border-right: 1px solid #cfd7dc;
+  flex-direction: column;
+  min-width: 17.5rem;
+  width: 17.5rem;
+}
+.sidebar-title {
+  font-size: 1.6875rem;
+  line-height: 2.21375rem;
+  background-color: #2f3b4c;
+  padding: 0 2.3125rem;
+}
+.sidebar-search input {
+  font-size: 0.75rem;
+  line-height: 2.21375rem;
+  border-bottom: 1px solid #bdc9d1;
+  padding-bottom: 0.6875rem;
+  padding-top: 0.875rem;
+}
+.sidebar-search input:-ms-input-placeholder {
+  color: #2f3b4c;
+}
+.sidebar-search input, .sidebar-search input::placeholder {
+  color: #2f3b4c;
+}
+.sidebar-search input:hover, .sidebar-search input:focus {
+  border-color: #2f3b4c;
+}
+.sidebar-footer {
+  margin-top: auto;
+}
+.sidebar-progress {
+  font-size: 0.75rem;
+  line-height: normal;
+  background-color: #d5d9db;
+  color: #2f3b4c;
+}
+.sidebar-progress-status {
+  padding-bottom: 0.3125rem;
+  padding-top: 0.375rem;
+}
+.sidebar-progress-bar {
+  animation: sidebar-progress-bar 5s ease-in-out infinite;
+  background-color: #c1c4c5;
+}
+.sidebar-progress-left {
+  margin-left: auto;
+}
+.sidebar-status {
+  background-color: #2575aa;
+}
+.sidebar-status-name {
+  font-size: 1.375rem;
+  line-height: 2.21375rem;
+  margin-right: auto;
+}
+.sidebar-status-btn {
+  font-size: 0.5rem;
+  line-height: normal;
+  border: 1px solid #fff;
+  height: 1.5rem;
+  justify-content: center;
+  margin-left: 0.5625rem;
+  width: 1.5rem;
+}
+.sidebar-status-btn::before, .sidebar-status-btn::after {
+  height: 0.375rem;
+  top: -2px;
+}
+.sidebar-status-btn::before {
+  right: 35%;
+  width: 0.375rem;
+  z-index: 1;
+}
+.sidebar-status-btn::after {
+  background-color: #2575aa;
+  right: 25%;
+  width: 0.75rem;
+  z-index: 0;
+}
+.sidebar-status-btn:hover {
+  background-color: #fff;
+  color: #2574a9;
+}
+.sidebar-status-btn:hover::after {
+  background-color: transparent;
+}
+.sidebar-status-btn--on::before {
+  background-color: #14741b;
+}
+.sidebar-status-btn--off::before {
+  background-color: #8c9092;
+}
+
+@keyframes sidebar-progress-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .icon-user {
   height: 1.875rem;
