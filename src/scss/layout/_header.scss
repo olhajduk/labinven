@@ -1,5 +1,6 @@
 .header {
   @extend %d-flex-al-ctr;
+  @include font(rem(17px), rem(35.42px));
   $h: &;
   background-color: $clr-bg-sec;
   box-shadow: $bs-hdr;

@@ -1,16 +1,3 @@
-.burger, .user, .header-lock, .header-item > a, .header-list, .header {
-  align-items: center;
-  display: flex;
-}
-
-.menu-item:hover, .user:hover, a:hover {
-  color: #2574a9;
-}
-
-.burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, a {
-  transition: 0.25s ease-in-out;
-}
-
 .burger, .menu-title, .menu {
   position: relative;
 }
@@ -27,12 +14,25 @@
   height: 100%;
 }
 
-.burger, .menu {
-  cursor: pointer;
+.burger, .user, .header-lock, .header-item > a, .header-list, .header {
+  align-items: center;
+  display: flex;
+}
+
+.menu-item:hover, .user:hover, a:hover {
+  color: #2574a9;
 }
 
 .menu-lang {
   text-transform: uppercase;
+}
+
+.burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, a {
+  transition: 0.25s ease-in-out;
+}
+
+.burger, .menu {
+  cursor: pointer;
 }
 
 .burger div::before, .burger div::after, .menu-title::before, .menu-title::after {
@@ -435,6 +435,8 @@ svg {
 }
 
 .header {
+  font-size: 1.0625rem;
+  line-height: 2.21375rem;
   background-color: #fff;
   box-shadow: 1px 2px 2px rgba(4, 4, 4, 0.09);
   padding: 0 1rem;
