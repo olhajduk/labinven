@@ -1,0 +1,13 @@
+.icon {
+  @extend %tr-pr;
+
+  &-user {
+    height: rem(30px);
+    width: rem(30px);
+  }
+
+  &-lock {
+    height: rem(24px);
+    width: rem(17px);
+  }
+}

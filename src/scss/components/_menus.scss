@@ -1,0 +1,74 @@
+.menu {
+  @extend %p-rel;
+  @extend %tr-pr;
+  @extend %pointer;
+  $m: &;
+
+  &-title {
+    @extend %p-rel;
+    padding-right: rem(27px);
+
+    &::before,
+    &::after {
+      @extend %p-abs;
+      @extend %content;
+      @extend %tr-pr;
+      background-color: currentColor;
+      height: rem(1px);
+      transition-property: transform;
+      width: rem(7px);
+    }
+
+    &::before {
+      right: rem(5px);
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-list {
+    @extend %tr-pr;
+    background: $clr-bg-sec;
+    box-shadow: $bs-hdr;
+    left: 0;
+    position: absolute;
+    transform: translateY(rem(5px));
+    transition-property: transform;
+    visibility: hidden;
+    width: 100%;
+    will-change: transform;
+    z-index: 5;
+  }
+
+  &-item {
+    @extend %hover-txt;
+    padding: rem(3px) rem(10px);
+  }
+
+  &:hover {
+    #{$m} {
+      &-title {
+        &::before {
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+
+      &-list {
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+  }
+
+  &-lang {
+    @extend %uppercase;
+  }
+}

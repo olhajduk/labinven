@@ -1,13 +1,48 @@
-$red: #fff;
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  background: $red;
-  display: grid;
-  font-family: $font-primary;
-  transition: .5s;
-  user-select: none;
+  &:focus {
+    outline: none;
+  }
 }
 
-#sprite {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font(rem(14px), 1.5);
+  background-color: $clr-bg-pr;
+  color: $clr-txt-pr;
+  font-family: $font-pr;
+  font-weight: 400;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  @extend %hover-txt;
+  @extend %tr-pr;
+  color: currentColor;
+  text-decoration: none;
+}
+
+svg {
+  fill: currentColor;
+  height: 100%;
+  width: 100%;
+}
+
+.sprite {
   display: none;
 }

@@ -1,0 +1,6 @@
+// convert px to rem
+$fs-default: 16px;
+
+@function rem($size) {
+  @return $size / $fs-default * 1rem;
+}

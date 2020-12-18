@@ -1,0 +1,42 @@
+.burger {
+  @extend %p-rel;
+  @extend %d-flex-al-ctr;
+  @extend %pointer;
+  height: rem(15px);
+  width: rem(20px);
+
+  div {
+    &,
+    &::before,
+    &::after {
+      @extend %w-100;
+      @extend %p-abs;
+      @extend %tr-pr;
+      background-color: $clr-icon;
+      height: rem(3px);
+    }
+
+    &::before,
+    &::after {
+      @extend %content;
+    }
+
+    &::before {
+      top: 6px;
+    }
+
+    &::after {
+      bottom: 6px;
+    }
+  }
+
+  &:hover {
+    div {
+      &,
+      &::before,
+      &::after {
+        background-color: $clr-bg-side-hdr;
+      }
+    }
+  }
+}
