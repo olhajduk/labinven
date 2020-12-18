@@ -1,0 +1,30 @@
+button {
+  @extend %bg-none-br-0;
+  @extend %pointer;
+}
+
+fieldset {
+  @extend %m-0;
+  @extend %br-0;
+}
+
+input {
+  @extend %tr-pr;
+
+  // &[type='search'] {
+  //   &::-webkit-search-cancel-button {
+  //     TODO: find resolve for path
+  //     -webkit-appearance: none;
+  //     height: 20px;
+  //     width: 20px;
+  //     background: url('/images/clode.png') no-repeat 50% / cover;
+  //     cursor: pointer;
+  //   }
+  // }#5fa1c1 
+}
+
+.field {
+  &-input {
+    @extend %bg-none-br-0;
+  }
+}

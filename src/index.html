@@ -18,11 +18,15 @@
 </head>
 
 <body>
-    <%= require('html-loader!./html/header.html') %>
+    <%= require('html-loader!./html/sidebar.html') %>
+
+    <main class="main">
+        <%= require('html-loader!./html/header.html') %>
+    </main>
 
     <div id="sprite" class="sprite">
         <img inline src="./../src/assets/images/sprite.svg" alt="">
-      </div>
+    </div>
 </body>
 
 </html>

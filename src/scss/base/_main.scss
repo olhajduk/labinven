@@ -2,9 +2,9 @@
   &,
   &::after,
   &::before {
+    @extend %m-0;
+    @extend %p-0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
   }
 
   &:focus {
@@ -17,11 +17,14 @@ html {
 }
 
 body {
+  @extend %d-flex;
+  @extend %h-100;
   @include font(rem(14px), 1.5);
   background-color: $clr-bg-pr;
   color: $clr-txt-pr;
   font-family: $font-pr;
   font-weight: 400;
+  min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
@@ -43,6 +46,21 @@ svg {
   width: 100%;
 }
 
+.main {
+  @extend %w-100;
+}
+
+.visuallyhidden {
+  @extend %p-0;
+  @extend %p-abs;
+  @extend %br-0;
+  @extend %ov-h-ws-n;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  width: 1px;
+}
+
 .sprite {
-  display: none;
+  @extend %d-none;
 }
