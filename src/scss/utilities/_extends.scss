@@ -1,18 +1,4 @@
-%d-flex-al-ctr {
-  align-items: center;
-  display: flex;
-}
-
-%hover-txt {
-  &:hover {
-    color: $clr-txt-event;
-  }
-}
-
-%tr-pr {
-  transition: .25s ease-in-out;
-}
-
+// grid
 %p-rel {
   position: relative;
 }
@@ -29,14 +15,36 @@
   height: 100%;
 }
 
-%pointer {
-  cursor: pointer;
+%d-flex {
+  display: flex;
+}
+
+%d-flex-al-ctr {
+  align-items: center;
+  display: flex;
+}
+
+// text
+%hover-txt {
+  &:hover {
+    color: $clr-txt-event;
+  }
 }
 
 %uppercase {
   text-transform: uppercase;
 }
 
+// event
+%tr-pr {
+  transition: .25s ease-in-out;
+}
+
+%pointer {
+  cursor: pointer;
+}
+
+// pseudo
 %content {
   content: '';
 }
