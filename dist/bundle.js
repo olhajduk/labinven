@@ -92,11 +92,11 @@ console.log('working!');
 document.addEventListener('DOMContentLoaded', function () {
   var burger = document.querySelector('.burger');
   var sidebar = document.querySelector('.sidebar');
+  var jobs = document.querySelector('.jobs');
+  var jobsBtn = document.querySelector('.jobs-btn');
   var open = 'is-open';
   var close = 'is-close';
   burger.addEventListener('click', function () {
-    console.log(burger.classList.contains(open));
-
     if (burger.classList.contains(open)) {
       burger.classList.remove(open);
       burger.classList.add(close);
@@ -107,6 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
       burger.classList.add(open);
       sidebar.classList.remove(close);
       sidebar.classList.add(open);
+    }
+  });
+  jobsBtn.addEventListener('click', function () {
+    if (jobsBtn.classList.contains(open)) {
+      jobs.classList.remove(open);
+      jobs.classList.add(close);
+      jobsBtn.classList.remove(open);
+      jobsBtn.classList.add(close);
+    } else if (jobsBtn.classList.contains(close)) {
+      jobs.classList.remove(close);
+      jobs.classList.add(open);
+      jobsBtn.classList.remove(close);
+      jobsBtn.classList.add(open);
     }
   });
 });

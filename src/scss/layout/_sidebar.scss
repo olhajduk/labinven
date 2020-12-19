@@ -4,12 +4,14 @@
 }
 
 .sidebar {
+  @extend %p-rel;
   @extend %d-flex;
   @extend %tr-pr;
   @extend %ov-h-ws-n;
   background-color: $clr-bg-side-body;
   border-right: 1px solid $clr-br-side;
   flex-direction: column;
+  z-index: 1;
 
   * {
     flex-wrap: nowrap;
@@ -72,6 +74,7 @@
       @extend %d-flex;
       @extend %p-rel;
       @extend %pr-pl;
+      border-right: 1px solid $clr-br-side;
       padding-bottom: rem(5px);
       padding-top: rem(6px);
     }

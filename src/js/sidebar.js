@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger')
   const sidebar = document.querySelector('.sidebar')
+
+  const jobs = document.querySelector('.jobs')
+  const jobsBtn = document.querySelector('.jobs-btn')
+
   const open = 'is-open'
   const close = 'is-close'
 
   burger.addEventListener('click', function() {
-    console.log(burger.classList.contains(open))
-
     if (burger.classList.contains(open)) {
       burger.classList.remove(open)
       burger.classList.add(close)
@@ -19,6 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
       sidebar.classList.remove(close)
       sidebar.classList.add(open)
+    }
+  });
+
+  jobsBtn.addEventListener('click', function() {
+    if (jobsBtn.classList.contains(open)) {
+      jobs.classList.remove(open)
+      jobs.classList.add(close)
+
+      jobsBtn.classList.remove(open)
+      jobsBtn.classList.add(close)
+    } else if (jobsBtn.classList.contains(close)) {
+      jobs.classList.remove(close)
+      jobs.classList.add(open)
+
+      jobsBtn.classList.remove(close)
+      jobsBtn.classList.add(open)
     }
   });
 });

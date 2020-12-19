@@ -6,19 +6,19 @@ fieldset, *, *::after, *::before {
   padding: 0;
 }
 
-.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress {
+.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .jobs, .header {
   position: relative;
 }
 
-.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .visuallyhidden {
+.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .jobs-btn, .visuallyhidden {
   position: absolute;
 }
 
-.burger div, .burger div::before, .burger div::after, .sidebar-progress-bar, .sidebar-search input, .main {
+.burger div, .burger div::before, .burger div::after, .sidebar-progress-bar, .sidebar-search input, .content-body, .main {
   width: 100%;
 }
 
-.sidebar-progress-bar, .header-item > a, .header-item, body {
+.sidebar-progress-bar, .content, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -26,11 +26,11 @@ fieldset, *, *::after, *::before {
   display: none;
 }
 
-.sidebar-progress-status, .sidebar, body, .burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
+.sidebar-progress-status, .sidebar, .content, body, .burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .jobs-btn, .header-lock, .header-item > a, .header-list, .header {
   display: flex;
 }
 
-.burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
+.burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .jobs-btn, .header-lock, .header-item > a, .header-list, .header {
   align-items: center;
 }
 
@@ -55,7 +55,7 @@ fieldset, *, *::after, *::before {
   color: #fff;
 }
 
-input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, .sidebar, a {
+input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, .sidebar, .jobs-btn, .content-sidebar, a {
   transition: 0.25s ease-in-out;
 }
 
@@ -75,7 +75,7 @@ fieldset, .visuallyhidden, .field-input, button {
   border: 0;
 }
 
-.sidebar-status-btn::after, .sidebar-status-btn {
+.sidebar-status-btn::after, .sidebar-status-btn, .jobs-btn {
   border-radius: 50%;
 }
 
@@ -461,6 +461,7 @@ svg {
   background-color: #fff;
   box-shadow: 1px 2px 2px rgba(4, 4, 4, 0.09);
   padding: 0 1rem;
+  z-index: 1;
 }
 .header-burger {
   margin-right: 1.25rem;
@@ -478,6 +479,34 @@ svg {
 .header-general .header-item:last-child {
   padding-right: 0;
 }
+.content-sidebar.is-open {
+  min-width: 14.25rem;
+  width: 14.25rem;
+}
+.content-sidebar.is-close {
+  min-width: 0;
+  width: 0;
+}
+.jobs {
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.35);
+  margin-left: -0.1875rem;
+  margin-top: -0.4375rem;
+  z-index: 0;
+}
+.jobs-btn {
+  background-color: #f1f3f2;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  height: 1.875rem;
+  right: -0.9375rem;
+  top: 2.3125rem;
+  width: 1.875rem;
+}
+.jobs-btn:hover {
+  border-color: #bfc2c4;
+  box-shadow: none;
+}
+
 .sidebar-status, .sidebar-progress-status, .sidebar-search input {
   padding-left: 1.375rem;
   padding-right: 1.375rem;
@@ -487,6 +516,7 @@ svg {
   background-color: #e1e5e8;
   border-right: 1px solid #cfd7dc;
   flex-direction: column;
+  z-index: 1;
 }
 .sidebar * {
   flex-wrap: nowrap;
@@ -531,6 +561,7 @@ svg {
   color: #2f3b4c;
 }
 .sidebar-progress-status {
+  border-right: 1px solid #cfd7dc;
   padding-bottom: 0.3125rem;
   padding-top: 0.375rem;
 }

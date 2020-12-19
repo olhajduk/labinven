@@ -1,0 +1,22 @@
+.content {
+  @extend %d-flex;
+  @extend %h-100;
+
+  &-sidebar {
+    @extend %tr-pr;
+
+    &.is-open {
+      min-width: rem(228px);
+      width: rem(228px);
+    }
+
+    &.is-close {
+      min-width: 0;
+      width: 0;
+    }
+  }
+
+  &-body {
+    @extend %w-100;
+  }
+}
