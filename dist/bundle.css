@@ -1,4 +1,4 @@
-fieldset, *, *::after, *::before {
+fieldset, h1, *, *::after, *::before {
   margin: 0;
 }
 
@@ -6,19 +6,19 @@ fieldset, *, *::after, *::before {
   padding: 0;
 }
 
-.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress {
+.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .inventory, .header {
   position: relative;
 }
 
-.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .visuallyhidden {
+.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .inventory-btn, .visuallyhidden {
   position: absolute;
 }
 
-.burger div, .burger div::before, .burger div::after, .sidebar-progress-bar, .sidebar-search input, .main {
+.burger div, .burger div::before, .burger div::after, .sidebar-progress-bar, .sidebar-search input, .content-body, .main {
   width: 100%;
 }
 
-.sidebar-progress-bar, .header-item > a, .header-item, body {
+.sidebar-progress-bar, .inventory .card-figure, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -26,12 +26,20 @@ fieldset, *, *::after, *::before {
   display: none;
 }
 
-.sidebar-progress-status, .sidebar, body, .burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
+.inventory .card-title::before, .inventory .card-title {
+  display: inline-block;
+}
+
+.sidebar-progress-status, .sidebar, .content, body, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   display: flex;
 }
 
-.burger, .user, .sidebar-status-btn, .sidebar-status, .sidebar-title, .header-lock, .header-item > a, .header-list, .header {
+.burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   align-items: center;
+}
+
+.sidebar-status-btn, .inventory .card-figure {
+  justify-content: center;
 }
 
 .sidebar, .visuallyhidden {
@@ -43,7 +51,7 @@ fieldset, *, *::after, *::before {
   color: #2574a9;
 }
 
-.menu-lang, .sidebar-status-btn, .sidebar-status-name, .sidebar-title {
+.menu-lang, .card-title, .sidebar-status-btn, .sidebar-status-name, .sidebar-title {
   text-transform: uppercase;
 }
 
@@ -55,15 +63,15 @@ fieldset, *, *::after, *::before {
   color: #fff;
 }
 
-input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, .sidebar, a {
+input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-status-btn, .sidebar, .inventory .card, .inventory-list, .inventory-btn, .content-sidebar, a {
   transition: 0.25s ease-in-out;
 }
 
-button, .burger, .menu {
+button, .burger, .menu, .inventory .card {
   cursor: pointer;
 }
 
-.burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after {
+.burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .inventory .card-title::before {
   content: "";
 }
 
@@ -75,12 +83,20 @@ fieldset, .visuallyhidden, .field-input, button {
   border: 0;
 }
 
-.sidebar-status-btn::after, .sidebar-status-btn {
+.sidebar-status-btn::after, .sidebar-status-btn, .inventory-btn {
   border-radius: 50%;
 }
 
 .field-input, button {
   background: none;
+}
+
+.inventory-btn, body {
+  background-color: #f1f3f2;
+}
+
+.card {
+  background-color: #fff;
 }
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -108,11 +124,6 @@ html {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -424,13 +435,16 @@ html {
 body {
   font-size: 0.875rem;
   line-height: 1.5;
-  background-color: #f1f3f2;
   color: #727272;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+}
+
+h2 {
+  font-size: inherit;
 }
 
 ul {
@@ -461,6 +475,7 @@ svg {
   background-color: #fff;
   box-shadow: 1px 2px 2px rgba(4, 4, 4, 0.09);
   padding: 0 1rem;
+  z-index: 1;
 }
 .header-burger {
   margin-right: 1.25rem;
@@ -478,6 +493,86 @@ svg {
 .header-general .header-item:last-child {
   padding-right: 0;
 }
+.content {
+  height: calc(100% - 3.125rem);
+}
+.content-sidebar.is-open {
+  min-width: 14.25rem;
+  width: 14.25rem;
+}
+.content-sidebar.is-close {
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 0;
+}
+.inventory {
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.35);
+  margin-left: -0.1875rem;
+  margin-top: -0.4375rem;
+  padding: 1.4375rem 1.1875rem 1.4375rem 1.25rem;
+  z-index: 0;
+}
+.inventory-btn {
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  height: 1.875rem;
+  right: -0.9375rem;
+  top: 2.3125rem;
+  width: 1.875rem;
+}
+.inventory-btn:hover {
+  border-color: #bfc2c4;
+  box-shadow: none;
+}
+.inventory.is-close .inventory-list {
+  transform: translateX(-100%);
+}
+.inventory-list {
+  overflow-x: hidden;
+  padding-bottom: 0.3125rem;
+}
+.inventory-list * {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.inventory .card:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.inventory .card:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.inventory .card-header {
+  padding: 0.625rem 0.375rem;
+}
+.inventory .card-title {
+  text-transform: none;
+}
+.inventory .card-title::before {
+  height: 0.625rem;
+  margin-right: 0.4375rem;
+  width: 0.625rem;
+}
+.inventory .card:first-child h2::before {
+  background-color: #1a9022;
+}
+.inventory .card:nth-child(2) h2::before {
+  background-color: #f5ad3c;
+}
+.inventory .card-body {
+  height: 9.375rem;
+}
+.inventory .card-figure {
+  text-align: center;
+}
+.inventory .card-figure figcaption {
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #2f3b4c;
+  margin-bottom: 13px;
+  margin-top: auto;
+}
+
 .sidebar-status, .sidebar-progress-status, .sidebar-search input {
   padding-left: 1.375rem;
   padding-right: 1.375rem;
@@ -487,6 +582,7 @@ svg {
   background-color: #e1e5e8;
   border-right: 1px solid #cfd7dc;
   flex-direction: column;
+  z-index: 1;
 }
 .sidebar * {
   flex-wrap: nowrap;
@@ -531,6 +627,7 @@ svg {
   color: #2f3b4c;
 }
 .sidebar-progress-status {
+  border-right: 1px solid #cfd7dc;
   padding-bottom: 0.3125rem;
   padding-top: 0.375rem;
 }
@@ -554,7 +651,6 @@ svg {
   line-height: normal;
   border: 1px solid #fff;
   height: 1.5rem;
-  justify-content: center;
   margin-left: 0.5625rem;
   width: 1.5rem;
 }
@@ -594,6 +690,16 @@ svg {
   100% {
     width: 100%;
   }
+}
+.card {
+  border: 1px solid #bfc2c4;
+}
+.card-header {
+  font-size: 0.875rem;
+  line-height: normal;
+  border-bottom: 1px solid #bfc2c4;
+  color: #2f3b4c;
+  padding: 1.125rem 1.0625rem;
 }
 .icon-user {
   height: 1.875rem;

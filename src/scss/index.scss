@@ -1,5 +1,5 @@
-@import './utilities/variables';
 @import './utilities/functions';
+@import './utilities/variables';
 @import './utilities/mixins';
 @import './utilities/extends';
 
@@ -8,7 +8,8 @@
 @import './base/breakpoints';
 
 @import './layout/header';
-@import './layout/navigation';
+@import './layout/content';
+@import './layout/inventory';
 @import './layout/sidebar';
 @import './layout/cards';
 

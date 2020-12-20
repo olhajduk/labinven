@@ -1,10 +1,12 @@
 .header {
+  @extend %p-rel;
   @extend %d-flex-al-ctr;
   @include font(rem(17px), rem(35.42px));
   $h: &;
   background-color: $clr-bg-sec;
   box-shadow: $bs-hdr;
   padding: 0 rem(16px);
+  z-index: 1;
 
   &-burger {
     margin-right: rem(20px);

@@ -92,11 +92,11 @@ console.log('working!');
 document.addEventListener('DOMContentLoaded', function () {
   var burger = document.querySelector('.burger');
   var sidebar = document.querySelector('.sidebar');
+  var inventory = document.querySelector('.inventory');
+  var inventoryBtn = document.querySelector('.inventory-btn');
   var open = 'is-open';
   var close = 'is-close';
   burger.addEventListener('click', function () {
-    console.log(burger.classList.contains(open));
-
     if (burger.classList.contains(open)) {
       burger.classList.remove(open);
       burger.classList.add(close);
@@ -107,6 +107,19 @@ document.addEventListener('DOMContentLoaded', function () {
       burger.classList.add(open);
       sidebar.classList.remove(close);
       sidebar.classList.add(open);
+    }
+  });
+  inventoryBtn.addEventListener('click', function () {
+    if (inventoryBtn.classList.contains(open)) {
+      inventory.classList.remove(open);
+      inventory.classList.add(close);
+      inventoryBtn.classList.remove(open);
+      inventoryBtn.classList.add(close);
+    } else if (inventoryBtn.classList.contains(close)) {
+      inventory.classList.remove(close);
+      inventory.classList.add(open);
+      inventoryBtn.classList.remove(close);
+      inventoryBtn.classList.add(open);
     }
   });
 });
@@ -10050,6 +10063,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/svg/syringe.svg":
+/*!***************************************!*
+  !*** ./assets/images/svg/syringe.svg ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "syringe-usage",
+      viewBox: "0 0 55 106",
+      url: "./../src/assets/images/" + "sprite.svg#syringe",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./assets/images/svg sync recursive \\.svg$":
 /*!****************************************!*
   !*** ./assets/images/svg/ sync \.svg$ ***!
@@ -10061,7 +10093,8 @@ var map = {
 	"./icon-lock.svg": "./assets/images/svg/icon-lock.svg",
 	"./icon-sampler.svg": "./assets/images/svg/icon-sampler.svg",
 	"./icon-user.svg": "./assets/images/svg/icon-user.svg",
-	"./icon-valve.svg": "./assets/images/svg/icon-valve.svg"
+	"./icon-valve.svg": "./assets/images/svg/icon-valve.svg",
+	"./syringe.svg": "./assets/images/svg/syringe.svg"
 };
 
 

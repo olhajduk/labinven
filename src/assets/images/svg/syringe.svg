@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="106" viewBox="0 0 55 106">
+  <defs>
+    <clipPath id="f2t5a">
+      <path fill="#fff" d="M7 4h48v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5b">
+      <path fill="#fff" d="M7 0h1v5H7z" />
+    </clipPath>
+    <clipPath id="f2t5c">
+      <path fill="#fff" d="M7 101h48v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5d">
+      <path fill="#fff" d="M7 101h1v5H7z" />
+    </clipPath>
+    <clipPath id="f2t5e">
+      <path fill="#fff" d="M54 4.999h1v96h-1z" />
+    </clipPath>
+    <clipPath id="f2t5f">
+      <path fill="#fff" d="M7 10h1v7H7z" />
+    </clipPath>
+    <clipPath id="f2t5g">
+      <path fill="#fff" d="M5.5 7h4a1.5 1.5 0 1 1 0 3h-4a1.5 1.5 0 0 1 0-3z" />
+    </clipPath>
+    <clipPath id="f2t5h">
+      <path fill="#fff" d="M1.5 17h12a1.5 1.5 0 0 1 0 3h-12a1.5 1.5 0 0 1 0-3z" />
+    </clipPath>
+    <clipPath id="f2t5i">
+      <path fill="#fff" d="M12 50.5A3.5 3.5 0 0 1 8.5 54h-2A3.5 3.5 0 0 1 3 50.5V19h9z" />
+    </clipPath>
+    <clipPath id="f2t5j">
+      <path fill="#fff" d="M6 54h3v2H6z" />
+    </clipPath>
+    <clipPath id="f2t5k">
+      <path fill="#fff" d="M7 55h1v13H7z" />
+    </clipPath>
+    <clipPath id="f2t5l">
+      <path fill="#fff" d="M5 34h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5m">
+      <path fill="#fff" d="M7 37h2v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5n">
+      <path fill="#fff" d="M5 40h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5o">
+      <path fill="#fff" d="M7 43h2v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5p">
+      <path fill="#fff" d="M5 46h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5q">
+      <path fill="#fff" d="M5 22h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5r">
+      <path fill="#fff" d="M7 25h2v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5s">
+      <path fill="#fff" d="M5 28h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5t">
+      <path fill="#fff" d="M7 31h2v1H7z" />
+    </clipPath>
+    <clipPath id="f2t5u">
+      <path fill="#fff" d="M5 34h4v1H5z" />
+    </clipPath>
+    <clipPath id="f2t5v">
+      <path fill="#fff" d="M3.5 70h8a2.5 2.5 0 0 1 0 5h-8a2.5 2.5 0 1 1 0-5z" />
+    </clipPath>
+    <clipPath id="f2t5w">
+      <path fill="#fff"
+        d="M7.5 76c4.142 0 7.5 1.358 7.5 5.5v13c0 4.142-3.858 4.5-8 4.5-4.142 0-7-.358-7-4.5v-13C0 77.358 3.358 76 7.5 76z" />
+    </clipPath>
+    <clipPath id="f2t5x">
+      <path fill="#fff" d="M3 74h9v4H3z" />
+    </clipPath>
+  </defs>
+  <g>
+    <g>
+      <g>
+        <path fill="#fff" d="M7 4h48v1H7z" />
+        <path fill="none" stroke="#009fe2" stroke-miterlimit="20" stroke-width="2" d="M7 4v0h48v1H7v0z"
+          clip-path="url(&quot;#f2t5a&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M7 0h1v5H7z" />
+        <path fill="none" stroke="#009fe2" stroke-miterlimit="20" stroke-width="2" d="M7 0v0h1v5H7v0z"
+          clip-path="url(&quot;#f2t5b&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M7 101h48v1H7z" />
+        <path fill="none" stroke="#009fe2" stroke-miterlimit="20" stroke-width="2" d="M7 101v0h48v1H7v0z"
+          clip-path="url(&quot;#f2t5c&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M7 101h1v5H7z" />
+        <path fill="none" stroke="#009fe2" stroke-miterlimit="20" stroke-width="2" d="M7 101v0h1v5H7v0z"
+          clip-path="url(&quot;#f2t5d&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M54 4.999h1v96h-1z" />
+        <path fill="none" stroke="#009fe2" stroke-miterlimit="20" stroke-width="2" d="M54 4.999v0h1v96h-1v0z"
+          clip-path="url(&quot;#f2t5e&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M7 10h1v7H7z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 10v0h1v7H7v0z"
+          clip-path="url(&quot;#f2t5f&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M5.5 7h4a1.5 1.5 0 1 1 0 3h-4a1.5 1.5 0 0 1 0-3z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2"
+          d="M5.5 7h4a1.5 1.5 0 1 1 0 3h-4a1.5 1.5 0 0 1 0-3z" clip-path="url(&quot;#f2t5g&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M1.5 17h12a1.5 1.5 0 0 1 0 3h-12a1.5 1.5 0 0 1 0-3z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2"
+          d="M1.5 17h12a1.5 1.5 0 0 1 0 3h-12a1.5 1.5 0 0 1 0-3z" clip-path="url(&quot;#f2t5h&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M12 50.5A3.5 3.5 0 0 1 8.5 54h-2A3.5 3.5 0 0 1 3 50.5V19h9z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2"
+          d="M12 50.5A3.5 3.5 0 0 1 8.5 54h-2A3.5 3.5 0 0 1 3 50.5V19h9z" clip-path="url(&quot;#f2t5i&quot;)" />
+      </g>
+      <g>
+        <path fill="#2f3b4c" d="M7 23h1v26H7z" />
+      </g>
+      <g>
+        <path fill="#fff" d="M6 54h3v2H6z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M6 54v0h3v2H6v0z"
+          clip-path="url(&quot;#f2t5j&quot;)" />
+      </g>
+      <g>
+        <path fill="#fff" d="M7 55h1v13H7z" />
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 55v0h1v13H7v0z"
+          clip-path="url(&quot;#f2t5k&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 34v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5l&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 37v0h2v1H7v0z"
+          clip-path="url(&quot;#f2t5m&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 40v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5n&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 43v0h2v1H7v0z"
+          clip-path="url(&quot;#f2t5o&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 46v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5p&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 22v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5q&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 25v0h2v1H7v0z"
+          clip-path="url(&quot;#f2t5r&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 28v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5s&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M7 31v0h2v1H7v0z"
+          clip-path="url(&quot;#f2t5t&quot;)" />
+      </g>
+      <g>
+        <path fill="none" stroke="#2f3b4c" stroke-miterlimit="20" stroke-width="2" d="M5 34v0h4v1H5v0z"
+          clip-path="url(&quot;#f2t5u&quot;)" />
+      </g>
+      <g>
+        <g>
+          <path fill="#fff" d="M3.5 70h8a2.5 2.5 0 0 1 0 5h-8a2.5 2.5 0 1 1 0-5z" />
+          <path fill="none" stroke="#afb0c3" stroke-miterlimit="20" stroke-width="2"
+            d="M3.5 70h8a2.5 2.5 0 0 1 0 5h-8a2.5 2.5 0 1 1 0-5z" clip-path="url(&quot;#f2t5v&quot;)" />
+        </g>
+        <g>
+          <path fill="#fff"
+            d="M7.5 76c4.142 0 7.5 1.358 7.5 5.5v13c0 4.142-3.858 4.5-8 4.5-4.142 0-7-.358-7-4.5v-13C0 77.358 3.358 76 7.5 76z" />
+          <path fill="none" stroke="#afb0c3" stroke-miterlimit="20" stroke-width="2"
+            d="M7.5 76c4.142 0 7.5 1.358 7.5 5.5v13c0 4.142-3.858 4.5-8 4.5-4.142 0-7-.358-7-4.5v-13C0 77.358 3.358 76 7.5 76z"
+            clip-path="url(&quot;#f2t5w&quot;)" />
+        </g>
+        <g>
+          <path fill="#fff" d="M3 74h9v4H3z" />
+          <path fill="none" stroke="#afb0c3" stroke-miterlimit="20" stroke-width="2" d="M3 74v0h9v4H3v0z"
+            clip-path="url(&quot;#f2t5x&quot;)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
