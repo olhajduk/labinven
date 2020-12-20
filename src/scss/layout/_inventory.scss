@@ -92,7 +92,7 @@
     &-figure {
       @extend %h-100;
       @extend %d-flex-al-ctr-jc-ctr;
-      text-align: center;
+      @extend %txt-ctr;
 
       figcaption {
         @include font(rem(12px), normal);

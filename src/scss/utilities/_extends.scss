@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+%w-50 {
+  width: 50%;
+}
+
 %h-100 {
   height: 100%;
 }
@@ -37,14 +41,22 @@
   display: flex;
 }
 
+%align-ctr {
+  align-items: center;
+}
+
+%jc-ctr {
+  justify-content: center;
+}
+
 %d-flex-al-ctr {
   @extend %d-flex;
-  align-items: center;
+  @extend %align-ctr;
 }
 
 %d-flex-al-ctr-jc-ctr {
   @extend %d-flex-al-ctr;
-  justify-content: center;
+  @extend %jc-ctr;
 }
 
 %ov-h-ws-n {
@@ -69,6 +81,10 @@
 
 %clr-white {
   color: $clr-white;
+}
+
+%txt-ctr {
+  text-align: center;
 }
 
 // event
@@ -111,4 +127,14 @@
 
 %bg-sec {
   background-color: $clr-bg-sec;
+}
+
+// colors
+%clr-darkest {
+  color: $clr-txt-sec;
+}
+
+// fonts
+%ff-sec {
+  font-family: $font-sec;
 }

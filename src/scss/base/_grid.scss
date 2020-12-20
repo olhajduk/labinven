@@ -1,0 +1,76 @@
+// grid
+
+.mr-66 {
+  margin-right: rem(66px);
+}
+
+.p-10 {
+  padding: rem(10px);
+}
+
+.d-flex {
+  @extend %d-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-ctr {
+  @extend %align-ctr;
+}
+
+.jc-ctr {
+  @extend %jc-ctr;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+// text & fonts
+.txt-ctr {
+  @extend %txt-ctr;
+}
+
+.fw-500 {
+  @extend %fw-500;
+}
+
+.ff-sec {
+  @extend %ff-sec;
+}
+
+.fs-12 {
+  @include font(rem(12px), rem(18px));
+}
+
+.uppercase {
+  @extend %uppercase;
+}
+
+// width & height
+.w-100 {
+  @extend %w-100;
+}
+
+.w-56 {
+  width: 56.28%;
+}
+
+.w-44 {
+  width: calc(100% - 56.28%);
+}
+
+.w-50 {
+  @extend %w-50;
+}
+
+// colors
+.br-darkest {
+  border: 1px solid $clr-txt-sec;
+}
+
+.clr-darkest {
+  @extend %clr-darkest;
+}

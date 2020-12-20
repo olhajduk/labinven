@@ -1,3 +1,304 @@
-<div class="content-body indicators">
-  
+<div class="content-body indicators d-flex flex-wrap">
+  <div class="indicators-item card w-100">
+    <div class="indicators-header card-header d-flex align-ctr">
+      <div class="indicators-worklist d-flex align-ctr">
+        <h2 class="indicators-title card-title indicators-worklist-title">
+          Worklist
+        </h2>
+        <button class="indicators-worklist-btn">
+          run
+        </button>
+        <span class="indicators-worklist-todo">
+          TO DO: 23 injections
+        </span>
+        <span class="indicators-worklist-time">
+          02:15:00
+        </span>
+      </div>
+      <div class="indicators-method">
+        Method:
+        <span class="indicators-method-name">
+          Method1.amx
+          <span class="indicators-method-time">
+            (00:00/04:30)
+          </span>
+        </span>
+      </div>
+      <div class="indicators-status">
+        single run
+      </div>
+    </div>
+
+    <div class="indicators-body card-body d-flex">
+      <ul class="indicators-tabs">
+        <li class="indicators-tab">
+          <a href="#">
+            ALS
+          </a>
+        </li>
+        <li class="indicators-tab">
+          <a href="#">
+            Inlets
+          </a>
+        </li>
+        <li class="indicators-tab active">
+          <a href="#">
+            Columns
+          </a>
+        </li>
+      </ul>
+      <div class="indicators-content d-flex w-100">
+        <div class="w-50">
+          <div class="w-100 d-flex align-ctr jc-ctr">
+            <ul class="job d-flex mr-66">
+              <li class="job-item txt-ctr">
+                <p class="job-name">
+                  Front Inlet
+                </p>
+                <figure>
+                  <!-- <img src="./assets/images/frontinlet.png" alt="frontinlet"> -->
+
+                  <figcaption class="fw-500">
+                    <p>SS (H2)</p>
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li class="job-item txt-ctr">
+                <p class="job-name">
+                  Agilent 19091Q-002
+                </p>
+                <figure>
+                  <!-- <img src="./assets/images/agilent.png" alt="agilent"> -->
+
+                  <figcaption>
+                    <p>60 Oc - 450 Oc (450 Oc)</p>
+                    <p>25 m * 320 μm * 1μm</p>
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li class="job-item txt-ctr">
+                <p class="job-name">
+                  Back Detector
+                </p>
+                <figure>
+                  <!-- <img src="./assets/images/detector.png" alt="detector"> -->
+
+                  <figcaption class="fw-500">
+                    <p>NPD</p>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+
+            <div class="br-darkest p-10 fs-12 fw-500 clr-darkest ff-sec">
+              <p>(Initial): 0 min</p>
+              <p>ArMe @ 35 Oc Oven</p>
+              <p>Out: Ambient Pressure</p>
+              <p>25 m * 320 μm * 1μm</p>
+            </div>
+          </div>
+
+          <div class="w-100">
+            <h2 class="indicators-content-title">Control Mode</h2>
+            <fieldset class="field field-checkboxbtn">
+              <label>On
+                <input class="field-checkbox" type="checkbox" name="cntrl-checkbox" checked>
+                <span class="checkmark"></span>
+              </label>
+            </fieldset>
+
+            <div class="d-flex flex-wrap">
+              <fieldset class="w-50 field">
+                <label><span>Flow</span>
+                  <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                  mL/min
+                </label>
+              </fieldset>
+              <fieldset class="w-50 field">
+                <label><span>Average Velocity</span>
+                  <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="198.05">
+                  cm/sec
+                </label>
+              </fieldset>
+              <fieldset class="w-50 field">
+                <label><span>Pressure</span>
+                  <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="21.756">
+                  psi
+                </label>
+              </fieldset>
+              <fieldset class="w-50 field">
+                <label><span>Holdup Time</span>
+                  <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="0.21038">
+                  cm/sec
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="w-50">
+            <h2 class="indicators-content-title">Post Run</h2>
+            <fieldset class="w-50 field">
+              <label><span>Post Run</span>
+                <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                cm/sec
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <div class="w-50">
+          <div class="table">
+            <h2 class="indicators-content-title table-title">
+              Pressure/Flow Settings
+            </h2>
+            <form action="" class="table-form">
+              <div class="table-pressure">
+                <fieldset class="field field-radiobtn">
+                  <label>Constant Pressure
+                    <input class="field-radio" type="radio" name="pressure-radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="field field-radiobtn">
+                  <label>Ramped Pressure
+                    <input class="field-radio" type="radio" name="pressure-radio" checked>
+                    <span class="checkmark"></span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="field field-radiobtn">
+                  <label>Constant Flow
+                    <input class="field-radio" type="radio" name="pressure-radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </fieldset>
+
+                <fieldset class="field field-radiobtn">
+                  <label>Ramped Flow
+                    <input class="field-radio" type="radio" name="pressure-radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <table class="table-content">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Ramp ##</th>
+                    <th>Rate, mL/min per min</th>
+                    <th>Value, mL/min</th>
+                    <th>Hold Time, min</th>
+                    <th>Run Time, min</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>(Initial)</td>
+                    <td></td>
+                    <td>16.849</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <fieldset class="field field-radiobtn">
+                        <label>
+                          <input class="field-radio" type="radio" name="table-radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </fieldset>
+                    </td>
+                    <td>(Initial)</td>
+                    <td></td>
+                    <td>16.849</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <fieldset class="field field-radiobtn">
+                        <label>
+                          <input class="field-radio" type="radio" name="table-radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </fieldset>
+                    </td>
+                    <td>Ramp 1</td>
+                    <td>10</td>
+                    <td>16.849</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <fieldset class="field field-radiobtn">
+                        <label>
+                          <input class="field-radio" type="radio" name="table-radio">
+                          <span class="checkmark"></span>
+                        </label>
+                      </fieldset>
+                    </td>
+                    <td>Ramp 2</td>
+                    <td>20</td>
+                    <td>16.849</td>
+                    <td>5</td>
+                    <td>26</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button class="table-graph">
+                <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 1V11L5 6L9 9L14.5 1" stroke="white" />
+                  <path d="M0 12H15.5" stroke="white" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="indicators-footer card-footer d-flex align-ctr jc-between">
+      <div class="indicators-options">
+        <button class="indicators-new">
+          New
+        </button>
+        <button class="indicators-open">
+          Open
+        </button>
+      </div>
+      <div class="indicators-btns">
+        <button class="btn btn-pr">Save</button>
+        <button class="btn btn-pr">Save as</button>
+        <button class="btn btn-sec">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="inducators-item card w-56">
+    <div class="indicators-header card-header d-flex align-ctr">
+      <h2 class="indicators-title card-title uppercase">live Chart</h2>
+    </div>
+    <div class="indicators-body card-body chart d-flex">
+      <div class="chart-main">
+        <ul class="chart-legends">
+          <li class="chart-legend fw-500">Plot</li>
+          <li class="chart-legend fw-500">Plot</li>
+          <li class="chart-legend fw-500">Plot</li>
+        </ul>
+        <figure class="chart-graph">
+          <!-- <img src="./assets/images/live-chart.png" alt="live-chart"> -->
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="inducators-item card w-44">
+    <div class="indicators-header card-header d-flex align-ctr">
+      <h2 class="indicators-title card-title uppercase">SPECTRa</h2>
+    </div>
+  </div>
 </div>

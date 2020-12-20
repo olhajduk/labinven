@@ -2,66 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.ico">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
+  <meta name="theme-color" content="#ffffff">
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" href="./fonts/Roboto/stylesheet.css">
-    <link rel="stylesheet" href="./fonts/HelveticaNeueCyr/stylesheet.css">
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="./assets/fonts/Roboto/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/HelveticaNeueCyr/stylesheet.css">
 </head>
 
 <body>
-    <%= require('html-loader!./html/sidebar.html') %>
+  <%= require('html-loader!./html/sidebar.html') %>
 
-    <main class="main">
-        <%= require('html-loader!./html/header.html') %>
+  <main class="main">
+    <%= require('html-loader!./html/header.html') %>
 
-        <!-- TODO: fix path for files-->
-        <div class="content">
-            <aside class="content-sidebar inventory is-open">
-                <ul class="inventory-list">
-                  <li class="inventory-item card">
-                    <div class="card-header">
-                      <h2 class="card-title">
-                        Sampler
-                      </h2>
-                    </div>
-                    <div class="card-body">
-                      <figure class="card-figure">
-                        <!-- TODO: add svg from <use> -->
-                      </figure>
-                    </div>
-                  </li>
-                  <li class="inventory-item card">
-                    <div class="card-header">
-                      <h2 class="card-title">
-                        Quat. Pump
-                      </h2>
-                    </div>
-                    <div class="card-body">
-                      <figure class="card-figure">
-                        <!-- TODO: add svg from <use> -->
-                        <figcaption>
-                            1.000 mL/min
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </li>
-                </ul>
-              <button class="inventory-btn is-open"></button>
-              </aside>
-            <%= require('html-loader!./html/indicators.html') %>
-        </div>
-        
-    </main>
+    <!-- TODO: fix path for files-->
+    <div class="content">
+      <%= require('html-loader!./html/inventory.html') %>
+      <%= require('html-loader!./html/indicators.html') %>
+    </div>
 
+  </main>
     <div id="sprite" class="sprite">
         <img inline src="./../src/assets/images/sprite.svg" alt="">
     </div>
