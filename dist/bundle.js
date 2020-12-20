@@ -92,8 +92,8 @@ console.log('working!');
 document.addEventListener('DOMContentLoaded', function () {
   var burger = document.querySelector('.burger');
   var sidebar = document.querySelector('.sidebar');
-  var jobs = document.querySelector('.jobs');
-  var jobsBtn = document.querySelector('.jobs-btn');
+  var inventory = document.querySelector('.inventory');
+  var inventoryBtn = document.querySelector('.inventory-btn');
   var open = 'is-open';
   var close = 'is-close';
   burger.addEventListener('click', function () {
@@ -109,17 +109,17 @@ document.addEventListener('DOMContentLoaded', function () {
       sidebar.classList.add(open);
     }
   });
-  jobsBtn.addEventListener('click', function () {
-    if (jobsBtn.classList.contains(open)) {
-      jobs.classList.remove(open);
-      jobs.classList.add(close);
-      jobsBtn.classList.remove(open);
-      jobsBtn.classList.add(close);
-    } else if (jobsBtn.classList.contains(close)) {
-      jobs.classList.remove(close);
-      jobs.classList.add(open);
-      jobsBtn.classList.remove(close);
-      jobsBtn.classList.add(open);
+  inventoryBtn.addEventListener('click', function () {
+    if (inventoryBtn.classList.contains(open)) {
+      inventory.classList.remove(open);
+      inventory.classList.add(close);
+      inventoryBtn.classList.remove(open);
+      inventoryBtn.classList.add(close);
+    } else if (inventoryBtn.classList.contains(close)) {
+      inventory.classList.remove(close);
+      inventory.classList.add(open);
+      inventoryBtn.classList.remove(close);
+      inventoryBtn.classList.add(open);
     }
   });
 });
@@ -10063,6 +10063,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/svg/syringe.svg":
+/*!***************************************!*
+  !*** ./assets/images/svg/syringe.svg ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+      id: "syringe-usage",
+      viewBox: "0 0 55 106",
+      url: "./../src/assets/images/" + "sprite.svg#syringe",
+      toString: function () {
+        return this.url;
+      }
+    });
+
+/***/ }),
+
 /***/ "./assets/images/svg sync recursive \\.svg$":
 /*!****************************************!*
   !*** ./assets/images/svg/ sync \.svg$ ***!
@@ -10074,7 +10093,8 @@ var map = {
 	"./icon-lock.svg": "./assets/images/svg/icon-lock.svg",
 	"./icon-sampler.svg": "./assets/images/svg/icon-sampler.svg",
 	"./icon-user.svg": "./assets/images/svg/icon-user.svg",
-	"./icon-valve.svg": "./assets/images/svg/icon-valve.svg"
+	"./icon-valve.svg": "./assets/images/svg/icon-valve.svg",
+	"./syringe.svg": "./assets/images/svg/syringe.svg"
 };
 
 

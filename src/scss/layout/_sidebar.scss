@@ -107,7 +107,7 @@
 
     &-btn {
       @extend %clr-white;
-      @extend %d-flex-al-ctr;
+      @extend %d-flex-al-ctr-jc-ctr;
       @extend %uppercase;
       @extend %p-rel;
       @extend %tr-pr;
@@ -115,7 +115,6 @@
       @include font(rem(8px), normal);
       border: 1px solid $clr-btn-sec;
       height: rem(24px);
-      justify-content: center;
       margin-left: rem(9px);
       width: rem(24px);
 

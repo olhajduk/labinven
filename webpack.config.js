@@ -63,13 +63,14 @@ module.exports = {
         new HtmlWebpackInlineSVGPlugin(),
         new CopyWebpackPlugin({
             patterns: [{
-                from: path.resolve(__dirname, 'src/assets/fonts'),
-                to: path.resolve(__dirname, 'dist/fonts')
-            },
-            {
-                from: path.resolve(__dirname, 'src/assets/images/png'),
-                to: path.resolve(__dirname, 'dist/images')
-            }],
+                    from: path.resolve(__dirname, 'src/assets/fonts'),
+                    to: path.resolve(__dirname, 'dist/fonts')
+                },
+                {
+                    from: path.resolve(__dirname, 'src/assets/images/png'),
+                    to: path.resolve(__dirname, 'dist/images')
+                }
+            ],
         }),
         new MiniCssExtractPlugin({
             filename: filename('css')

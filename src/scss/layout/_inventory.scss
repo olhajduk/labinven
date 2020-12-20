@@ -1,0 +1,105 @@
+.inventory {
+  @extend %p-rel;
+  box-shadow: $bs-inventory;
+  margin-left: rem(-3px);
+  margin-top: rem(-7px);
+  padding: rem(23px) rem(19px) rem(23px) rem(20px);
+  z-index: 0;
+
+  &-btn {
+    @extend %p-abs;
+    @extend %d-flex-al-ctr;
+    @extend %brr-50;
+    @extend %tr-pr;
+    @extend %bg-pr;
+    border: 1px solid transparent;
+    box-shadow: $bs-inventory-btn;
+    height: rem(30px);
+    right: rem(-15px);
+    top: rem(37px);
+    width: rem(30px);
+
+    &:hover {
+      border-color: $clr-br-pr;
+      box-shadow: none;
+    }
+  }
+
+  &.is-close &-list {
+    transform: translateX(-100%);
+  }
+
+  &-list {
+    @extend %tr-pr;
+    overflow-x: hidden;
+    padding-bottom: rem(5px);
+
+    * {
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
+  }
+
+  .card {
+    @extend %pointer;
+    @extend %tr-pr;
+
+    &:hover {
+      box-shadow: $bs-inventory-btn;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(16px);
+    }
+
+    &-header {
+      padding: rem(10px) rem(6px);
+    }
+
+    &-title {
+      @extend %d-inline-block;
+      text-transform: none;
+
+      &::before {
+        @extend %content;
+        @extend %d-inline-block;
+        height: rem(10px);
+        margin-right: rem(7px);
+        width: rem(10px);
+      }
+    }
+
+    &:first-child {
+      h2 {
+        &::before {
+          background-color: $clr-bg-inventory-card-1chld;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      h2 {
+        &::before {
+          background-color: $clr-bg-inventory-card-2chld;
+        }
+      }
+    }
+
+    &-body {
+      height: rem(150px);
+    }
+
+    &-figure {
+      @extend %h-100;
+      @extend %d-flex-al-ctr-jc-ctr;
+      text-align: center;
+
+      figcaption {
+        @include font(rem(12px), normal);
+        color: $clr-bg-side-hdr;
+        margin-bottom: 13px;
+        margin-top: auto;
+      }
+    }
+  }
+}

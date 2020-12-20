@@ -29,6 +29,10 @@
   display: none;
 }
 
+%d-inline-block {
+  display: inline-block;
+}
+
 %d-flex {
   display: flex;
 }
@@ -36,6 +40,11 @@
 %d-flex-al-ctr {
   @extend %d-flex;
   align-items: center;
+}
+
+%d-flex-al-ctr-jc-ctr {
+  @extend %d-flex-al-ctr;
+  justify-content: center;
 }
 
 %ov-h-ws-n {
@@ -78,9 +87,10 @@
 
 // other
 %h-hdr-sdbr {
-  height: rem(50px);
+  height: #{$height};
 }
 
+// border
 %br-0 {
   border: 0;
 }
@@ -89,7 +99,16 @@
   border-radius: 50%;
 }
 
+// background
 %bg-none-br-0 {
   @extend %br-0;
   background: none;
+}
+
+%bg-pr {
+  background-color: $clr-bg-pr;
+}
+
+%bg-sec {
+  background-color: $clr-bg-sec;
 }

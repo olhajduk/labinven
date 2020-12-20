@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger')
   const sidebar = document.querySelector('.sidebar')
 
-  const jobs = document.querySelector('.jobs')
-  const jobsBtn = document.querySelector('.jobs-btn')
+  const inventory = document.querySelector('.inventory')
+  const inventoryBtn = document.querySelector('.inventory-btn')
 
   const open = 'is-open'
   const close = 'is-close'
@@ -24,19 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  jobsBtn.addEventListener('click', function() {
-    if (jobsBtn.classList.contains(open)) {
-      jobs.classList.remove(open)
-      jobs.classList.add(close)
+  inventoryBtn.addEventListener('click', function() {
+    if (inventoryBtn.classList.contains(open)) {
+      inventory.classList.remove(open)
+      inventory.classList.add(close)
 
-      jobsBtn.classList.remove(open)
-      jobsBtn.classList.add(close)
-    } else if (jobsBtn.classList.contains(close)) {
-      jobs.classList.remove(close)
-      jobs.classList.add(open)
+      inventoryBtn.classList.remove(open)
+      inventoryBtn.classList.add(close)
+    } else if (inventoryBtn.classList.contains(close)) {
+      inventory.classList.remove(close)
+      inventory.classList.add(open)
 
-      jobsBtn.classList.remove(close)
-      jobsBtn.classList.add(open)
+      inventoryBtn.classList.remove(close)
+      inventoryBtn.classList.add(open)
     }
   });
 });

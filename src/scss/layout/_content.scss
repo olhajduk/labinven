@@ -1,17 +1,21 @@
 .content {
   @extend %d-flex;
-  @extend %h-100;
+  height: calc(100% - #{$height});
 
   &-sidebar {
     @extend %tr-pr;
 
     &.is-open {
       min-width: rem(228px);
+      // overflow: auto;
       width: rem(228px);
     }
 
     &.is-close {
       min-width: 0;
+      // overflow: hidden;
+      padding-left: 0;
+      padding-right: 0;
       width: 0;
     }
   }

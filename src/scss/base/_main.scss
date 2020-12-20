@@ -19,14 +19,22 @@ html {
 body {
   @extend %d-flex;
   @extend %h-100;
+  @extend %bg-pr;
   @include font(rem(14px), 1.5);
-  background-color: $clr-bg-pr;
   color: $clr-txt-pr;
   font-family: $font-pr;
   font-weight: 400;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @extend %m-0;
+}
+
+h2 {
+  font-size: inherit;
 }
 
 ul {

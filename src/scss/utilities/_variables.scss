@@ -33,7 +33,14 @@ $clr-br-pr: #bfc2c4;
 $clr-status-on: #14741b;
 $clr-status-off: #8c9092;
 
+$clr-bg-inventory-card-1chld: #1a9022;
+$clr-bg-inventory-card-2chld: #f5ad3c;
+
 // box-shadows
 $bs-hdr: 1px 2px 2px rgba(4, 4, 4, .09);
-$bs-jobs: inset 0 3px 7px rgba(0, 0, 0, .35);
-$bs-jobs-btn: 1px 1px 2px rgba(0, 0, 0, .3);
+$bs-inventory: inset 0 3px 7px rgba(0, 0, 0, .35);
+$bs-inventory-btn: 1px 1px 2px rgba(0, 0, 0, .3);
+
+
+// frequently repeated values
+$height: rem(50px);
