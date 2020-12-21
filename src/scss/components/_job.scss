@@ -1,0 +1,50 @@
+.job {
+  @extend %fw-500;
+  font-size: 10px;
+  letter-spacing: .2px;
+
+  figure {
+    @extend %d-flex-al-ctr-jc-ctr;
+    height: 43px;
+  }
+
+  li+li {
+    @extend %p-rel;
+    margin-left: 48px;
+
+    &::before,
+    &::after {
+      @extend %p-abs;
+    }
+
+    &::before {
+      content: '\2197';
+      top: 27px;
+    left: -30px;
+    font-size: 25px;
+    color: $clr-txt-sec;
+    transform: rotate(45deg);
+    font-weight: 300;
+    }
+
+    &::after {
+      @extend %content;
+    }
+  }
+
+  &-item {
+    // @extend %d-flex-al-ctr;
+
+  }
+
+  &-name {
+    color: rgba($clr-txt-sec, .5);
+    margin-bottom: 10px;
+  }
+
+  &-capture {
+    @extend %ff-sec;
+    color: $clr-txt-sec;
+    padding-top: 10px;
+  }
+}

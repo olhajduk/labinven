@@ -1,3 +1,4 @@
+@charset "UTF-8";
 fieldset, h1, *, *::after, *::before, .m-0 {
   margin: 0;
 }
@@ -10,11 +11,11 @@ fieldset, h1, *, *::after, *::before, .m-0 {
   padding: 0;
 }
 
-table tr > *:first-child, .table, .custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-tab.active, .indicators-btn, .inventory, .header {
+.job li + li, .chart-main, .chart-legend, table tr > *:first-child, .table, .custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .indicators-tab.active, .indicators-btn, .inventory, .header {
   position: relative;
 }
 
-table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
+.job li + li::before, .job li + li::after, .chart-options, .chart-legend::before, .chart-legend::after, table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
   position: absolute;
 }
 
@@ -26,7 +27,7 @@ table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .bur
   width: 50%;
 }
 
-.table, .sidebar-progress-bar, .indicators-body, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
+.table, .sidebar-progress-bar, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -42,19 +43,19 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   display: inline-block;
 }
 
-.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .sidebar-status-btn, .inventory .card-figure {
+.chart-option, .chart-options, .custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .chart-graph, .burger, .card-header, .user, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .job figure, .sidebar-status-btn, .inventory .card-figure {
   display: flex;
 }
 
-.sidebar, .indicators-btn, .flex-d-col {
+.chart-options, .sidebar, .indicators-btn, .flex-d-col {
   flex-direction: column;
 }
 
-.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .indicators-btn, .align-ctr, .chart-graph, .burger, .card-header, .user, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .job figure, .sidebar-status-btn, .inventory .card-figure {
   align-items: center;
 }
 
-.custominput-mark, .jc-ctr, .table-graph, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .jc-ctr, .job figure, .table-graph, .sidebar-status-btn, .inventory .card-figure {
   justify-content: center;
 }
 
@@ -66,12 +67,16 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   color: #2574a9;
 }
 
-.menu-lang, .card-title, .sidebar-status-btn, .sidebar-status-name, .sidebar-title, .uppercase {
+.card-title, .menu-lang, .sidebar-status-btn, .sidebar-status-name, .sidebar-title, .uppercase {
   text-transform: uppercase;
 }
 
-.card-title, .sidebar-search input, .sidebar-title, .fw-500 {
+.job, .card-title, .sidebar-search input, .sidebar-title, .fw-500 {
   font-weight: 500;
+}
+
+table th, h2, body, .fw-400 {
+  font-weight: 400;
 }
 
 .header-item {
@@ -90,15 +95,15 @@ table td:nth-child(2), table thead, .btn, .inventory .card-figure, .txt-ctr {
   white-space: nowrap;
 }
 
-.custominput-mark, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .indicators-worklist-btn, .inventory .card, .inventory-list, .content-sidebar, button, a {
+.chart-options, .custominput-mark, .custominput, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .indicators-worklist-btn, .inventory .card, .inventory-list, .content-sidebar, button, a {
   transition: 0.25s ease-in-out;
 }
 
-.custominput, button, .burger, .menu, .inventory .card {
+.chart-option, .custominput, button, .burger, .menu, .inventory .card {
   cursor: pointer;
 }
 
-.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab.active::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
+.job li + li::after, .chart-legend::before, .chart-legend::after, .custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab.active::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
   content: "";
 }
 
@@ -110,7 +115,7 @@ fieldset, .visuallyhidden, .field-input, button {
   border: 0;
 }
 
-.sidebar-status-btn::after, .sidebar-status-btn, .chart-legend::before, .indicators-open::after, .indicators-btn::before, .table-graph, .inventory-btn {
+.chart-legend::before, .sidebar-status-btn::after, .sidebar-status-btn, .indicators-open::after, .indicators-btn::before, .table-graph, .inventory-btn {
   border-radius: 50%;
 }
 
@@ -130,11 +135,7 @@ fieldset, .visuallyhidden, .field-input, button {
   background-color: #fff;
 }
 
-.sidebar-search input:-ms-input-placeholder {
-  color: #2f3b4c;
-}
-
-input:not([type=search]), .card-header, .sidebar-progress, .sidebar-search input, .sidebar-search input::placeholder, .chart-legend, .indicators-content-title, .indicators-tabs, .clr-darkest {
+.chart-legend, input:not([type=search]), .card-header, .sidebar-progress, .sidebar-search input, .sidebar-search input::placeholder, .indicators-content-title, .indicators-tabs, .clr-darkest {
   color: #2f3b4c;
 }
 
@@ -142,7 +143,7 @@ input:not([type=search]), .card-header, .sidebar-progress, .sidebar-search input
   font-family: "Roboto", sans-serif;
 }
 
-table tr > *, input:not([type=search]), .btn, .indicators .field, .indicators-content-title, .indicators-tabs, .ff-sec {
+.job-capture, table tr > *, input:not([type=search]), .btn, .indicators .field, .indicators-content-title, .indicators-tabs, .ff-sec {
   font-family: "HelveticaNeueCyr", sans-serif;
 }
 
@@ -215,8 +216,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -573,7 +573,6 @@ body {
   line-height: 1.5;
   color: #727272;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -581,7 +580,6 @@ body {
 
 h2 {
   font-size: inherit;
-  font-weight: 400;
 }
 
 ul {
@@ -720,7 +718,7 @@ a {
   min-width: 172px;
 }
 .indicators-item:nth-child(2) {
-  flex: 1.2;
+  flex: 13%;
 }
 .indicators-item:nth-child(3) {
   flex: 1;
@@ -807,6 +805,9 @@ a {
   top: 0;
   width: 2px;
 }
+.indicators-body {
+  height: calc(100% - 46px);
+}
 .indicators-content > div:first-child {
   border-right: 1px solid #bdc9d1;
 }
@@ -837,39 +838,6 @@ a {
 }
 .indicators .field-value {
   margin-left: 5px;
-}
-
-.chart-legends {
-  border-bottom: 1px solid #ebf2f4;
-  padding: 10px 16px 11px;
-}
-.chart-legend {
-  font-size: 14px;
-  line-height: normal;
-  margin-right: 30px;
-  padding-left: 26px;
-}
-.chart-legend::before, .chart-legend::after {
-  left: 0;
-}
-.chart-legend::before {
-  height: 9px;
-  left: 5px;
-  width: 9px;
-}
-.chart-legend::after {
-  height: 1px;
-  left: 0;
-  width: 19px;
-}
-.chart-legend:first-child::before, .chart-legend:first-child::after {
-  background-color: #1ba39c;
-}
-.chart-legend:nth-child(2)::before, .chart-legend:nth-child(2)::after {
-  background-color: #913d88;
-}
-.chart-legend:nth-child(3)::before, .chart-legend:nth-child(3)::after {
-  background-color: #f5ad3c;
 }
 
 .sidebar-status, .sidebar-progress-status, .sidebar-search input {
@@ -979,23 +947,6 @@ a {
     width: 100%;
   }
 }
-.card {
-  border: 1px solid #bfc2c4;
-}
-.card-header {
-  font-size: 16px;
-  line-height: normal;
-  border-bottom: 1px solid #bfc2c4;
-  height: 46px;
-}
-.card-title {
-  padding: 0 17px;
-}
-.card-footer {
-  border-top: 1px solid #bfc2c4;
-  padding: 8px 15px 8px 26px;
-}
-
 .icon-user {
   height: 30px;
   width: 30px;
@@ -1055,6 +1006,23 @@ a {
   transform: translateY(0);
   visibility: visible;
 }
+.card {
+  border: 1px solid #bfc2c4;
+}
+.card-header {
+  font-size: 16px;
+  line-height: normal;
+  border-bottom: 1px solid #bfc2c4;
+  height: 46px;
+}
+.card-title {
+  padding: 0 17px;
+}
+.card-footer {
+  border-top: 1px solid #bfc2c4;
+  padding: 8px 15px 8px 26px;
+}
+
 .burger {
   height: 15px;
   width: 20px;
@@ -1133,9 +1101,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .custominput {
   font-size: 12px;
   padding-left: 24px;
-  -webkit-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
+}
+.custominput:hover .custominput-mark {
+  border-color: #2f3b4c;
 }
 .custominput input {
   display: none;
@@ -1210,7 +1179,6 @@ table tbody td:nth-child(n+3) {
   text-align: right;
 }
 table th {
-  font-weight: 400;
   padding: 5px 0 1px;
 }
 table tr > * {
@@ -1229,6 +1197,84 @@ table td:nth-child(2) {
 }
 table td:nth-child(3) {
   width: 134px;
+}
+
+.chart-legends {
+  border-bottom: 1px solid #ebf2f4;
+  padding: 10px 66px 11px 16px;
+}
+.chart-legend {
+  font-size: 14px;
+  line-height: normal;
+  margin-right: 30px;
+  padding-left: 26px;
+}
+.chart-legend::before, .chart-legend::after {
+  left: 0;
+}
+.chart-legend::before {
+  height: 9px;
+  left: 5px;
+  width: 9px;
+}
+.chart-legend::after {
+  height: 1px;
+  left: 0;
+  width: 19px;
+}
+.chart-legend:first-child::before, .chart-legend:first-child::after {
+  background-color: #1ba39c;
+}
+.chart-legend:nth-child(2)::before, .chart-legend:nth-child(2)::after {
+  background-color: #913d88;
+}
+.chart-legend:nth-child(3)::before, .chart-legend:nth-child(3)::after {
+  background-color: #f5ad3c;
+}
+.chart-options {
+  background: #fff;
+  border-left: 1px solid #ebf2f4;
+  height: 100%;
+  padding: 10px;
+  right: 0;
+  top: 0;
+}
+.chart-option {
+  margin-bottom: 10px;
+}
+.chart-option:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.chart-graph {
+  margin: 63px 92px 19px 19px;
+}
+
+.job {
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+.job figure {
+  height: 43px;
+}
+.job li + li {
+  margin-left: 48px;
+}
+.job li + li::before {
+  content: "↗";
+  top: 27px;
+  left: -30px;
+  font-size: 25px;
+  color: #2f3b4c;
+  transform: rotate(45deg);
+  font-weight: 300;
+}
+.job-name {
+  color: rgba(47, 59, 76, 0.5);
+  margin-bottom: 10px;
+}
+.job-capture {
+  color: #2f3b4c;
+  padding-top: 10px;
 }
 
 /*# sourceMappingURL=bundle.css.map*/

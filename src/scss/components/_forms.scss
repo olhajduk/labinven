@@ -62,9 +62,14 @@ input {
   @extend %align-ctr;
   @extend %p-rel;
   @extend %pointer;
+  @extend %tr-pr;
   font-size: 12px;
   padding-left: 24px;
   user-select: none;
+
+  &:hover &-mark {
+    border-color: $clr-txt-sec;
+  }
 
   input {
     display: none;

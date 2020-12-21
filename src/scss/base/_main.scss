@@ -23,7 +23,7 @@ body {
   @include font(14px, 1.5);
   color: $clr-txt-pr;
   font-family: $font-pr;
-  font-weight: 400;
+  @extend %fw-400;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -35,7 +35,7 @@ h1 {
 
 h2 {
   font-size: inherit;
-  font-weight: 400;
+  @extend %fw-400;
 }
 
 ul {

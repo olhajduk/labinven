@@ -7,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
-const autoprefixer = require('autoprefixer')
 
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
@@ -106,19 +105,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    [
-                                        // FIXME: doesn't work
-                                        autoprefixer
-                                    ]
-                                ]
-                            }
-                        }
-                    },
+                    'postcss-loader',
                     'sass-loader'
                 ]
             },

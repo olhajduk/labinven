@@ -63,7 +63,7 @@ table {
   }
 
   th {
-    font-weight: 400;
+    @extend %fw-400;
     padding: 5px 0 1px;
   }
 
