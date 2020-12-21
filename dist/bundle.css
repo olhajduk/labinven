@@ -75,7 +75,7 @@ fieldset, h1, *, *::after, *::before {
   color: #fff;
 }
 
-.inventory .card-figure, .txt-ctr {
+.btn, .inventory .card-figure, .txt-ctr {
   text-align: center;
 }
 
@@ -659,6 +659,9 @@ a {
   height: 0.25rem;
   width: 0.25rem;
 }
+.indicators-btns button:not(:first-child) {
+  margin-left: 10px;
+}
 
 .chart-legends {
   border-bottom: 1px solid #ebf2f4;
@@ -916,6 +919,31 @@ a {
 }
 .burger:hover div, .burger:hover div::before, .burger:hover div::after {
   background-color: #2f3b4c;
+}
+
+.btn {
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #11a9ec;
+  border-radius: 15px;
+  min-width: 95px;
+  padding: 6px 22px 7px;
+}
+.btn-pr {
+  background-color: #12a9eb;
+  color: #fff;
+}
+.btn-pr:hover {
+  background-color: #fff;
+  color: #12a9eb;
+}
+.btn-sec {
+  background-color: #fff;
+  color: #12a9eb;
+}
+.btn-sec:hover {
+  background-color: #12a9eb;
+  color: #fff;
 }
 
 /*# sourceMappingURL=bundle.css.map*/
