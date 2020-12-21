@@ -10,11 +10,11 @@ fieldset, h1, *, *::after, *::before {
   padding: 0;
 }
 
-.custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-btn, .inventory, .header {
+.custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-tab.active, .indicators-btn, .inventory, .header {
   position: relative;
 }
 
-.custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
+.custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
   position: absolute;
 }
 
@@ -26,7 +26,7 @@ fieldset, h1, *, *::after, *::before {
   width: 50%;
 }
 
-.sidebar-progress-bar, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
+.sidebar-progress-bar, .indicators-body, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -34,7 +34,7 @@ fieldset, h1, *, *::after, *::before {
   display: none;
 }
 
-input:checked ~ .custominput-mark::after {
+input:checked ~ .custominput-mark::after, .indicators-tab a {
   display: block;
 }
 
@@ -95,7 +95,7 @@ input:checked ~ .custominput-mark::after {
   cursor: pointer;
 }
 
-.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
+.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-tab.active::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
   content: "";
 }
 
@@ -115,19 +115,23 @@ fieldset, .visuallyhidden, .field-input, button {
   background: none;
 }
 
-.indicators-worklist, .indicators-status, .inventory-btn, body {
+.indicators-tabs, .indicators-worklist, .indicators-status, .inventory-btn, body {
   background-color: #f1f3f2;
 }
 
-.card {
+.card, .indicators-tab.active {
   background-color: #fff;
 }
 
-.clr-darkest {
+.sidebar-search input:-ms-input-placeholder {
   color: #2f3b4c;
 }
 
-input:not([type=search]), .btn, .ff-sec {
+input:not([type=search]), .card-header, .sidebar-progress, .sidebar-search input, .sidebar-search input::placeholder, .chart-legend, .indicators-tabs, .clr-darkest {
+  color: #2f3b4c;
+}
+
+input:not([type=search]), .btn, .indicators-tabs, .ff-sec {
   font-family: "HelveticaNeueCyr", sans-serif;
 }
 
@@ -711,7 +715,25 @@ a {
 .indicators-method-name {
   margin-left: 8px;
 }
-
+.indicators-tabs {
+  border-right: 1px solid #bfc2c4;
+  font-size: 13px;
+  min-width: 150px;
+  width: 150px;
+}
+.indicators-tab {
+  border-bottom: 1px solid #bfc2c4;
+}
+.indicators-tab a {
+  padding: 10px 15px 7px;
+}
+.indicators-tab.active::after {
+  background-color: #fff;
+  height: 101%;
+  right: -2px;
+  top: 0;
+  width: 2px;
+}
 .chart-legends {
   border-bottom: 1px solid #ebf2f4;
   padding: 10px 16px 11px;
@@ -719,7 +741,6 @@ a {
 .chart-legend {
   font-size: 14px;
   line-height: normal;
-  color: #2f3b4c;
   margin-right: 30px;
   padding-left: 26px;
 }
@@ -780,12 +801,6 @@ a {
   padding-bottom: 11px;
   padding-top: 14px;
 }
-.sidebar-search input:-ms-input-placeholder {
-  color: #2f3b4c;
-}
-.sidebar-search input, .sidebar-search input::placeholder {
-  color: #2f3b4c;
-}
 .sidebar-search input:hover, .sidebar-search input:focus {
   border-color: #2f3b4c;
 }
@@ -793,7 +808,6 @@ a {
   font-size: 12px;
   line-height: normal;
   background-color: #d5d9db;
-  color: #2f3b4c;
 }
 .sidebar-progress-status {
   border-right: 1px solid #cfd7dc;
@@ -867,7 +881,6 @@ a {
   font-size: 16px;
   line-height: normal;
   border-bottom: 1px solid #bfc2c4;
-  color: #2f3b4c;
   height: 46px;
 }
 .card-title {
@@ -998,7 +1011,6 @@ input:not([type=search]) {
   font-size: 11px;
   line-height: normal;
   border: 1px solid #bfc2c4;
-  color: #2f3b4c;
   max-width: 65px;
   padding: 7px 0 5px 12px;
 }

@@ -12,10 +12,10 @@ input {
   @extend %tr-pr;
 
   &:not([type='search']) {
+    @extend %clr-darkest;
     @extend %ff-sec;
     @include font(11px, normal);
     border: 1px solid $clr-br-pr;
-    color: $clr-txt-sec;
     max-width: 65px;
     padding: 7px 0 5px 12px;
 

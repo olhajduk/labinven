@@ -138,6 +138,44 @@
       margin-left: 8px;
     }
   }
+
+  &-tabs {
+    @extend %bg-pr;
+    @extend %ff-sec;
+    @extend %clr-darkest;
+    border-right: 1px solid $clr-br-pr;
+    font-size: 13px;
+    min-width: 150px;
+    width: 150px;
+  }
+
+  &-tab {
+    border-bottom: 1px solid $clr-br-pr;
+
+    a {
+      @extend %d-block;
+      padding: 10px 15px 7px;
+    }
+
+    &.active {
+      @extend %p-rel;
+      @extend %bg-sec;
+
+      &::after {
+        @extend %p-abs;
+        @extend %content;
+        background-color: $clr-bg-sec;
+        height: 101%;
+        right: -2px;
+        top: 0;
+        width: 2px;
+      }
+    }
+  }
+
+  &-body {
+    @extend %h-100;
+  }
 }
 
 .chart {
@@ -147,9 +185,9 @@
   }
 
   &-legend {
+    @extend %clr-darkest;
     @extend %p-rel;
     @include font(14px, normal);
-    color: $clr-txt-sec;
     margin-right: 30px;
     padding-left: 26px;
 

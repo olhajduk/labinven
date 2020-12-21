@@ -3,10 +3,10 @@
   border: 1px solid $clr-br-pr;
 
   &-header {
+    @extend %clr-darkest;
     @extend %d-flex-al-ctr;
     @include font(16px, normal);
     border-bottom: 1px solid $clr-br-pr;
-    color: $clr-txt-sec;
     height: 46px;
   }
 

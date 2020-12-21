@@ -50,7 +50,7 @@
 
       &,
       &::placeholder {
-        color: $clr-txt-sec;
+        @extend %clr-darkest;
       }
 
       &:hover,
@@ -68,7 +68,7 @@
     @extend %p-rel;
     @include font(12px, normal);
     background-color: $clr-bg-side-run-pr;
-    color: $clr-txt-sec;
+    @extend %clr-darkest;
 
     &-status {
       @extend %d-flex;
