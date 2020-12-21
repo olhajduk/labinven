@@ -6,7 +6,7 @@ fieldset, h1, *, *::after, *::before {
   margin-top: auto;
 }
 
-.visuallyhidden, *, *::after, *::before {
+.visuallyhidden, *, *::after, *::before, .p-0 {
   padding: 0;
 }
 
@@ -26,7 +26,7 @@ fieldset, h1, *, *::after, *::before {
   width: 50%;
 }
 
-.sidebar-progress-bar, .inventory .card-figure, .header-item > a, .header-item, body {
+.sidebar-progress-bar, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -38,11 +38,11 @@ input:checked ~ .custominput-mark::after {
   display: block;
 }
 
-.inventory .card-title::before, .inventory .card-title {
+.indicators-worklist-btn::before, .inventory .card-title::before, .inventory .card-title {
   display: inline-block;
 }
 
-.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   display: flex;
 }
 
@@ -50,7 +50,7 @@ input:checked ~ .custominput-mark::after {
   flex-direction: column;
 }
 
-.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   align-items: center;
 }
 
@@ -71,8 +71,12 @@ input:checked ~ .custominput-mark::after {
   text-transform: uppercase;
 }
 
-.sidebar-search input, .sidebar-title, .fw-500 {
+.card-title, .sidebar-search input, .sidebar-title, .fw-500 {
   font-weight: 500;
+}
+
+.header-item {
+  font-weight: 300;
 }
 
 .sidebar-status-btn, .sidebar-status-name, .sidebar-title {
@@ -83,7 +87,7 @@ input:checked ~ .custominput-mark::after {
   text-align: center;
 }
 
-.custominput-mark, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .inventory .card, .inventory-list, .content-sidebar, button, a {
+.custominput-mark, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .indicators-worklist-btn, .inventory .card, .inventory-list, .content-sidebar, button, a {
   transition: 0.25s ease-in-out;
 }
 
@@ -91,7 +95,7 @@ input:checked ~ .custominput-mark::after {
   cursor: pointer;
 }
 
-.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
+.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
   content: "";
 }
 
@@ -111,7 +115,7 @@ fieldset, .visuallyhidden, .field-input, button {
   background: none;
 }
 
-.inventory-btn, body {
+.indicators-worklist, .indicators-status, .inventory-btn, body {
   background-color: #f1f3f2;
 }
 
@@ -498,6 +502,7 @@ body {
 
 h2 {
   font-size: inherit;
+  font-weight: 400;
 }
 
 ul {
@@ -590,16 +595,17 @@ a {
   margin-bottom: 16px;
 }
 .inventory .card-header {
-  padding: 10px 6px;
+  height: 30px;
 }
 .inventory .card-title {
   font-size: 14px;
   line-height: normal;
+  padding: 0 6px;
   text-transform: none;
 }
 .inventory .card-title::before {
   height: 10px;
-  margin-right: 7px;
+  margin-right: 3px;
   width: 10px;
 }
 .inventory .card:first-child h2::before {
@@ -609,7 +615,7 @@ a {
   background-color: #f5ad3c;
 }
 .inventory .card-body {
-  height: 150px;
+  height: 159px;
 }
 .inventory .card-figure figcaption {
   font-size: 12px;
@@ -626,6 +632,15 @@ a {
 }
 .indicators-item:first-child {
   flex: 100%;
+}
+.indicators-item:first-child .indicators-header > div {
+  border-right: 1px solid #bdc9d1;
+  font-size: 14px;
+  padding-left: 17px;
+  padding-right: 40px;
+}
+.indicators-item:first-child .indicators-header > div:last-child {
+  min-width: 172px;
 }
 .indicators-item:nth-child(2) {
   flex: 1.2;
@@ -668,6 +683,33 @@ a {
 }
 .indicators-btns button:not(:first-child) {
   margin-left: 10px;
+}
+.indicators-worklist-title {
+  margin-right: 14px;
+}
+.indicators-worklist-btn {
+  color: #2574a9;
+  font-weight: 600;
+  margin-right: 27px;
+}
+.indicators-worklist-btn::before {
+  border-color: transparent transparent transparent currentColor;
+  border-style: solid;
+  border-width: 6px 0 6px 10.4px;
+  height: 0;
+  width: 0;
+}
+.indicators-worklist-btn:hover {
+  color: #12a9eb;
+}
+.indicators-worklist-todo {
+  margin-right: 35px;
+}
+.indicators-worklist-todo span {
+  margin-left: 4px;
+}
+.indicators-method-name {
+  margin-left: 8px;
 }
 
 .chart-legends {
@@ -822,15 +864,14 @@ a {
   border: 1px solid #bfc2c4;
 }
 .card-header {
-  font-size: 14px;
+  font-size: 16px;
   line-height: normal;
   border-bottom: 1px solid #bfc2c4;
   color: #2f3b4c;
-  padding: 18px 17px;
+  height: 46px;
 }
 .card-title {
-  font-size: 14px;
-  line-height: normal;
+  padding: 0 17px;
 }
 .card-footer {
   border-top: 1px solid #bfc2c4;
@@ -934,7 +975,7 @@ a {
   border: 1px solid #11a9ec;
   border-radius: 15px;
   min-width: 95px;
-  padding: 6px 22px 7px;
+  padding: 9px 22px 6px;
 }
 .btn-pr {
   background-color: #12a9eb;
@@ -959,7 +1000,7 @@ input:not([type=search]) {
   border: 1px solid #bfc2c4;
   color: #2f3b4c;
   max-width: 65px;
-  padding: 6px 12px;
+  padding: 7px 0 5px 12px;
 }
 input:not([type=search]):hover, input:not([type=search]):focus {
   border-color: #2574a9;

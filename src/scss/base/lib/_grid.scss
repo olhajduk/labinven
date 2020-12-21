@@ -1,0 +1,24 @@
+// grid
+.d-flex {
+  @extend %d-flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-d-col {
+  @extend %flex-d-col;
+}
+
+.align-ctr {
+  @extend %align-ctr;
+}
+
+.jc-ctr {
+  @extend %jc-ctr;
+}
+
+.jc-between {
+  justify-content: space-between;
+}

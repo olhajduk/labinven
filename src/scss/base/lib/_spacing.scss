@@ -1,0 +1,26 @@
+// margin
+.mt-auto {
+  @extend %mt-auto;
+}
+
+.mr-66 {
+  margin-right: 66px;
+}
+
+// padding
+.p-0 {
+  @extend %p-0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+// width & height
+.w-100 {
+  @extend %w-100;
+}
+
+.w-50 {
+  @extend %w-50;
+}

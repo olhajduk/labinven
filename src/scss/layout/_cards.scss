@@ -3,15 +3,17 @@
   border: 1px solid $clr-br-pr;
 
   &-header {
-    @include font(14px, normal);
+    @extend %d-flex-al-ctr;
+    @include font(16px, normal);
     border-bottom: 1px solid $clr-br-pr;
     color: $clr-txt-sec;
-    padding: 18px 17px;
+    height: 46px;
   }
 
   &-title {
     @extend %uppercase;
-    @include font(14px, normal);
+    @extend %fw-500;
+    padding: 0 17px;
   }
 
   &-footer {

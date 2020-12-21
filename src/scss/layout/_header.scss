@@ -38,6 +38,7 @@
 
   &-item {
     @extend %h-100;
+    @extend %fw-300;
 
     &>a {
       @extend %h-100;

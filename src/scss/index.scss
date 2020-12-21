@@ -4,14 +4,18 @@
 @import './utilities/extends';
 
 @import './base/normalize';
-@import './base/grid';
+
+@import './base/lib/spacing';
+@import './base/lib/grid';
+@import './base/lib/text';
+@import './base/lib/colors';
+
 @import './base/main';
-@import './base/breakpoints';
 
 @import './layout/header';
 @import './layout/content';
 @import './layout/inventory';
-@import './layout/inducators';
+@import './layout/indicators';
 @import './layout/sidebar';
 @import './layout/cards';
 

@@ -52,19 +52,20 @@
     }
 
     &-header {
-      padding: 10px 6px;
+      height: 30px;
     }
 
     &-title {
       @extend %d-inline-block;
       @include font(14px, normal);
+      padding: 0 6px;
       text-transform: none;
 
       &::before {
         @extend %content;
         @extend %d-inline-block;
         height: 10px;
-        margin-right: 7px;
+        margin-right: 3px;
         width: 10px;
       }
     }
@@ -86,7 +87,7 @@
     }
 
     &-body {
-      height: 150px;
+      height: 159px;
     }
 
     &-figure {
