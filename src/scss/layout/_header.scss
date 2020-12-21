@@ -1,15 +1,15 @@
 .header {
   @extend %p-rel;
   @extend %d-flex-al-ctr;
-  @include font(rem(17px), rem(35.42px));
+  @include font(17px, 35.42px);
   $h: &;
   background-color: $clr-bg-sec;
   box-shadow: $bs-hdr;
-  padding: 0 rem(16px);
+  padding: 0 16px;
   z-index: 1;
 
   &-burger {
-    margin-right: rem(20px);
+    margin-right: 20px;
   }
 
   &-list {
@@ -19,7 +19,7 @@
 
   &-nav {
     #{$h}-item {
-      margin: 0 rem(35px);
+      margin: 0 35px;
     }
   }
 
@@ -28,7 +28,7 @@
 
     #{$h}-item {
       border-left: 1px solid $clr-br-hdr;
-      padding: 0 rem(24px);
+      padding: 0 24px;
 
       &:last-child {
         padding-right: 0;

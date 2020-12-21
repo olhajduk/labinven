@@ -1,9 +1,9 @@
 .inventory {
   @extend %p-rel;
   box-shadow: $bs-inventory;
-  margin-left: rem(-3px);
-  margin-top: rem(-7px);
-  padding: rem(23px) rem(19px) rem(23px) rem(20px);
+  margin-left: -3px;
+  margin-top: -7px;
+  padding: 23px 19px 23px 20px;
   z-index: 0;
 
   &-btn {
@@ -13,10 +13,10 @@
     @extend %bg-pr;
     border: 1px solid transparent;
     box-shadow: $bs-inventory-btn;
-    height: rem(30px);
-    right: rem(-15px);
-    top: rem(37px);
-    width: rem(30px);
+    height: 30px;
+    right: -15px;
+    top: 37px;
+    width: 30px;
 
     &:hover {
       border-color: $clr-br-pr;
@@ -31,7 +31,7 @@
   &-list {
     @extend %tr-pr;
     overflow-x: hidden;
-    padding-bottom: rem(5px);
+    padding-bottom: 5px;
 
     * {
       flex-wrap: nowrap;
@@ -48,24 +48,24 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: rem(16px);
+      margin-bottom: 16px;
     }
 
     &-header {
-      padding: rem(10px) rem(6px);
+      padding: 10px 6px;
     }
 
     &-title {
       @extend %d-inline-block;
-      @include font(rem(14px), normal);
+      @include font(14px, normal);
       text-transform: none;
 
       &::before {
         @extend %content;
         @extend %d-inline-block;
-        height: rem(10px);
-        margin-right: rem(7px);
-        width: rem(10px);
+        height: 10px;
+        margin-right: 7px;
+        width: 10px;
       }
     }
 
@@ -86,7 +86,7 @@
     }
 
     &-body {
-      height: rem(150px);
+      height: 150px;
     }
 
     &-figure {
@@ -96,7 +96,7 @@
 
       figcaption {
         @extend %mt-auto;
-        @include font(rem(12px), normal);
+        @include font(12px, normal);
         color: $clr-bg-side-hdr;
         margin-bottom: 13px;
       }

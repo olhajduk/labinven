@@ -20,7 +20,7 @@ body {
   @extend %d-flex;
   @extend %h-100;
   @extend %bg-pr;
-  @include font(rem(14px), 1.5);
+  @include font(14px, 1.5);
   color: $clr-txt-pr;
   font-family: $font-pr;
   font-weight: 400;

@@ -3,19 +3,19 @@
   border: 1px solid $clr-br-pr;
 
   &-header {
-    @include font(rem(14px), normal);
+    @include font(14px, normal);
     border-bottom: 1px solid $clr-br-pr;
     color: $clr-txt-sec;
-    padding: rem(18px) rem(17px);
+    padding: 18px 17px;
   }
 
   &-title {
     @extend %uppercase;
-    @include font(rem(14px), normal);
+    @include font(14px, normal);
   }
 
   &-footer {
     border-top: 1px solid $clr-br-pr;
-    padding: rem(8px) rem(15px) rem(8px) rem(26px);
+    padding: 8px 15px 8px 26px;
   }
 }
