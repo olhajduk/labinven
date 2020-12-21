@@ -1,5 +1,6 @@
 .btn {
   @extend %txt-ctr;
+  @extend %ff-sec;
   @include font(13px, normal);
   border: 1px solid $clr-btn-br;
   border-radius: 15px;

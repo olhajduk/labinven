@@ -10,11 +10,11 @@ fieldset, h1, *, *::after, *::before {
   padding: 0;
 }
 
-.burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-btn, .inventory, .header {
+.custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-btn, .inventory, .header {
   position: relative;
 }
 
-.burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
+.custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
   position: absolute;
 }
 
@@ -34,11 +34,15 @@ fieldset, h1, *, *::after, *::before {
   display: none;
 }
 
+input:checked ~ .custominput-mark::after {
+  display: block;
+}
+
 .inventory .card-title::before, .inventory .card-title {
   display: inline-block;
 }
 
-.sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   display: flex;
 }
 
@@ -46,11 +50,11 @@ fieldset, h1, *, *::after, *::before {
   flex-direction: column;
 }
 
-.indicators-btn, .align-ctr, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .sidebar-status, .sidebar-title, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
   align-items: center;
 }
 
-.jc-ctr, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .jc-ctr, .sidebar-status-btn, .inventory .card-figure {
   justify-content: center;
 }
 
@@ -79,15 +83,15 @@ fieldset, h1, *, *::after, *::before {
   text-align: center;
 }
 
-input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .inventory .card, .inventory-list, .content-sidebar, button, a {
+.custominput-mark, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .inventory .card, .inventory-list, .content-sidebar, button, a {
   transition: 0.25s ease-in-out;
 }
 
-button, .burger, .menu, .inventory .card {
+.custominput, button, .burger, .menu, .inventory .card {
   cursor: pointer;
 }
 
-.burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
+.custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .chart-legend::before, .chart-legend::after, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
   content: "";
 }
 
@@ -119,7 +123,7 @@ fieldset, .visuallyhidden, .field-input, button {
   color: #2f3b4c;
 }
 
-.ff-sec {
+input:not([type=search]), .btn, .ff-sec {
   font-family: "HelveticaNeueCyr", sans-serif;
 }
 
@@ -947,6 +951,61 @@ a {
 .btn-sec:hover {
   background-color: #12a9eb;
   color: #fff;
+}
+
+input:not([type=search]) {
+  font-size: 11px;
+  line-height: normal;
+  border: 1px solid #bfc2c4;
+  color: #2f3b4c;
+  max-width: 65px;
+  padding: 6px 12px;
+}
+input:not([type=search]):hover, input:not([type=search]):focus {
+  border-color: #2574a9;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.custominput {
+  font-size: 12px;
+  padding-left: 24px;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.custominput input {
+  display: none;
+}
+input:checked ~ .custominput-mark {
+  background-color: #12a9eb;
+  border-color: #12a9eb;
+}
+.custominput-mark {
+  background-color: #fff;
+  border: 1px solid #bfc2c4;
+  height: 15px;
+  left: 0;
+  top: 0;
+  width: 15px;
+}
+.custominput-checkbox ~ .custominput-mark::after {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  height: 9px;
+  margin-top: -3px;
+  transform: rotate(45deg);
+  width: 6px;
+}
+.custominput-radio ~ .custominput-mark {
+  border-radius: 50%;
+}
+.custominput-radio ~ .custominput-mark::after {
+  background: #fff;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
 }
 
 /*# sourceMappingURL=bundle.css.map*/
