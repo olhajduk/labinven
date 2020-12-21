@@ -1,0 +1,94 @@
+// margin
+.m-0 {
+  @extend %m-0;
+}
+
+.mt-auto {
+  @extend %mt-auto;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-19 {
+  margin-bottom: 19px;
+}
+
+.mr-66 {
+  margin-right: 66px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+// padding
+.p-0 {
+  @extend %p-0;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-28 {
+  padding-top: 28px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.pl-13 {
+  padding-left: 13px;
+}
+
+.pr-13 {
+  padding-right: 13px;
+}
+
+.pl-34 {
+  padding-left: 34px;
+}
+
+.pr-18 {
+  padding-right: 18px;
+}
+
+.pr-19 {
+  padding-right: 19px;
+}
+
+.pr-34 {
+  padding-right: 34px;
+}
+
+.pb-2 {
+  padding-bottom: 2px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pl-17 {
+  padding-left: 17px;
+}
+
+// width & height
+.w-100 {
+  @extend %w-100;
+}
+
+.w-50 {
+  @extend %w-50;
+}

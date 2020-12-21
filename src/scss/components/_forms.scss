@@ -1,0 +1,126 @@
+button {
+  @extend %bg-none-br-0;
+  @extend %pointer;
+}
+
+fieldset {
+  @extend %m-0;
+  @extend %br-0;
+}
+
+input {
+  @extend %tr-pr;
+
+  &:not([type='search']) {
+    @extend %clr-darkest;
+    @extend %ff-sec;
+    @include font(11px, normal);
+    border: 1px solid $clr-br-pr;
+    max-width: 65px;
+    padding: 7px 0 5px 12px;
+
+    &:hover,
+    &:focus {
+      border-color: $clr-txt-event;
+    }
+  }
+
+  &[type='number'] {
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  // &[type='search'] {
+  //   &::-webkit-search-cancel-button {
+  //     TODO: find resolve for path
+  //     -webkit-appearance: none;
+  //     height: 20px;
+  //     width: 20px;
+  //     background: url('/images/clode.png') no-repeat 50% / cover;
+  //     cursor: pointer;
+  //   }
+  // }#5fa1c1 
+}
+
+.field {
+  &-input {
+    @extend %bg-none-br-0;
+  }
+
+  &-radio {
+    .custominput {
+      padding-left: 22px;
+    }
+  }
+}
+
+.custominput {
+  @extend %d-flex;
+  @extend %align-ctr;
+  @extend %p-rel;
+  @extend %pointer;
+  @extend %tr-pr;
+  font-size: 12px;
+  padding-left: 24px;
+  user-select: none;
+
+  &:hover &-mark {
+    border-color: $clr-txt-sec;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked ~ &-mark {
+    background-color: $clr-btn-pr;
+    border-color: $clr-btn-pr;
+
+    &::after {
+      @extend %d-block;
+    }
+  }
+
+  &-mark {
+    @extend %tr-pr;
+    @extend %p-abs;
+    @extend %d-flex;
+    @extend %align-ctr;
+    @extend %jc-ctr;
+    background-color: $clr-btn-sec;
+    border: 1px solid $clr-br-pr;
+    height: 15px;
+    left: 0;
+    top: 0;
+    width: 15px;
+
+    &::after {
+      @extend %content;
+    }
+  }
+
+  &-checkbox~&-mark {
+    &::after {
+      border: solid $clr-btn-sec;
+      border-width: 0 2px 2px 0;
+      height: 9px;
+      margin-top: -3px;
+      transform: rotate(45deg);
+      width: 6px;
+    }
+  }
+
+  &-radio~&-mark {
+    border-radius: 50%;
+
+    &::after {
+      background: $clr-btn-sec;
+      border-radius: 50%;
+      height: 7px;
+      width: 7px;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.inventory {
+  @extend %p-rel;
+  box-shadow: $bs-inventory;
+  margin-left: -3px;
+  margin-top: -7px;
+  padding: 23px 19px 23px 20px;
+  z-index: 0;
+
+  &-btn {
+    @extend %p-abs;
+    @extend %cicle-btn;
+    @extend %bg-pr;
+    border: 1px solid transparent;
+    height: 30px;
+    right: -15px;
+    top: 37px;
+    width: 30px;
+
+    &::before,
+    &::after {
+      @extend %p-abs;
+      @extend %content;
+      @extend %tr-pr;
+      background-color: $clr-icon;
+      height: 1px;
+      transition-property: transform;
+      width: 7px;
+    }
+
+    &::before {
+      right: 40%;
+      transform: rotate(135deg);
+      top: 41%;
+    }
+
+    &::after {
+      right: 40%;
+      transform: rotate(-135deg);
+      top: 58%;
+    }
+
+    &:hover {
+      border-color: $clr-br-pr;
+      box-shadow: none;
+    }
+
+    &.is-close {
+      right: -25px;
+      transform: rotate(180deg);
+      background-color: $clr-btn-pr;
+
+      &::before,
+      &::after {
+        background-color: $clr-btn-sec;
+        height: 2px;
+      }
+    }
+  }
+
+  &.is-close &-list {
+    transform: translateX(-100%);
+  }
+
+  &-list {
+    @extend %tr-pr;
+    overflow-x: hidden;
+    padding-bottom: 5px;
+
+    * {
+      @extend %ws-nowrap;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .card {
+    @extend %pointer;
+    @extend %tr-pr;
+
+    &:hover {
+      box-shadow: $bs-inventory-btn;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-header {
+      height: 30px;
+    }
+
+    &-title {
+      @extend %d-inline-block;
+      @include font(14px, normal);
+      padding: 0 6px;
+      text-transform: none;
+
+      &::before {
+        @extend %content;
+        @extend %d-inline-block;
+        height: 10px;
+        margin-right: 3px;
+        width: 10px;
+      }
+    }
+
+    &:first-child {
+      h2 {
+        &::before {
+          background-color: $clr-bg-inventory-card-1chld;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      h2 {
+        &::before {
+          background-color: $clr-bg-inventory-card-2chld;
+        }
+      }
+    }
+
+    &-body {
+      height: 159px;
+    }
+
+    &-figure {
+      @extend %h-100;
+      @extend %d-flex-al-ctr-jc-ctr;
+      @extend %txt-ctr;
+      @extend %flex-d-col;
+
+      svg {
+        margin: auto;
+      }
+
+      figcaption {
+        @extend %mt-auto;
+        @include font(12px, normal);
+        color: $clr-bg-side-hdr;
+        margin-bottom: 13px;
+      }
+    }
+  }
+}

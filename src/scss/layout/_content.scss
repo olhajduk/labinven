@@ -1,0 +1,26 @@
+.content {
+  @extend %d-flex;
+  height: calc(100% - #{$height});
+
+  &-sidebar {
+    @extend %tr-pr;
+
+    &.is-open {
+      min-width: 228px;
+      // overflow: auto;
+      width: 228px;
+    }
+
+    &.is-close {
+      min-width: 0;
+      // overflow: hidden;
+      padding-left: 0;
+      padding-right: 0;
+      width: 0;
+    }
+  }
+
+  &-body {
+    @extend %w-100;
+  }
+}

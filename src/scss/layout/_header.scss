@@ -1,0 +1,52 @@
+.header {
+  @extend %p-rel;
+  @extend %d-flex-al-ctr;
+  @include font(17px, 35.42px);
+  $h: &;
+  background-color: $clr-bg-sec;
+  box-shadow: $bs-hdr;
+  padding: 0 16px;
+  z-index: 1;
+
+  &-burger {
+    margin-right: 20px;
+  }
+
+  &-list {
+    @extend %d-flex-al-ctr;
+    @extend %h-hdr-sdbr;
+  }
+
+  &-nav {
+    #{$h}-item {
+      margin: 0 35px;
+    }
+  }
+
+  &-general {
+    margin-left: auto;
+
+    #{$h}-item {
+      border-left: 1px solid $clr-br-hdr;
+      padding: 0 24px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &-item {
+    @extend %h-100;
+    @extend %fw-300;
+
+    &>a {
+      @extend %h-100;
+      @extend %d-flex-al-ctr;
+    }
+  }
+
+  &-lock {
+    @extend %d-flex-al-ctr;
+  }
+}

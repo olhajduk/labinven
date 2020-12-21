@@ -1,0 +1,28 @@
+// text & fonts
+.txt-ctr {
+  @extend %txt-ctr;
+}
+
+.fw-500 {
+  @extend %fw-500;
+}
+
+.fw-400 {
+  @extend %fw-400;
+}
+
+.ff-sec {
+  @extend %ff-sec;
+}
+
+.ff-pr {
+  @extend %ff-pr;
+}
+
+.fs-12 {
+  @include font(12px, 18px);
+}
+
+.uppercase {
+  @extend %uppercase;
+}

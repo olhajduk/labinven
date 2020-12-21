@@ -1,0 +1,99 @@
+.table {
+  @extend %h-100;
+  @extend %p-rel;
+
+  &-pressure {
+    fieldset {
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+    }
+  }
+
+  &-graph {
+    @extend %p-abs;
+    @extend %cicle-btn;
+    @extend %d-flex-al-ctr-jc-ctr;
+    bottom: 14px;
+    height: 27px;
+    min-width: 27px;
+    padding: 0;
+    right: 14px;
+    width: 27px;
+
+    &:hover {
+      box-shadow: none;
+
+      svg path {
+        stroke: currentColor;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  thead {
+    @extend %clr-white;
+    @extend %txt-ctr;
+    background-color: $clr-bg-thead;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $clr-br-tbody-tr;
+
+      &:nth-child(2n) {
+        background-color: $clr-bg-tr-nth2n;
+      }
+    }
+
+    td {
+      padding: 6px 7px;
+
+      &:not(:last-child) {
+        border-right: 1px solid $clr-br-tbody;
+      }
+
+      &:nth-child(n+3) {
+        text-align: right;
+      }
+    }
+  }
+
+  th {
+    @extend %fw-400;
+    padding: 5px 0 1px;
+  }
+
+  tr {
+    >* {
+      @extend %ff-sec;
+      font-size: 12px;
+
+      &:first-child {
+        @extend %p-rel;
+        padding: 0;
+        width: 29px;
+
+        &>* {
+          @extend %p-abs;
+          right: 1px;
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  td {
+    &:nth-child(2) {
+      @extend %txt-ctr;
+      width: 99px;
+    }
+
+    &:nth-child(3) {
+      width: 134px;
+    }
+  }
+}

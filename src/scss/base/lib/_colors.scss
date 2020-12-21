@@ -1,0 +1,12 @@
+// colors
+.br-darkest {
+  border: 1px solid $clr-txt-sec;
+}
+
+.clr-darkest {
+  @extend %clr-darkest;
+}
+
+.clr-white {
+  @extend %clr-white;
+}

@@ -1,0 +1,90 @@
+.chart {
+  &-legends {
+    border-bottom: 1px solid $clr-br-chart-lg;
+    padding: 10px 66px 11px 16px;
+  }
+
+  &-legend {
+    @extend %clr-darkest;
+    @extend %p-rel;
+    @include font(14px, normal);
+    margin-right: 30px;
+    padding-left: 26px;
+
+    &::before,
+    &::after {
+      @extend %content;
+      @extend %p-abs;
+      left: 0;
+    }
+
+    &::before {
+      @extend %brr-50;
+      height: 9px;
+      left: 5px;
+      width: 9px;
+    }
+
+    &::after {
+      height: 1px;
+      left: 0;
+      width: 19px;
+    }
+
+    &:first-child {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-1chld;
+      }
+    }
+
+    &:nth-child(2) {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-2chld;
+      }
+    }
+
+    &:nth-child(3) {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-3chld;
+      }
+    }
+  }
+
+  &-main {
+    @extend %p-rel;
+  }
+
+  &-options {
+    @extend %p-abs;
+    @extend %d-flex;
+    @extend %flex-d-col;
+    @extend %tr-pr;
+    background: $clr-white;
+    border-left: 1px solid $clr-br-chart-lg;
+    height: 100%;
+    padding: 10px;
+    right: 0;
+    top: 0;
+  }
+
+  &-option {
+    @extend %d-flex;
+    @extend %pointer;
+    margin-bottom: 10px;
+
+    &:hover {
+      box-shadow: $bs-inventory-btn;
+    }
+  }
+
+  &-graph {
+    @extend %d-flex-al-ctr;
+    margin: 63px 92px 19px 19px;
+  }
+}

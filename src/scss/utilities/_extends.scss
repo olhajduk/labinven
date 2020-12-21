@@ -1,0 +1,174 @@
+// margin
+%m-0 {
+  margin: 0;
+}
+
+%mt-auto {
+  margin-top: auto;
+}
+
+// padding
+%p-0 {
+  padding: 0;
+}
+
+// grid
+%p-rel {
+  position: relative;
+}
+
+%p-abs {
+  position: absolute;
+}
+
+%w-100 {
+  width: 100%;
+}
+
+%w-50 {
+  width: 50%;
+}
+
+%h-100 {
+  height: 100%;
+}
+
+%d-none {
+  display: none;
+}
+
+%d-block {
+  display: block;
+}
+
+%d-inline-block {
+  display: inline-block;
+}
+
+%d-flex {
+  display: flex;
+}
+
+%flex-d-col {
+  flex-direction: column;
+}
+
+%align-ctr {
+  align-items: center;
+}
+
+%jc-ctr {
+  justify-content: center;
+}
+
+%d-flex-al-ctr {
+  @extend %d-flex;
+  @extend %align-ctr;
+}
+
+%d-flex-al-ctr-jc-ctr {
+  @extend %d-flex-al-ctr;
+  @extend %jc-ctr;
+}
+
+%ov-h-ws-n {
+  @extend %ws-nowrap;
+  overflow: hidden;
+}
+
+// text
+%hover-txt {
+  &:hover {
+    color: $clr-txt-event;
+  }
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+%fw-500 {
+  font-weight: 500;
+}
+
+%fw-400 {
+  font-weight: 400;
+}
+
+%fw-300 {
+  font-weight: 300;
+}
+
+%clr-white {
+  color: $clr-white;
+}
+
+%txt-ctr {
+  text-align: center;
+}
+
+%ws-nowrap {
+  white-space: nowrap;
+}
+
+// event
+%tr-pr {
+  transition: .25s ease-in-out;
+}
+
+%pointer {
+  cursor: pointer;
+}
+
+// pseudo
+%content {
+  content: '';
+}
+
+// other
+%h-hdr-sdbr {
+  height: #{$height};
+}
+
+// border
+%br-0 {
+  border: 0;
+}
+
+%brr-50 {
+  border-radius: 50%;
+}
+
+%cicle-btn {
+  @extend %d-flex-al-ctr;
+  @extend %brr-50;
+  box-shadow: $bs-inventory-btn;
+}
+
+// background
+%bg-none-br-0 {
+  @extend %br-0;
+  background: none;
+}
+
+%bg-pr {
+  background-color: $clr-bg-pr;
+}
+
+%bg-sec {
+  background-color: $clr-bg-sec;
+}
+
+// colors
+%clr-darkest {
+  color: $clr-txt-sec;
+}
+
+// fonts
+%ff-pr {
+  font-family: $font-pr;
+}
+
+%ff-sec {
+  font-family: $font-sec;
+}

@@ -1,0 +1,194 @@
+%pr-pl {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.sidebar {
+  @extend %p-rel;
+  @extend %d-flex;
+  @extend %tr-pr;
+  @extend %ov-h-ws-n;
+  @extend %flex-d-col;
+  background-color: $clr-bg-side-body;
+  border-right: 1px solid $clr-br-side;
+  z-index: 1;
+
+  * {
+    flex-wrap: nowrap;
+  }
+
+  &.is-close {
+    min-width: 0;
+    width: 0;
+  }
+
+  &.is-open {
+    min-width: 280px;
+    width: 280px;
+  }
+
+  &-title {
+    @extend %d-flex-al-ctr;
+    @extend %uppercase;
+    @extend %h-hdr-sdbr;
+    @extend %fw-500;
+    @extend %clr-white;
+    @include font(27px, 35.42px);
+    background-color: $clr-bg-side-hdr;
+    padding: 0 37px;
+  }
+
+  &-search {
+    input {
+      @extend %fw-500;
+      @extend %w-100;
+      padding-left: 22px;
+      padding-right: 44px;
+      @include font(12px, 35.42px);
+      border-bottom: 1px solid $clr-br-side-s;
+      padding-bottom: 11px;
+      padding-top: 14px;
+
+      &,
+      &::placeholder {
+        @extend %clr-darkest;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $clr-bg-side-hdr;
+        padding-right: 22px;
+
+        & ~ img {
+          opacity: 0;
+        }
+      }
+    }
+
+    label {
+      @extend %p-rel;
+      @extend %d-block;
+    }
+
+    img {
+      @extend %p-abs;
+      @extend %tr-pr;
+      right: 7%;
+      top: 38%;
+    }
+  }
+
+  &-footer {
+    @extend %mt-auto;
+  }
+
+  &-progress {
+    @extend %p-rel;
+    @include font(12px, normal);
+    background-color: $clr-bg-side-run-pr;
+    @extend %clr-darkest;
+
+    &-status {
+      @extend %d-flex;
+      @extend %p-rel;
+      @extend %pr-pl;
+      border-right: 1px solid $clr-br-side;
+      padding-bottom: 5px;
+      padding-top: 6px;
+    }
+
+    &-bar {
+      @extend %p-abs;
+      @extend %w-100;
+      @extend %h-100;
+      animation: sidebar-progress-bar 5s ease-in-out infinite;
+      background-color: $clr-bg-side-run-sec;
+    }
+
+    &-left {
+      margin-left: auto;
+    }
+  }
+
+  &-status {
+    @extend %h-hdr-sdbr;
+    @extend %pr-pl;
+    @extend %d-flex-al-ctr;
+    background-color: $clr-bg-side-ftr;
+
+    &-name {
+      @extend %uppercase;
+      @extend %clr-white;
+      @include font(22px, 35.42px);
+      margin-right: auto;
+    }
+
+    &-btn {
+      @extend %clr-white;
+      @extend %d-flex-al-ctr-jc-ctr;
+      @extend %uppercase;
+      @extend %p-rel;
+      @extend %brr-50;
+      @include font(8px, normal);
+      border: 1px solid $clr-btn-sec;
+      height: 24px;
+      margin-left: 9px;
+      width: 24px;
+
+      &::before,
+      &::after {
+        @extend %content;
+        @extend %p-abs;
+        height: 6px;
+        top: -2px;
+      }
+
+      &::before {
+        right: 35%;
+        width: 6px;
+        z-index: 1;
+      }
+
+      &::after {
+        @extend %tr-pr;
+        @extend %brr-50;
+        background-color: $clr-bg-side-ftr;
+        right: 25%;
+        width: 12px;
+        z-index: 0;
+      }
+
+      &:hover {
+        background-color: $clr-bg-sec;
+        color: $clr-txt-event;
+
+        &::after {
+          background-color: transparent;
+        }
+      }
+
+      &--on {
+        &::before {
+          background-color: $clr-status-on;
+        }
+      }
+
+      &--off {
+        &::before {
+          background-color: $clr-status-off;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes sidebar-progress-bar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
