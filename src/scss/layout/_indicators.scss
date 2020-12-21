@@ -187,7 +187,7 @@
       @extend %clr-darkest;
       font-size: 13px;
       font-weight: 600;
-      padding-bottom: 19px;
+      padding-bottom: 15px;
       padding-top: 12px;
 
       span {
@@ -218,7 +218,6 @@
   .field {
     @extend %ff-sec;
     font-size: 12px;
-    margin-bottom: 10px;
 
     label {
       @extend %d-flex-al-ctr;

@@ -8,11 +8,9 @@
 
   &-btn {
     @extend %p-abs;
-    @extend %d-flex-al-ctr;
-    @extend %brr-50;
+    @extend %cicle-btn;
     @extend %bg-pr;
     border: 1px solid transparent;
-    box-shadow: $bs-inventory-btn;
     height: 30px;
     right: -15px;
     top: 37px;

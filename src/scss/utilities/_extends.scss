@@ -135,6 +135,12 @@
   border-radius: 50%;
 }
 
+%cicle-btn {
+  @extend %d-flex-al-ctr;
+  @extend %brr-50;
+  box-shadow: $bs-inventory-btn;
+}
+
 // background
 %bg-none-br-0 {
   @extend %br-0;
@@ -155,6 +161,10 @@
 }
 
 // fonts
+%ff-pr {
+  font-family: $font-pr;
+}
+
 %ff-sec {
   font-family: $font-sec;
 }

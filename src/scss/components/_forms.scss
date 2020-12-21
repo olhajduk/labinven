@@ -49,6 +49,12 @@ input {
   &-input {
     @extend %bg-none-br-0;
   }
+
+  &-radio {
+    .custominput {
+      padding-left: 22px;
+    }
+  }
 }
 
 .custominput {

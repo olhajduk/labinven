@@ -1,4 +1,4 @@
-fieldset, h1, *, *::after, *::before {
+fieldset, h1, *, *::after, *::before, .m-0 {
   margin: 0;
 }
 
@@ -10,11 +10,11 @@ fieldset, h1, *, *::after, *::before {
   padding: 0;
 }
 
-.custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-tab.active, .indicators-btn, .inventory, .header {
+table tr > *:first-child, .table, .custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .chart-legend, .indicators-tab.active, .indicators-btn, .inventory, .header {
   position: relative;
 }
 
-.custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
+table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .chart-legend::before, .chart-legend::after, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
   position: absolute;
 }
 
@@ -26,7 +26,7 @@ fieldset, h1, *, *::after, *::before {
   width: 50%;
 }
 
-.sidebar-progress-bar, .indicators-body, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
+.table, .sidebar-progress-bar, .indicators-body, .indicators-item:first-child .indicators-header > div, .inventory .card-figure, .header-item > a, .header-item, body {
   height: 100%;
 }
 
@@ -42,7 +42,7 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   display: inline-block;
 }
 
-.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .sidebar-progress-status, .sidebar, .indicators-btn, .content, body, .d-flex, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .sidebar-status-btn, .inventory .card-figure {
   display: flex;
 }
 
@@ -50,11 +50,11 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   flex-direction: column;
 }
 
-.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .inventory-btn, .header-lock, .header-item > a, .header-list, .header, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .custominput, .indicators-btn, .align-ctr, .burger, .user, .card-header, .sidebar-status, .sidebar-title, .indicators .field label, .indicators-content-title span, .header-lock, .header-item > a, .header-list, .header, .table-graph, .inventory-btn, .sidebar-status-btn, .inventory .card-figure {
   align-items: center;
 }
 
-.custominput-mark, .jc-ctr, .sidebar-status-btn, .inventory .card-figure {
+.custominput-mark, .jc-ctr, .table-graph, .sidebar-status-btn, .inventory .card-figure {
   justify-content: center;
 }
 
@@ -78,11 +78,11 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   font-weight: 300;
 }
 
-.sidebar-status-btn, .sidebar-status-name, .sidebar-title {
+table thead, .sidebar-status-btn, .sidebar-status-name, .sidebar-title, .clr-white {
   color: #fff;
 }
 
-.btn, .inventory .card-figure, .txt-ctr {
+table td:nth-child(2), table thead, .btn, .inventory .card-figure, .txt-ctr {
   text-align: center;
 }
 
@@ -110,8 +110,12 @@ fieldset, .visuallyhidden, .field-input, button {
   border: 0;
 }
 
-.sidebar-status-btn::after, .sidebar-status-btn, .chart-legend::before, .indicators-open::after, .indicators-btn::before, .inventory-btn {
+.sidebar-status-btn::after, .sidebar-status-btn, .chart-legend::before, .indicators-open::after, .indicators-btn::before, .table-graph, .inventory-btn {
   border-radius: 50%;
+}
+
+.table-graph, .inventory-btn {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .field-input, button {
@@ -134,7 +138,11 @@ input:not([type=search]), .card-header, .sidebar-progress, .sidebar-search input
   color: #2f3b4c;
 }
 
-input:not([type=search]), .btn, .indicators .field, .indicators-content-title, .indicators-tabs, .ff-sec {
+.ff-pr {
+  font-family: "Roboto", sans-serif;
+}
+
+table tr > *, input:not([type=search]), .btn, .indicators .field, .indicators-content-title, .indicators-tabs, .ff-sec {
   font-family: "HelveticaNeueCyr", sans-serif;
 }
 
@@ -460,6 +468,14 @@ template {
   display: none;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-19 {
+  margin-bottom: 19px;
+}
+
 .mr-66 {
   margin-right: 66px;
 }
@@ -496,12 +512,20 @@ template {
   padding-right: 13px;
 }
 
+.pl-34 {
+  padding-left: 34px;
+}
+
 .pr-18 {
   padding-right: 18px;
 }
 
 .pr-19 {
   padding-right: 19px;
+}
+
+.pr-34 {
+  padding-right: 34px;
 }
 
 .pb-2 {
@@ -622,7 +646,6 @@ a {
 }
 .inventory-btn {
   border: 1px solid transparent;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   height: 30px;
   right: -15px;
   top: 37px;
@@ -790,7 +813,7 @@ a {
 .indicators-content-title {
   font-size: 13px;
   font-weight: 600;
-  padding-bottom: 19px;
+  padding-bottom: 15px;
   padding-top: 12px;
 }
 .indicators-content-title span::before, .indicators-content-title span::after {
@@ -807,7 +830,6 @@ a {
 }
 .indicators .field {
   font-size: 12px;
-  margin-bottom: 10px;
 }
 .indicators .field-title {
   margin-right: 24px;
@@ -1104,6 +1126,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   -webkit-appearance: none;
 }
 
+.field-radio .custominput {
+  padding-left: 22px;
+}
+
 .custominput {
   font-size: 12px;
   padding-left: 24px;
@@ -1142,6 +1168,67 @@ input:checked ~ .custominput-mark {
   border-radius: 50%;
   height: 7px;
   width: 7px;
+}
+
+.table-pressure fieldset:not(:last-child) {
+  margin-right: 19px;
+}
+.table-graph {
+  bottom: 14px;
+  height: 27px;
+  min-width: 27px;
+  padding: 0;
+  right: 14px;
+  width: 27px;
+}
+.table-graph:hover {
+  box-shadow: none;
+}
+.table-graph:hover svg path {
+  stroke: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+table thead {
+  background-color: #5fa1c1;
+}
+table tbody tr {
+  border-bottom: 1px solid #f4f8f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #f2fafd;
+}
+table tbody td {
+  padding: 6px 7px;
+}
+table tbody td:not(:last-child) {
+  border-right: 1px solid rgba(191, 194, 196, 0.5);
+}
+table tbody td:nth-child(n+3) {
+  text-align: right;
+}
+table th {
+  font-weight: 400;
+  padding: 5px 0 1px;
+}
+table tr > * {
+  font-size: 12px;
+}
+table tr > *:first-child {
+  padding: 0;
+  width: 29px;
+}
+table tr > *:first-child > * {
+  right: 1px;
+  top: 8px;
+}
+table td:nth-child(2) {
+  width: 99px;
+}
+table td:nth-child(3) {
+  width: 134px;
 }
 
 /*# sourceMappingURL=bundle.css.map*/

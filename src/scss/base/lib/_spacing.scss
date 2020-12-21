@@ -1,6 +1,18 @@
 // margin
+.m-0 {
+  @extend %m-0;
+}
+
 .mt-auto {
   @extend %mt-auto;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-19 {
+  margin-bottom: 19px;
 }
 
 .mr-66 {
@@ -44,12 +56,20 @@
   padding-right: 13px;
 }
 
+.pl-34 {
+  padding-left: 34px;
+}
+
 .pr-18 {
   padding-right: 18px;
 }
 
 .pr-19 {
   padding-right: 19px;
+}
+
+.pr-34 {
+  padding-right: 34px;
 }
 
 .pb-2 {

@@ -11,6 +11,10 @@
   @extend %ff-sec;
 }
 
+.ff-pr {
+  @extend %ff-pr;
+}
+
 .fs-12 {
   @include font(12px, 18px);
 }
