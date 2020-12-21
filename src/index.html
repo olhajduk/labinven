@@ -2,69 +2,484 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.ico">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.ico">
+  <meta name="theme-color" content="#ffffff">
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <!-- Fonts & Styles -->
-    <link rel="stylesheet" href="./fonts/Roboto/stylesheet.css">
-    <link rel="stylesheet" href="./fonts/HelveticaNeueCyr/stylesheet.css">
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="./assets/fonts/Roboto/stylesheet.css">
+  <link rel="stylesheet" href="./assets/fonts/HelveticaNeueCyr/stylesheet.css">
 </head>
 
 <body>
-    <%= require('html-loader!./html/sidebar.html') %>
-
-    <main class="main">
-        <%= require('html-loader!./html/header.html') %>
-
-        <!-- TODO: fix path for files-->
-        <div class="content">
-            <aside class="content-sidebar inventory is-open">
-                <ul class="inventory-list">
-                  <li class="inventory-item card">
-                    <div class="card-header">
-                      <h2 class="card-title">
-                        Sampler
-                      </h2>
-                    </div>
-                    <div class="card-body">
-                      <figure class="card-figure">
-                        <!-- TODO: add svg from <use> -->
-                      </figure>
-                    </div>
-                  </li>
-                  <li class="inventory-item card">
-                    <div class="card-header">
-                      <h2 class="card-title">
-                        Quat. Pump
-                      </h2>
-                    </div>
-                    <div class="card-body">
-                      <figure class="card-figure">
-                        <!-- TODO: add svg from <use> -->
-                        <figcaption>
-                            1.000 mL/min
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </li>
-                </ul>
-              <button class="inventory-btn is-open"></button>
-              </aside>
-            <%= require('html-loader!./html/indicators.html') %>
-        </div>
+  <aside class="sidebar is-open">
+    <div class="sidebar-header">
+      <h1 class="sidebar-title">
+        <a href="#">lims</a>
         
-    </main>
+      </h1>
+      <fieldset class="sidebar-search field field-search">
+        <label class="field-label">
+          <input class="field-input" type="search" name="search" placeholder="Search">
+          <img src="./assets/images/search.png" alt="search">
+        </label>
+        
 
-    <div id="sprite" class="sprite">
-        <img inline src="./../src/assets/images/sprite.svg" alt="">
+      </fieldset>
     </div>
+    <div class="sidebar-footer">
+      <div class="sidebar-progress">
+        <div class="sidebar-progress-bar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="sidebar-progress-status">
+          <div class="sidebar-progress-time">
+            Run 00:23/01:00
+          </div>
+          <div class="sidebar-progress-left">
+            -00:47
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-status">
+        <span class="sidebar-status-name">
+          run
+        </span>
+        <button class="sidebar-status-btn sidebar-status-btn--on">
+          on
+        </button>
+        <button class="sidebar-status-btn sidebar-status-btn--off">
+          off
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-burger burger is-open">
+        <div></div>
+      </div>
+      <ul class="header-list header-nav">
+        <li class="header-item menu menu-instruments">
+          <a href="#" class="menu-title">Instruments</a>
+          <ul class="menu-list">
+            <li class="menu-item">Lorem</li>
+            <li class="menu-item">Lorem</li>
+            <li class="menu-item">Lorem</li>
+          </ul>
+        </li>
+        <li class="header-item">
+          <a href="#">Widgets</a>
+        </li>
+        <li class="header-item">
+          <a href="#">View</a>
+        </li>
+        <li class="header-item">
+          <a href="#">Administration</a>
+        </li>
+      </ul>
+
+      <ul class="header-list header-general">
+        <li class="header-item">
+          <a class="user" href="#">
+            <svg class="user-icon icon icon-user" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="1.983 1.99 29.01 29.01"><path paint-order="stroke fill markers" fill-rule="evenodd" d="M16.489 1.99C8.49 1.99 1.983 8.497 1.983 16.496 1.983 24.494 8.49 31 16.49 31c7.998 0 14.505-6.507 14.505-14.505 0-7.999-6.507-14.506-14.505-14.506zM7.966 26.967c.845-.792 2.17-1.462 3.836-1.924.807-.318 1.324-.57 1.745-.992.427-.427.68-.873.77-1.365.076-.42.025-2.097.007-2.6l-.007-.195-.137-.138c-.488-.494-.919-1.342-1.358-2.669l-.03-.344-.374.015c-.089-.04-.355-.323-.43-.723-.067-.35-.045-.605-.013-.727l.331-.056-.091-.497c-.553-3.017-.29-5.2.783-6.487.767-.92 1.987-1.387 3.633-1.387 1.396-.019 1.54.18 1.71.41.118.162.28.384.605.576l.128.076.148-.007c.642-.033 1.112.168 1.458.605.826 1.045.864 3.46.095 6.152l-.08.478.38.12c.029.116.05.38-.032.748-.067.299-.239.529-.36.641l-.405-.304-.2.691c-.355 1.221-.704 2.152-1.256 2.725l-.139.145.004 2.53c.108.867.485 1.233.85 1.588l.232.227c.35.286.622.412 1.496.792 1.603.447 2.909 1.112 3.746 1.896a13.442 13.442 0 0 1-8.522 3.039c-3.23 0-6.196-1.142-8.523-3.04zm17.788-.665c-.956-.921-2.423-1.687-4.154-2.165-.785-.346-.96-.431-1.158-.59l-.211-.209c-.317-.308-.492-.477-.553-.936v-2.076c.556-.647.91-1.509 1.254-2.645.492-.183.944-.812 1.083-1.43.157-.71.082-1.305-.188-1.636.776-2.932.644-5.418-.367-6.694-.511-.645-1.239-.984-2.112-.986-.083-.067-.137-.142-.205-.234-.36-.494-.726-.85-2.52-.817-1.947 0-3.424.587-4.389 1.744-1.236 1.484-1.587 3.85-1.045 7.035-.233.334-.304.891-.179 1.553.12.634.516 1.197.949 1.42.426 1.235.868 2.093 1.377 2.67.03.956.04 1.997.002 2.2-.054.29-.21.558-.494.842-.265.265-.62.46-1.357.753-1.81.499-3.3 1.271-4.264 2.2-2.607-2.464-4.245-5.943-4.245-9.805 0-7.45 6.061-13.51 13.51-13.51 7.45 0 13.51 6.06 13.51 13.51 0 3.862-1.637 7.342-4.244 9.806z"/></svg>
+            <span class="user-name">
+              Alexander
+            </span>
+          </a>
+        </li>
+        <li class="header-item menu menu-lang">
+          <a href="#" class="menu-title">eng</a>
+          <ul class="menu-list">
+            <li class="menu-item">deu</li>
+          </ul>
+        </li>
+        <li class="header-item">
+          <a href="#" class="header-lock">
+            <svg class="icon icon-lock lock" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect class="lock-body" x="0.5" y="9.5" width="16" height="14" stroke="#12A9EB"/>
+              <path class="lock-head" d="M14.5 5.5C14.5 3 12.9 0.5 8.5 0.5C4.1 0.5 2.5 3 2.5 5.5V9.5" stroke="#12A9EB"/>
+              <path class="lock-heart" d="M9 17.5C9.13882 17.5 9.31619 17.4615 9.5 17.3737M8 17.5C7.8266 17.5 7.6579 17.453 7.5 17.3692M10.4859 15.2704C10.4956 15.3527 10.5 15.43 10.5 15.5C10.5 15.6809 10.4855 15.8473 10.459 16M10.4859 15.2704C10.4028 14.5682 9.93211 13.5 8.5 13.5C6.9 13.5 6.5 14.8333 6.5 15.5C6.5 16.2832 6.92943 17.0665 7.5 17.3692M10.4859 15.2704L10.459 16M10.459 16C10.4267 16.1865 10.3766 16.3527 10.3135 16.5M10.3135 16.5C10.2286 16.6982 10.1202 16.8624 10 16.9965M10.3135 16.5L10 16.9965M10 16.9965C9.84466 17.1697 9.66959 17.2927 9.5 17.3737M9.5 17.3737V19.5H7.5V17.3692" stroke="#12A9EB"/>
+              </svg>
+              
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="content">
+      <aside class="content-sidebar inventory is-open">
+        <ul class="inventory-list">
+          <li class="inventory-item card">
+            <div class="card-header">
+              <h2 class="card-title p-0">
+                Sampler
+              </h2>
+            </div>
+            <div class="card-body">
+              <figure class="card-figure">
+                <svg class="icon" width="123px" height="106px">
+                  <use xlink:href="#card-1"></use>
+                </svg>
+              </figure>
+            </div>
+          </li>
+          <li class="inventory-item card">
+            <div class="card-header">
+              <h2 class="card-title">
+                Quat. Pump
+              </h2>
+            </div>
+            <div class="card-body">
+              <figure class="card-figure">
+                <svg class="icon" width="145px" height="62px">
+                  <use xlink:href="#card-2"></use>
+                </svg>
+                <figcaption>
+                  1.000 mL/min
+                </figcaption>
+              </figure>
+            </div>
+          </li>
+        </ul>
+        <button class="inventory-btn is-open"></button>
+      </aside>
+      <div class="content-body indicators d-flex flex-wrap">
+        <div class="indicators-item card d-flex flex-d-col">
+          <div class="indicators-header card-header d-flex align-ctr">
+            <div class="indicators-worklist d-flex align-ctr">
+              <h2 class="indicators-title indicators-worklist-title uppercase">
+                Worklist
+              </h2>
+              <button class="indicators-worklist-btn uppercase">
+                run
+              </button>
+              <span class="indicators-worklist-todo">
+                TO DO:
+                <span>
+                  23 injections
+                </span>
+              </span>
+              <span class="indicators-worklist-time">
+                02:15:00
+              </span>
+            </div>
+            <div class="indicators-method d-flex align-ctr">
+              <span class="uppercase">
+                Method:
+              </span>
+              <span class="indicators-method-name">
+                Method1.amx
+                <span class="indicators-method-time">
+                  (00:00/04:30)
+                </span>
+              </span>
+            </div>
+            <div class="indicators-status d-flex align-ctr uppercase">
+              single run
+            </div>
+          </div>
+          <div class="indicators-body card-body d-flex">
+            <ul class="indicators-tabs">
+              <li class="indicators-tab">
+                <a href="#">
+                  ALS
+                </a>
+              </li>
+              <li class="indicators-tab">
+                <a href="#">
+                  Inlets
+                </a>
+              </li>
+              <li class="indicators-tab active">
+                <a href="#">
+                  Columns
+                </a>
+              </li>
+            </ul>
+            <div class="indicators-content d-flex w-100">
+              <div class="w-50 pt-28 pr-18 pb-16 pl-17">
+                <div class="w-100 d-flex align-ctr jc-ctr">
+                  <ul class="job d-flex mr-66">
+                    <li class="job-item txt-ctr">
+                      <p class="job-name">
+                        Front Inlet
+                      </p>
+                      <figure>
+                        <img src="./assets/images/frontinlet.png" alt="frontinlet">
+                      </figure>
+                      <p class="job-capture fw-500">
+                        SS (H2)
+                      </p>
+                    </li>
+
+                    <li class="job-item txt-ctr">
+                      <p class="job-name">
+                        Agilent 19091Q-002
+                      </p>
+                      <figure>
+                        <img src="./assets/images/agilent.png" alt="agilent">
+                      </figure>
+                      <p class="job-capture fw-400">
+                        <span>
+                          60 Oc - 450 Oc (450 Oc)
+                        </span>
+                        <br>
+                        <span>
+                          25 m * 320 μm * 1μm
+                        </span>
+                      </p>
+                    </li>
+
+                    <li class="job-item txt-ctr">
+                      <p class="job-name">
+                        Back Detector
+                      </p>
+                      <figure>
+                        <img src="./assets/images/detector.png" alt="detector">
+                      </figure>
+                      <p class="job-capture fw-500">
+                        NPD
+                      </p>
+                    </li>
+                  </ul>
+
+                  <div class="br-darkest pt-10 pr-18 pb-2 pl-13 fs-12 fw-500 clr-darkest ff-sec">
+                    <p>(Initial): 0 min</p>
+                    <p>ArMe @ 35 Oc Oven</p>
+                    <p>Out: Ambient Pressure</p>
+                    <p>25 m * 320 μm * 1μm</p>
+                  </div>
+                </div>
+
+                <div class="w-100">
+                  <h2 class="indicators-content-title">
+                    <span>Control Mode</span>
+                  </h2>
+                  <fieldset class="field field-checkbox ml-20 mr-20 mb-10">
+                    <label class="custominput">On
+                      <input class="field-input custominput-checkbox" type="checkbox" name="cntrl-checkbox" checked>
+                      <span class="custominput-mark"></span>
+                    </label>
+                  </fieldset>
+
+                  <div class="d-flex flex-wrap ml-20 mr-20">
+                    <fieldset class="w-50 field mb-10">
+                      <label><span class="field-title">Flow</span>
+                        <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                        <span class="field-value">
+                          mL/min
+                        </span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="w-50 field mb-10">
+                      <label><span class="field-title">Average Velocity</span>
+                        <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="198.05">
+                        <span class="field-value">
+                          cm/sec
+                        </span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="w-50 field mb-10">
+                      <label><span class="field-title">Pressure</span>
+                        <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="21.756">
+                        <span class="field-value">
+                          psi
+                        </span>
+                      </label>
+                    </fieldset>
+                    <fieldset class="w-50 field mb-10">
+                      <label><span class="field-title">Holdup Time</span>
+                        <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="0.21038">
+                        <span class="field-value">
+                          cm/sec
+                        </span>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div class="w-50">
+                  <div class="ml-20 mr-20">
+                    <h2 class="indicators-content-title">
+                      <span>Post Run</span>
+                    </h2>
+                    <fieldset class="w-50 field">
+                      <label><span class="field-title">Post Run</span>
+                        <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                        <span class="field-value">
+                          cm/sec
+                        </span>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="w-50">
+                <div class="table">
+                  <h2 class="indicators-content-title table-title pl-15 pr-19">
+                    <span>
+                      Pressure/Flow Settings
+                    </span>
+                  </h2>
+                  <form action="" class="table-form">
+                    <div class="table-pressure d-flex align-ctr pr-34 pl-34 mt-19">
+                      <fieldset class="field field-radio">
+                        <label class="custominput ff-pr clr-darkest">Constant Pressure
+                          <input class="field-input custominput-radio" type="radio" name="pressure-radio">
+                          <span class="custominput-mark"></span>
+                        </label>
+                      </fieldset>
+
+                      <fieldset class="field field-radio">
+                        <label class="custominput ff-pr clr-darkest">Ramped Pressure
+                          <input class="field-input custominput-radio" type="radio" name="pressure-radio" checked>
+                          <span class="custominput-mark"></span>
+                        </label>
+                      </fieldset>
+
+                      <fieldset class="field field-radio">
+                        <label class="custominput ff-pr clr-darkest">Constant Flow
+                          <input class="field-input custominput-radio" type="radio" name="pressure-radio">
+                          <span class="custominput-mark"></span>
+                        </label>
+                      </fieldset>
+
+                      <fieldset class="field field-radio">
+                        <label class="custominput ff-pr clr-darkest">Ramped Flow
+                          <input class="field-input custominput-radio" type="radio" name="pressure-radio">
+                          <span class="custominput-mark"></span>
+                        </label>
+                      </fieldset>
+                    </div>
+
+                    <table class="table-content w-100">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Ramp ##</th>
+                          <th>Rate, mL/min per min</th>
+                          <th>Value, mL/min</th>
+                          <th>Hold Time, min</th>
+                          <th>Run Time, min</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                          </td>
+                          <td>(Initial)</td>
+                          <td></td>
+                          <td>16.849</td>
+                          <td>0</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <fieldset class="field field-radio">
+                              <label class="custominput">
+                                <input class="field-input custominput-radio" type="radio" name="table-radio">
+                                <span class="custominput-mark"></span>
+                              </label>
+                            </fieldset>
+                          </td>
+                          <td>Ramp 1</td>
+                          <td>10</td>
+                          <td>16.849</td>
+                          <td>0</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <fieldset class="field field-radio">
+                              <label class="custominput">
+                                <input class="field-input custominput-radio" type="radio" name="table-radio">
+                                <span class="custominput-mark"></span>
+                              </label>
+                            </fieldset>
+                          </td>
+                          <td>Ramp 2</td>
+                          <td>20</td>
+                          <td>16.849</td>
+                          <td>5</td>
+                          <td>26</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button class="table-graph btn btn-pr">
+                      <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 1V11L5 6L9 9L14.5 1" stroke="white" />
+                        <path d="M0 12H15.5" stroke="white" />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indicators-footer card-footer d-flex align-ctr jc-between mt-auto">
+            <div class="indicators-options d-flex align-ctr">
+              <button class="indicators-btn indicators-new">
+                New
+              </button>
+              <button class="indicators-btn indicators-open">
+                Open
+              </button>
+            </div>
+            <div class="indicators-btns d-flex align-ctr">
+              <button class="btn btn-pr">Save</button>
+              <button class="btn btn-pr">Save as</button>
+              <button class="btn btn-sec">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="indicators-item card">
+          <div class="indicators-header card-header d-flex align-ctr">
+            <h2 class="indicators-title card-title uppercase">live Chart</h2>
+          </div>
+          <div class="indicators-body card-body chart d-flex">
+            <div class="chart-main w-100">
+              <ul class="chart-legends d-flex align-ctr flex-wrap">
+                <li class="chart-legend d-flex align-ctr fw-500">Plot</li>
+                <li class="chart-legend d-flex align-ctr">Plot</li>
+                <li class="chart-legend d-flex align-ctr">Plot</li>
+              </ul>
+              <ul class="chart-options">
+                <li class="chart-option">
+                  <img src="./assets/images/icon-legend.png" alt="icon-legend">
+                </li>
+                <li class="chart-option">
+                  <img src="./assets/images/icon-settings.png" alt="icon-settings">
+                </li>
+                <li class="chart-option">
+                  <img src="./assets/images/icon-balance.png" alt="icon-balance">
+                </li>
+              </ul>
+              <figure class="chart-graph">
+                <img src="./assets/images/live-chart.png" alt="live-chart">
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="indicators-item card">
+          <div class="indicators-header card-header d-flex align-ctr">
+            <h2 class="indicators-title card-title uppercase">SPECTRa</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <div id="sprite" class="sprite">
+    <img inline src="./../src/assets/images/sprite.svg" alt="">
+  </div>
 </body>
 
 </html>

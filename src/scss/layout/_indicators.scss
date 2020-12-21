@@ -1,0 +1,235 @@
+.indicators {
+  $ind: &;
+  padding: 7.5px 7.5px 7.5px 11.5px;
+
+  &-item {
+    margin: 7.5px;
+
+    &:first-child {
+      flex: 100%;
+
+      #{$ind}-header>div {
+        @extend %h-100;
+        border-right: 1px solid $clr-br-side-s;
+        font-size: 14px;
+        padding-left: 17px;
+        padding-right: 40px;
+
+        &:last-child {
+          min-width: 172px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      flex: 13%;
+    }
+
+    &:nth-child(3) {
+      flex: 1;
+    }
+  }
+
+  &-btn {
+    @extend %p-rel;
+    @extend %d-flex;
+    @extend %flex-d-col;
+    @extend %align-ctr;
+    @include font(11px, normal);
+    color: $clr-icon;
+
+    &::before,
+    &::after {
+      @extend %content;
+    }
+
+    &::before {
+      @extend %brr-50;
+      border: 1px solid;
+      height: 26px;
+      margin-bottom: 4px;
+      width: 26px;
+    }
+
+    &::after {
+      @extend %p-abs;
+      top: 11px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    &:hover {
+      color: $clr-txt-event;
+    }
+  }
+
+  &-new {
+    &::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 300;
+      right: 6.5px;
+      top: 1px;
+    }
+  }
+
+  &-open {
+    &::after {
+      @extend %brr-50;
+      border: 1px solid;
+      box-shadow: 5px 0 0 -1px $clr-btn-sec, 5px 0 0 currentColor, -5px 0 0 -1px $clr-btn-sec, -5px 0 0 currentColor;
+      height: 4px;
+      width: 4px;
+    }
+  }
+
+  &-btns {
+    button {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &-worklist,
+  &-status {
+    @extend %bg-pr;
+  }
+
+  &-worklist {
+    &-title {
+      margin-right: 14px;
+    }
+
+    &-btn {
+      @extend %tr-pr;
+      color: $clr-txt-event;
+      font-weight: 600;
+      margin-right: 27px;
+
+      &::before {
+        @extend %content;
+        @extend %d-inline-block;
+        border-color: transparent transparent transparent currentColor;
+        border-style: solid;
+        border-width: 6px 0 6px 10.4px;
+        height: 0;
+        width: 0;
+      }
+
+      &:hover {
+        color: $clr-btn-pr;
+      }
+    }
+
+    &-todo {
+      margin-right: 35px;
+
+      span {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  &-method {
+    &-name {
+      margin-left: 8px;
+    }
+  }
+
+  &-tabs {
+    @extend %bg-pr;
+    @extend %ff-sec;
+    @extend %clr-darkest;
+    border-right: 1px solid $clr-br-pr;
+    font-size: 13px;
+    min-width: 150px;
+    width: 150px;
+  }
+
+  &-tab {
+    border-bottom: 1px solid $clr-br-pr;
+
+    a {
+      @extend %d-block;
+      padding: 10px 15px 7px;
+    }
+
+    &.active {
+      @extend %p-rel;
+      @extend %bg-sec;
+
+      &::after {
+        @extend %p-abs;
+        @extend %content;
+        background-color: $clr-bg-sec;
+        height: 101%;
+        right: -2px;
+        top: 0;
+        width: 2px;
+      }
+    }
+  }
+
+  &-body {
+    height: calc(100% - 46px);
+  }
+
+  &-content {
+    >div:first-child {
+      border-right: 1px solid $clr-br-side-s;
+    }
+
+    &-title {
+      @extend %ff-sec;
+      @extend %clr-darkest;
+      font-size: 13px;
+      font-weight: 600;
+      padding-bottom: 15px;
+      padding-top: 12px;
+
+      span {
+        @extend %d-flex-al-ctr;
+        @extend %ws-nowrap;
+
+        &::before,
+        &::after {
+          @extend %d-block;
+          @extend %content;
+          background-color: currentColor;
+          height: 1px;
+        }
+
+        &::before {
+          margin-right: 9px;
+          width: 11px;
+        }
+
+        &::after {
+          margin-left: 7px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .field {
+    @extend %ff-sec;
+    font-size: 12px;
+
+    label {
+      @extend %d-flex-al-ctr;
+    }
+
+    &-title {
+      margin-right: 24px;
+      width: 93px;
+    }
+
+    &-value {
+      margin-left: 5px;
+    }
+  }
+}

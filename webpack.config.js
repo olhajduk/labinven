@@ -5,7 +5,7 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -37,20 +37,20 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js'],
-        alias: {
-            '@': path.resolve(__dirname, 'src'),
-            '@core': path.resolve(__dirname, 'src/core'),
-        }
+        extensions: ['.js']
     },
     devtool: isDev ? 'source-map' : false,
+    devServer: {
+        port: 3000,
+        hot: isDev
+      },
     plugins: [
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/assets/images/sprite.svg')
         }),
-        new SpriteLoaderPlugin({
-            plainSprite: true
-        }),
+        // new SpriteLoaderPlugin({
+        //     plainSprite: true
+        // }),
         new HtmlWebpackPlugin({
             title: 'Labinvent | HTML Test task',
             template: 'index.html',
@@ -64,11 +64,11 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [{
                     from: path.resolve(__dirname, 'src/assets/fonts'),
-                    to: path.resolve(__dirname, 'dist/fonts')
+                    to: path.resolve(__dirname, 'dist/assets/fonts')
                 },
                 {
-                    from: path.resolve(__dirname, 'src/assets/images/png'),
-                    to: path.resolve(__dirname, 'dist/images')
+                    from: path.resolve(__dirname, 'src/assets/images/*.png'),
+                    to: path.resolve(__dirname, 'dist/')
                 }
             ],
         }),
@@ -77,7 +77,18 @@ module.exports = {
         })
     ],
     module: {
-        rules: [{
+        rules: [
+            // {
+            //     test: /\.(png|jpe?g|gif)$/i,
+            //     use: [{
+            //         loader: 'file-loader',
+            //         options: {
+            //             name: '[path][name].[ext]',
+            //             publicPath: './../src/assets/images/*.png'
+            //         },
+            //     }],
+            // },
+            {
                 test: /\.svg$/,
                 use: [{
                         loader: 'svg-sprite-loader',
@@ -94,21 +105,9 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    [
-                                        // FIXME: doesn't work
-                                        'autoprefixer'
-                                    ]
-                                ]
-                            }
-                        }
-                    },
-                    'sass-loader',
-                ],
+                    'postcss-loader',
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.m?js$/,

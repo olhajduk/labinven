@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+%mt-auto {
+  margin-top: auto;
+}
+
 // padding
 %p-0 {
   padding: 0;
@@ -21,12 +25,20 @@
   width: 100%;
 }
 
+%w-50 {
+  width: 50%;
+}
+
 %h-100 {
   height: 100%;
 }
 
 %d-none {
   display: none;
+}
+
+%d-block {
+  display: block;
 }
 
 %d-inline-block {
@@ -37,19 +49,31 @@
   display: flex;
 }
 
+%flex-d-col {
+  flex-direction: column;
+}
+
+%align-ctr {
+  align-items: center;
+}
+
+%jc-ctr {
+  justify-content: center;
+}
+
 %d-flex-al-ctr {
   @extend %d-flex;
-  align-items: center;
+  @extend %align-ctr;
 }
 
 %d-flex-al-ctr-jc-ctr {
   @extend %d-flex-al-ctr;
-  justify-content: center;
+  @extend %jc-ctr;
 }
 
 %ov-h-ws-n {
+  @extend %ws-nowrap;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 // text
@@ -67,8 +91,24 @@
   font-weight: 500;
 }
 
+%fw-400 {
+  font-weight: 400;
+}
+
+%fw-300 {
+  font-weight: 300;
+}
+
 %clr-white {
   color: $clr-white;
+}
+
+%txt-ctr {
+  text-align: center;
+}
+
+%ws-nowrap {
+  white-space: nowrap;
 }
 
 // event
@@ -99,6 +139,12 @@
   border-radius: 50%;
 }
 
+%cicle-btn {
+  @extend %d-flex-al-ctr;
+  @extend %brr-50;
+  box-shadow: $bs-inventory-btn;
+}
+
 // background
 %bg-none-br-0 {
   @extend %br-0;
@@ -111,4 +157,18 @@
 
 %bg-sec {
   background-color: $clr-bg-sec;
+}
+
+// colors
+%clr-darkest {
+  color: $clr-txt-sec;
+}
+
+// fonts
+%ff-pr {
+  font-family: $font-pr;
+}
+
+%ff-sec {
+  font-family: $font-sec;
 }

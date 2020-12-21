@@ -2,8 +2,8 @@
   @extend %p-rel;
   @extend %d-flex-al-ctr;
   @extend %pointer;
-  height: rem(15px);
-  width: rem(20px);
+  height: 15px;
+  width: 20px;
 
   div {
     &,
@@ -13,7 +13,7 @@
       @extend %p-abs;
       @extend %tr-pr;
       background-color: $clr-icon;
-      height: rem(3px);
+      height: 3px;
     }
 
     &::before,
@@ -32,8 +32,8 @@
 
   &.is-close {
     div {
-      right: rem(5px);
-      top: rem(3px);
+      right: 5px;
+      top: 3px;
       transform: rotate(45deg);
       width: 50%;
 
@@ -42,8 +42,8 @@
       }
 
       &::after {
-        right: rem(-4px);
-        top: rem(4px);
+        right: -4px;
+        top: 4px;
         transform: rotate(90deg);
       }
     }

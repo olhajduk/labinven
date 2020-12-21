@@ -1,0 +1,23 @@
+.card {
+  @extend %bg-sec;
+  border: 1px solid $clr-br-pr;
+
+  &-header {
+    @extend %clr-darkest;
+    @extend %d-flex-al-ctr;
+    @include font(16px, normal);
+    border-bottom: 1px solid $clr-br-pr;
+    height: 46px;
+  }
+
+  &-title {
+    @extend %uppercase;
+    @extend %fw-500;
+    padding: 0 17px;
+  }
+
+  &-footer {
+    border-top: 1px solid $clr-br-pr;
+    padding: 8px 15px 8px 26px;
+  }
+}

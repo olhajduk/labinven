@@ -15,11 +15,14 @@ $clr-bg-side-body: #e1e5e8;
 $clr-bg-side-ftr: #2575aa;
 $clr-bg-side-run-pr: #d5d9db;
 $clr-bg-side-run-sec: #c1c4c5;
+$clr-bg-thead: #5fa1c1;
+$clr-bg-tr-nth2n:  #f2fafd;
 
 $clr-icon: #afb0c3;
 
 $clr-btn-pr: #12a9eb;
 $clr-btn-sec: $clr-white;
+$clr-btn-br: #11a9ec;
 
 $clr-txt-pr: #727272;
 $clr-txt-sec: #2f3b4c;
@@ -29,12 +32,19 @@ $clr-br-hdr: #e1e7f0;
 $clr-br-side: #cfd7dc;
 $clr-br-side-s: #bdc9d1;
 $clr-br-pr: #bfc2c4;
+$clr-br-chart-lg: #ebf2f4;
+$clr-br-tbody: rgba(191, 194, 196, .5);
+$clr-br-tbody-tr: #f4f8f9;
 
 $clr-status-on: #14741b;
 $clr-status-off: #8c9092;
 
 $clr-bg-inventory-card-1chld: #1a9022;
 $clr-bg-inventory-card-2chld: #f5ad3c;
+
+$clr-bg-chart-1chld: #1ba39c;
+$clr-bg-chart-2chld: #913d88;
+$clr-bg-chart-3chld: #f5ad3c;
 
 // box-shadows
 $bs-hdr: 1px 2px 2px rgba(4, 4, 4, .09);
@@ -43,4 +53,4 @@ $bs-inventory-btn: 1px 1px 2px rgba(0, 0, 0, .3);
 
 
 // frequently repeated values
-$height: rem(50px);
+$height: 50px;

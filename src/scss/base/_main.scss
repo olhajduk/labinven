@@ -20,10 +20,10 @@ body {
   @extend %d-flex;
   @extend %h-100;
   @extend %bg-pr;
-  @include font(rem(14px), 1.5);
+  @include font(14px, 1.5);
   color: $clr-txt-pr;
   font-family: $font-pr;
-  font-weight: 400;
+  @extend %fw-400;
   min-height: 100vh;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -31,10 +31,15 @@ body {
 
 h1 {
   @extend %m-0;
+
+  a:hover {
+    color: $clr-br-side-s;
+  }
 }
 
 h2 {
   font-size: inherit;
+  @extend %fw-400;
 }
 
 ul {
@@ -48,11 +53,15 @@ a {
   text-decoration: none;
 }
 
-svg {
-  fill: currentColor;
-  height: 100%;
-  width: 100%;
+button {
+  @extend %tr-pr;
 }
+
+// svg {
+//   fill: currentColor;
+//   height: 100%;
+//   width: 100%;
+// }
 
 .main {
   @extend %w-100;
@@ -70,5 +79,5 @@ svg {
 }
 
 .sprite {
-  @extend %d-none;
+  @extend .visuallyhidden;
 }

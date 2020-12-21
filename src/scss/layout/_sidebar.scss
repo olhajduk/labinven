@@ -1,6 +1,6 @@
 %pr-pl {
-  padding-left: rem(22px);
-  padding-right: rem(22px);
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .sidebar {
@@ -8,9 +8,9 @@
   @extend %d-flex;
   @extend %tr-pr;
   @extend %ov-h-ws-n;
+  @extend %flex-d-col;
   background-color: $clr-bg-side-body;
   border-right: 1px solid $clr-br-side;
-  flex-direction: column;
   z-index: 1;
 
   * {
@@ -23,8 +23,8 @@
   }
 
   &.is-open {
-    min-width: rem(280px);
-    width: rem(280px);
+    min-width: 280px;
+    width: 280px;
   }
 
   &-title {
@@ -33,50 +33,68 @@
     @extend %h-hdr-sdbr;
     @extend %fw-500;
     @extend %clr-white;
-    @include font(rem(27px), rem(35.42px));
+    @include font(27px, 35.42px);
     background-color: $clr-bg-side-hdr;
-    padding: 0 rem(37px);
+    padding: 0 37px;
   }
 
   &-search {
     input {
       @extend %fw-500;
       @extend %w-100;
-      @extend %pr-pl;
-      @include font(rem(12px), rem(35.42px));
+      padding-left: 22px;
+      padding-right: 44px;
+      @include font(12px, 35.42px);
       border-bottom: 1px solid $clr-br-side-s;
-      padding-bottom: rem(11px);
-      padding-top: rem(14px);
+      padding-bottom: 11px;
+      padding-top: 14px;
 
       &,
       &::placeholder {
-        color: $clr-txt-sec;
+        @extend %clr-darkest;
       }
 
       &:hover,
       &:focus {
         border-color: $clr-bg-side-hdr;
+        padding-right: 22px;
+
+        & ~ img {
+          opacity: 0;
+        }
       }
+    }
+
+    label {
+      @extend %p-rel;
+      @extend %d-block;
+    }
+
+    img {
+      @extend %p-abs;
+      @extend %tr-pr;
+      right: 7%;
+      top: 38%;
     }
   }
 
   &-footer {
-    margin-top: auto;
+    @extend %mt-auto;
   }
 
   &-progress {
     @extend %p-rel;
-    @include font(rem(12px), normal);
+    @include font(12px, normal);
     background-color: $clr-bg-side-run-pr;
-    color: $clr-txt-sec;
+    @extend %clr-darkest;
 
     &-status {
       @extend %d-flex;
       @extend %p-rel;
       @extend %pr-pl;
       border-right: 1px solid $clr-br-side;
-      padding-bottom: rem(5px);
-      padding-top: rem(6px);
+      padding-bottom: 5px;
+      padding-top: 6px;
     }
 
     &-bar {
@@ -101,7 +119,7 @@
     &-name {
       @extend %uppercase;
       @extend %clr-white;
-      @include font(rem(22px), rem(35.42px));
+      @include font(22px, 35.42px);
       margin-right: auto;
     }
 
@@ -110,25 +128,24 @@
       @extend %d-flex-al-ctr-jc-ctr;
       @extend %uppercase;
       @extend %p-rel;
-      @extend %tr-pr;
       @extend %brr-50;
-      @include font(rem(8px), normal);
+      @include font(8px, normal);
       border: 1px solid $clr-btn-sec;
-      height: rem(24px);
-      margin-left: rem(9px);
-      width: rem(24px);
+      height: 24px;
+      margin-left: 9px;
+      width: 24px;
 
       &::before,
       &::after {
         @extend %content;
         @extend %p-abs;
-        height: rem(6px);
+        height: 6px;
         top: -2px;
       }
 
       &::before {
         right: 35%;
-        width: rem(6px);
+        width: 6px;
         z-index: 1;
       }
 
@@ -137,7 +154,7 @@
         @extend %brr-50;
         background-color: $clr-bg-side-ftr;
         right: 25%;
-        width: rem(12px);
+        width: 12px;
         z-index: 0;
       }
 
@@ -150,12 +167,16 @@
         }
       }
 
-      &--on::before {
-        background-color: $clr-status-on;
+      &--on {
+        &::before {
+          background-color: $clr-status-on;
+        }
       }
 
-      &--off::before {
-        background-color: $clr-status-off;
+      &--off {
+        &::before {
+          background-color: $clr-status-off;
+        }
       }
     }
   }

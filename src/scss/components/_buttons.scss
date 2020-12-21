@@ -1,0 +1,29 @@
+.btn {
+  @extend %txt-ctr;
+  @extend %ff-sec;
+  @include font(13px, normal);
+  border: 1px solid $clr-btn-br;
+  border-radius: 15px;
+  min-width: 95px;
+  padding: 9px 22px 6px;
+
+  &-pr {
+    background-color: $clr-btn-pr;
+    color: $clr-btn-sec;
+
+    &:hover {
+      background-color: $clr-btn-sec;
+      color: $clr-btn-pr;
+    }
+  }
+
+  &-sec {
+    background-color: $clr-btn-sec;
+    color: $clr-btn-pr;
+
+    &:hover {
+      background-color: $clr-btn-pr;
+      color: $clr-btn-sec;
+    }
+  }
+}

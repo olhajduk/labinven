@@ -6,7 +6,7 @@
 
   &-title {
     @extend %p-rel;
-    padding-right: rem(27px);
+    padding-right: 27px;
 
     &::before,
     &::after {
@@ -14,13 +14,13 @@
       @extend %content;
       @extend %tr-pr;
       background-color: currentColor;
-      height: rem(1px);
+      height: 1px;
       transition-property: transform;
-      width: rem(7px);
+      width: 7px;
     }
 
     &::before {
-      right: rem(5px);
+      right: 5px;
       transform: rotate(45deg);
     }
 
@@ -36,7 +36,7 @@
     box-shadow: $bs-hdr;
     left: 0;
     position: absolute;
-    transform: translateY(rem(5px));
+    transform: translateY(5px);
     transition-property: transform;
     visibility: hidden;
     width: 100%;
@@ -46,7 +46,7 @@
 
   &-item {
     @extend %hover-txt;
-    padding: rem(3px) rem(10px);
+    padding: 3px 10px;
   }
 
   &:hover {

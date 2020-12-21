@@ -4,20 +4,28 @@
 @import './utilities/extends';
 
 @import './base/normalize';
+
+@import './base/lib/spacing';
+@import './base/lib/grid';
+@import './base/lib/text';
+@import './base/lib/colors';
+
 @import './base/main';
-@import './base/breakpoints';
 
 @import './layout/header';
 @import './layout/content';
 @import './layout/inventory';
+@import './layout/indicators';
 @import './layout/sidebar';
-@import './layout/cards';
+
 
 @import './components/icons';
 @import './components/user';
 @import './components/menus';
+@import './components/cards';
 @import './components/burger';
 @import './components/buttons';
 @import './components/forms';
 @import './components/tables';
-
+@import './components/chart';
+@import './components/job';

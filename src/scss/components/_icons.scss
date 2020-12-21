@@ -2,12 +2,12 @@
   @extend %tr-pr;
 
   &-user {
-    height: rem(30px);
-    width: rem(30px);
+    height: 30px;
+    width: 30px;
   }
 
   &-lock {
-    height: rem(24px);
-    width: rem(17px);
+    height: 24px;
+    width: 17px;
   }
 }

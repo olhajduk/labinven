@@ -6,9 +6,9 @@
     @extend %tr-pr;
 
     &.is-open {
-      min-width: rem(228px);
+      min-width: 228px;
       // overflow: auto;
-      width: rem(228px);
+      width: 228px;
     }
 
     &.is-close {
