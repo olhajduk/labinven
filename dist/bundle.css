@@ -620,6 +620,9 @@ a {
 .indicators-item {
   margin: 0.46875rem;
 }
+.indicators-item:first-child {
+  flex: 100%;
+}
 .indicators-item:nth-child(2) {
   flex: 1.2;
 }
