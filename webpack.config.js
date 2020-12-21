@@ -5,7 +5,7 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
+// const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -48,9 +48,9 @@ module.exports = {
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'src/assets/images/sprite.svg')
         }),
-        new SpriteLoaderPlugin({
-            plainSprite: true
-        }),
+        // new SpriteLoaderPlugin({
+        //     plainSprite: true
+        // }),
         new HtmlWebpackPlugin({
             title: 'Labinvent | HTML Test task',
             template: 'index.html',

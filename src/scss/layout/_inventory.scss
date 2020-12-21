@@ -16,9 +16,44 @@
     top: 37px;
     width: 30px;
 
+    &::before,
+    &::after {
+      @extend %p-abs;
+      @extend %content;
+      @extend %tr-pr;
+      background-color: $clr-icon;
+      height: 1px;
+      transition-property: transform;
+      width: 7px;
+    }
+
+    &::before {
+      right: 40%;
+      transform: rotate(135deg);
+      top: 41%;
+    }
+
+    &::after {
+      right: 40%;
+      transform: rotate(-135deg);
+      top: 58%;
+    }
+
     &:hover {
       border-color: $clr-br-pr;
       box-shadow: none;
+    }
+
+    &.is-close {
+      right: -25px;
+      transform: rotate(180deg);
+      background-color: $clr-btn-pr;
+
+      &::before,
+      &::after {
+        background-color: $clr-btn-sec;
+        height: 2px;
+      }
     }
   }
 
@@ -92,6 +127,11 @@
       @extend %h-100;
       @extend %d-flex-al-ctr-jc-ctr;
       @extend %txt-ctr;
+      @extend %flex-d-col;
+
+      svg {
+        margin: auto;
+      }
 
       figcaption {
         @extend %mt-auto;

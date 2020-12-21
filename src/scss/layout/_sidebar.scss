@@ -42,7 +42,8 @@
     input {
       @extend %fw-500;
       @extend %w-100;
-      @extend %pr-pl;
+      padding-left: 22px;
+      padding-right: 44px;
       @include font(12px, 35.42px);
       border-bottom: 1px solid $clr-br-side-s;
       padding-bottom: 11px;
@@ -56,7 +57,24 @@
       &:hover,
       &:focus {
         border-color: $clr-bg-side-hdr;
+        padding-right: 22px;
+
+        & ~ img {
+          opacity: 0;
+        }
       }
+    }
+
+    label {
+      @extend %p-rel;
+      @extend %d-block;
+    }
+
+    img {
+      @extend %p-abs;
+      @extend %tr-pr;
+      right: 7%;
+      top: 38%;
     }
   }
 

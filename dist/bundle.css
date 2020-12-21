@@ -7,15 +7,15 @@ fieldset, h1, *, *::after, *::before, .m-0 {
   margin-top: auto;
 }
 
-.visuallyhidden, *, *::after, *::before, .p-0 {
+.visuallyhidden, .sprite, *, *::after, *::before, .p-0 {
   padding: 0;
 }
 
-.job li + li, .chart-main, .chart-legend, table tr > *:first-child, .table, .custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar, .indicators-tab.active, .indicators-btn, .inventory, .header {
+.job li + li, .chart-main, .chart-legend, table tr > *:first-child, .table, .custominput, .burger, .menu-title, .menu, .sidebar-status-btn, .sidebar-progress-status, .sidebar-progress, .sidebar-search label, .sidebar, .indicators-tab.active, .indicators-btn, .inventory, .header {
   position: relative;
 }
 
-.job li + li::before, .job li + li::after, .chart-options, .chart-legend::before, .chart-legend::after, table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn, .visuallyhidden {
+.job li + li::before, .job li + li::after, .chart-options, .chart-legend::before, .chart-legend::after, table tr > *:first-child > *, .table-graph, .custominput-mark, .burger div, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .sidebar-progress-bar, .sidebar-search img, .indicators-tab.active::after, .indicators-btn::after, .inventory-btn::before, .inventory-btn::after, .inventory-btn, .visuallyhidden, .sprite {
   position: absolute;
 }
 
@@ -31,11 +31,7 @@ fieldset, h1, *, *::after, *::before, .m-0 {
   height: 100%;
 }
 
-.sprite {
-  display: none;
-}
-
-input:checked ~ .custominput-mark::after, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab a {
+input:checked ~ .custominput-mark::after, .sidebar-search label, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab a {
   display: block;
 }
 
@@ -47,7 +43,7 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   display: flex;
 }
 
-.chart-options, .sidebar, .indicators-btn, .flex-d-col {
+.chart-options, .sidebar, .indicators-btn, .inventory .card-figure, .flex-d-col {
   flex-direction: column;
 }
 
@@ -59,7 +55,7 @@ input:checked ~ .custominput-mark::after, .indicators-content-title span::before
   justify-content: center;
 }
 
-.sidebar, .visuallyhidden {
+.sidebar, .visuallyhidden, .sprite {
   overflow: hidden;
 }
 
@@ -91,11 +87,11 @@ table td:nth-child(2), table thead, .btn, .inventory .card-figure, .txt-ctr {
   text-align: center;
 }
 
-.indicators-content-title span, .inventory-list *, .sidebar, .visuallyhidden {
+.indicators-content-title span, .inventory-list *, .sidebar, .visuallyhidden, .sprite {
   white-space: nowrap;
 }
 
-.chart-options, .custominput-mark, .custominput, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar, .indicators-worklist-btn, .inventory .card, .inventory-list, .content-sidebar, button, a {
+.chart-options, .custominput-mark, .custominput, input, .burger div, .burger div::before, .burger div::after, .menu-list, .menu-title::before, .menu-title::after, .menu, .user, .icon, .sidebar-status-btn::after, .sidebar-search img, .sidebar, .indicators-worklist-btn, .inventory .card, .inventory-list, .inventory-btn::before, .inventory-btn::after, .content-sidebar, button, a {
   transition: 0.25s ease-in-out;
 }
 
@@ -103,7 +99,7 @@ table td:nth-child(2), table thead, .btn, .inventory .card-figure, .txt-ctr {
   cursor: pointer;
 }
 
-.job li + li::after, .chart-legend::before, .chart-legend::after, .custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab.active::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before {
+.job li + li::after, .chart-legend::before, .chart-legend::after, .custominput-mark::after, .burger div::before, .burger div::after, .menu-title::before, .menu-title::after, .sidebar-status-btn::before, .sidebar-status-btn::after, .indicators-content-title span::before, .indicators-content-title span::after, .indicators-tab.active::after, .indicators-worklist-btn::before, .indicators-btn::before, .indicators-btn::after, .inventory .card-title::before, .inventory-btn::before, .inventory-btn::after {
   content: "";
 }
 
@@ -111,7 +107,7 @@ table td:nth-child(2), table thead, .btn, .inventory .card-figure, .txt-ctr {
   height: 50px;
 }
 
-fieldset, .visuallyhidden, .field-input, button {
+fieldset, .visuallyhidden, .sprite, .field-input, button {
   border: 0;
 }
 
@@ -578,6 +574,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h1 a:hover {
+  color: #bdc9d1;
+}
+
 h2 {
   font-size: inherit;
 }
@@ -591,7 +591,7 @@ a {
   text-decoration: none;
 }
 
-.visuallyhidden {
+.visuallyhidden, .sprite {
   clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
@@ -649,9 +649,34 @@ a {
   top: 37px;
   width: 30px;
 }
+.inventory-btn::before, .inventory-btn::after {
+  background-color: #afb0c3;
+  height: 1px;
+  transition-property: transform;
+  width: 7px;
+}
+.inventory-btn::before {
+  right: 40%;
+  transform: rotate(135deg);
+  top: 41%;
+}
+.inventory-btn::after {
+  right: 40%;
+  transform: rotate(-135deg);
+  top: 58%;
+}
 .inventory-btn:hover {
   border-color: #bfc2c4;
   box-shadow: none;
+}
+.inventory-btn.is-close {
+  right: -25px;
+  transform: rotate(180deg);
+  background-color: #12a9eb;
+}
+.inventory-btn.is-close::before, .inventory-btn.is-close::after {
+  background-color: #fff;
+  height: 2px;
 }
 .inventory.is-close .inventory-list {
   transform: translateX(-100%);
@@ -692,6 +717,9 @@ a {
 .inventory .card-body {
   height: 159px;
 }
+.inventory .card-figure svg {
+  margin: auto;
+}
 .inventory .card-figure figcaption {
   font-size: 12px;
   line-height: normal;
@@ -700,7 +728,7 @@ a {
 }
 
 .indicators {
-  padding: 7.5px;
+  padding: 7.5px 7.5px 7.5px 11.5px;
 }
 .indicators-item {
   margin: 7.5px;
@@ -840,7 +868,7 @@ a {
   margin-left: 5px;
 }
 
-.sidebar-status, .sidebar-progress-status, .sidebar-search input {
+.sidebar-status, .sidebar-progress-status {
   padding-left: 22px;
   padding-right: 22px;
 }
@@ -868,6 +896,8 @@ a {
   padding: 0 37px;
 }
 .sidebar-search input {
+  padding-left: 22px;
+  padding-right: 44px;
   font-size: 12px;
   line-height: 35.42px;
   border-bottom: 1px solid #bdc9d1;
@@ -876,6 +906,14 @@ a {
 }
 .sidebar-search input:hover, .sidebar-search input:focus {
   border-color: #2f3b4c;
+  padding-right: 22px;
+}
+.sidebar-search input:hover ~ img, .sidebar-search input:focus ~ img {
+  opacity: 0;
+}
+.sidebar-search img {
+  right: 7%;
+  top: 38%;
 }
 .sidebar-progress {
   font-size: 12px;

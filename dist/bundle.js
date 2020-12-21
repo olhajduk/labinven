@@ -130,14 +130,13 @@ document.addEventListener('DOMContentLoaded', function () {
 /*!**********************!*
   !*** ./js/sprite.js ***!
   \**********************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+/***/ (function() {
 
-// import each svg into JS
-function requireAll(r) {
-  r.keys().forEach(r);
-}
-
-requireAll(__webpack_require__("./assets/images/svg sync recursive \\.svg$"));
+// // import each svg into JS
+// function requireAll(r) {
+//   r.keys().forEach(r)
+// }
+// requireAll(require.context('./../assets/images/svg', true, /\.svg$/))
 
 /***/ }),
 
@@ -9965,157 +9964,6 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-
-/***/ }),
-
-/***/ "./assets/images/svg/icon-bottle.svg":
-/*!*******************************************!*
-  !*** ./assets/images/svg/icon-bottle.svg ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "icon-bottle-usage",
-      viewBox: "0 0 64 114",
-      url: "./../src/assets/images/" + "sprite.svg#icon-bottle",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg/icon-lock.svg":
-/*!*****************************************!*
-  !*** ./assets/images/svg/icon-lock.svg ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "icon-lock-usage",
-      viewBox: "0 0 17 24",
-      url: "./../src/assets/images/" + "sprite.svg#icon-lock",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg/icon-sampler.svg":
-/*!********************************************!*
-  !*** ./assets/images/svg/icon-sampler.svg ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "icon-sampler-usage",
-      viewBox: "0 0 73 95",
-      url: "./../src/assets/images/" + "sprite.svg#icon-sampler",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg/icon-user.svg":
-/*!*****************************************!*
-  !*** ./assets/images/svg/icon-user.svg ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "icon-user-usage",
-      viewBox: "1.983 1.99 29.01 29.01",
-      url: "./../src/assets/images/" + "sprite.svg#icon-user",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg/icon-valve.svg":
-/*!******************************************!*
-  !*** ./assets/images/svg/icon-valve.svg ***!
-  \******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "icon-valve-usage",
-      viewBox: "0 0 51 31",
-      url: "./../src/assets/images/" + "sprite.svg#icon-valve",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg/syringe.svg":
-/*!***************************************!*
-  !*** ./assets/images/svg/syringe.svg ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
-      id: "syringe-usage",
-      viewBox: "0 0 55 106",
-      url: "./../src/assets/images/" + "sprite.svg#syringe",
-      toString: function () {
-        return this.url;
-      }
-    });
-
-/***/ }),
-
-/***/ "./assets/images/svg sync recursive \\.svg$":
-/*!****************************************!*
-  !*** ./assets/images/svg/ sync \.svg$ ***!
-  \****************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-var map = {
-	"./icon-bottle.svg": "./assets/images/svg/icon-bottle.svg",
-	"./icon-lock.svg": "./assets/images/svg/icon-lock.svg",
-	"./icon-sampler.svg": "./assets/images/svg/icon-sampler.svg",
-	"./icon-user.svg": "./assets/images/svg/icon-user.svg",
-	"./icon-valve.svg": "./assets/images/svg/icon-valve.svg",
-	"./syringe.svg": "./assets/images/svg/syringe.svg"
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "./assets/images/svg sync recursive \\.svg$";
 
 /***/ })
 
