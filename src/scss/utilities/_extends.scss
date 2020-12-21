@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+%mt-auto {
+  margin-top: auto;
+}
+
 // padding
 %p-0 {
   padding: 0;
@@ -39,6 +43,10 @@
 
 %d-flex {
   display: flex;
+}
+
+%flex-d-col {
+  flex-direction: column;
 }
 
 %align-ctr {

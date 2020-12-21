@@ -1,4 +1,7 @@
 // grid
+.mt-auto {
+  @extend %mt-auto;
+}
 
 .mr-66 {
   margin-right: rem(66px);
@@ -14,6 +17,10 @@
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-d-col {
+  @extend %flex-d-col;
 }
 
 .align-ctr {
@@ -52,14 +59,6 @@
 // width & height
 .w-100 {
   @extend %w-100;
-}
-
-.w-56 {
-  width: 56.28%;
-}
-
-.w-44 {
-  width: calc(100% - 56.28%);
 }
 
 .w-50 {

@@ -10,7 +10,6 @@
     @extend %p-abs;
     @extend %d-flex-al-ctr;
     @extend %brr-50;
-    @extend %tr-pr;
     @extend %bg-pr;
     border: 1px solid transparent;
     box-shadow: $bs-inventory-btn;
@@ -58,6 +57,7 @@
 
     &-title {
       @extend %d-inline-block;
+      @include font(rem(14px), normal);
       text-transform: none;
 
       &::before {
@@ -95,10 +95,10 @@
       @extend %txt-ctr;
 
       figcaption {
+        @extend %mt-auto;
         @include font(rem(12px), normal);
         color: $clr-bg-side-hdr;
         margin-bottom: 13px;
-        margin-top: auto;
       }
     }
   }

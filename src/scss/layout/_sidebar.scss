@@ -8,9 +8,9 @@
   @extend %d-flex;
   @extend %tr-pr;
   @extend %ov-h-ws-n;
+  @extend %flex-d-col;
   background-color: $clr-bg-side-body;
   border-right: 1px solid $clr-br-side;
-  flex-direction: column;
   z-index: 1;
 
   * {
@@ -61,7 +61,7 @@
   }
 
   &-footer {
-    margin-top: auto;
+    @extend %mt-auto;
   }
 
   &-progress {
@@ -110,7 +110,6 @@
       @extend %d-flex-al-ctr-jc-ctr;
       @extend %uppercase;
       @extend %p-rel;
-      @extend %tr-pr;
       @extend %brr-50;
       @include font(rem(8px), normal);
       border: 1px solid $clr-btn-sec;
@@ -150,12 +149,16 @@
         }
       }
 
-      &--on::before {
-        background-color: $clr-status-on;
+      &--on {
+        &::before {
+          background-color: $clr-status-on;
+        }
       }
 
-      &--off::before {
-        background-color: $clr-status-off;
+      &--off {
+        &::before {
+          background-color: $clr-status-off;
+        }
       }
     }
   }

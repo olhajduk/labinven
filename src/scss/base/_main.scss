@@ -48,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  @extend %tr-pr;
+}
+
 // svg {
 //   fill: currentColor;
 //   height: 100%;

@@ -1,0 +1,129 @@
+.indicators {
+  padding: rem(7.5px);
+
+  &-item {
+    margin: rem(7.5px);
+
+    &:nth-child(2) {
+      flex: 1.2;
+    }
+
+    &:nth-child(3) {
+      flex: 1;
+    }
+  }
+
+  &-btn {
+    @extend %p-rel;
+    @extend %d-flex;
+    @extend %flex-d-col;
+    @extend %align-ctr;
+    @include font(rem(11px), normal);
+    color: $clr-icon;
+
+    &::before,
+    &::after {
+      @extend %content;
+    }
+
+    &::before {
+      @extend %brr-50;
+      border: 1px solid;
+      height: rem(26px);
+      margin-bottom: rem(4px);
+      width: rem(26px);
+    }
+
+    &::after {
+      @extend %p-abs;
+      top: rem(11px);
+    }
+
+    &:not(:last-child) {
+      margin-right: rem(32px);
+    }
+
+    &:hover {
+      color: $clr-txt-event;
+    }
+  }
+
+  &-new {
+    &::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 300;
+      right: 6.5px;
+      top: 1px;
+    }
+  }
+
+  &-open {
+    &::after {
+      @extend %brr-50;
+      border: 1px solid;
+      box-shadow: 5px 0 0 -1px $clr-btn-sec, 5px 0 0 currentColor, -5px 0 0 -1px $clr-btn-sec, -5px 0 0 currentColor;
+      height: rem(4px);
+      width: rem(4px);
+    }
+  }
+}
+
+.chart {
+  &-legends {
+    border-bottom: 1px solid $clr-br-chart-lg;
+    padding: rem(10px) rem(16px) rem(11px);
+  }
+
+  &-legend {
+    @extend %p-rel;
+    @include font(rem(14px), normal);
+    color: $clr-txt-sec;
+    margin-right: rem(30px);
+    padding-left: rem(26px);
+
+    &::before,
+    &::after {
+      @extend %content;
+      @extend %p-abs;
+      left: 0;
+    }
+
+    &::before {
+      @extend %brr-50;
+      height: rem(9px);
+      left: rem(5px);
+      width: rem(9px);
+    }
+
+    &::after {
+      height: rem(1px);
+      left: 0;
+      width: rem(19px);
+    }
+
+    &:first-child {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-1chld;
+      }
+    }
+
+    &:nth-child(2) {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-2chld;
+      }
+    }
+
+    &:nth-child(3) {
+
+      &::before,
+      &::after {
+        background-color: $clr-bg-chart-3chld;
+      }
+    }
+  }
+}
