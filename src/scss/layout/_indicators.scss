@@ -176,6 +176,63 @@
   &-body {
     @extend %h-100;
   }
+
+  &-content {
+    >div:first-child {
+      border-right: 1px solid $clr-br-side-s;
+    }
+
+    &-title {
+      @extend %ff-sec;
+      @extend %clr-darkest;
+      font-size: 13px;
+      font-weight: 600;
+      padding-bottom: 19px;
+      padding-top: 12px;
+
+      span {
+        @extend %d-flex-al-ctr;
+        @extend %ws-nowrap;
+
+        &::before,
+        &::after {
+          @extend %d-block;
+          @extend %content;
+          background-color: currentColor;
+          height: 1px;
+        }
+
+        &::before {
+          margin-right: 9px;
+          width: 11px;
+        }
+
+        &::after {
+          margin-left: 7px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .field {
+    @extend %ff-sec;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+    label {
+      @extend %d-flex-al-ctr;
+    }
+
+    &-title {
+      margin-right: 24px;
+      width: 93px;
+    }
+
+    &-value {
+      margin-left: 5px;
+    }
+  }
 }
 
 .chart {

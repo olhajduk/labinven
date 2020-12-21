@@ -194,7 +194,7 @@
         </li>
       </ul>
       <div class="indicators-content d-flex w-100">
-        <div class="w-50">
+        <div class="w-50 pt-28 pr-18 pb-16 pl-17">
           <div class="w-100 d-flex align-ctr jc-ctr">
             <ul class="job d-flex mr-66">
               <li class="job-item txt-ctr">
@@ -238,7 +238,7 @@
               </li>
             </ul>
 
-            <div class="br-darkest p-10 fs-12 fw-500 clr-darkest ff-sec">
+            <div class="br-darkest pt-10 pr-18 pb-2 pl-13 fs-12 fw-500 clr-darkest ff-sec">
               <p>(Initial): 0 min</p>
               <p>ArMe @ 35 Oc Oven</p>
               <p>Out: Ambient Pressure</p>
@@ -247,56 +247,74 @@
           </div>
 
           <div class="w-100">
-            <h2 class="indicators-content-title">Control Mode</h2>
-            <fieldset class="field field-checkbox">
+            <h2 class="indicators-content-title">
+              <span>Control Mode</span>
+              </h2>
+            <fieldset class="field field-checkbox ml-20 mr-20">
               <label class="custominput">On
                 <input class="field-input custominput-checkbox" type="checkbox" name="cntrl-checkbox" checked="checked">
                 <span class="custominput-mark"></span>
               </label>
             </fieldset>
 
-            <div class="d-flex flex-wrap">
+            <div class="d-flex flex-wrap ml-20 mr-20">
               <fieldset class="w-50 field">
-                <label><span>Flow</span>
+                <label><span class="field-title">Flow</span>
                   <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                  <span class="field-value">
                   mL/min
+                  </span>
                 </label>
               </fieldset>
               <fieldset class="w-50 field">
-                <label><span>Average Velocity</span>
+                <label><span class="field-title">Average Velocity</span>
                   <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="198.05">
+                  <span class="field-value">
                   cm/sec
+                  </span>
                 </label>
               </fieldset>
               <fieldset class="w-50 field">
-                <label><span>Pressure</span>
+                <label><span class="field-title">Pressure</span>
                   <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="21.756">
+                  <span class="field-value">
                   psi
+                  </span>
                 </label>
               </fieldset>
               <fieldset class="w-50 field">
-                <label><span>Holdup Time</span>
+                <label><span class="field-title">Holdup Time</span>
                   <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="0.21038">
+                  <span class="field-value">
                   cm/sec
+                  </span>
                 </label>
               </fieldset>
             </div>
           </div>
 
           <div class="w-50">
-            <h2 class="indicators-content-title">Post Run</h2>
-            <fieldset class="w-50 field">
-              <label><span>Post Run</span>
-                <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
-                cm/sec
-              </label>
-            </fieldset>
+            <div class="ml-20 mr-20">
+              <h2 class="indicators-content-title">
+                <span>Post Run</span>
+                </h2>
+              <fieldset class="w-50 field">
+                <label><span class="field-title">Post Run</span>
+                  <input class="field-number" type="number" name="cntrl-number" step="0.0001" value="16.849">
+                  <span class="field-value">
+                    cm/sec
+                  </span>
+                </label>
+              </fieldset>
+            </div>
           </div>
         </div>
         <div class="w-50">
           <div class="table">
-            <h2 class="indicators-content-title table-title">
-              Pressure/Flow Settings
+            <h2 class="indicators-content-title table-title pl-15 pr-19">
+              <span>
+                Pressure/Flow Settings
+              </span>
             </h2>
             <form action="" class="table-form">
               <div class="table-pressure">
@@ -434,6 +452,7 @@
     </div>
   </div>
 </div>
+
     </div>
 
   </main>

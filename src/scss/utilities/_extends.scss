@@ -72,8 +72,8 @@
 }
 
 %ov-h-ws-n {
+  @extend %ws-nowrap;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 // text
@@ -101,6 +101,10 @@
 
 %txt-ctr {
   text-align: center;
+}
+
+%ws-nowrap {
+  white-space: nowrap;
 }
 
 // event

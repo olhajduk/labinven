@@ -34,8 +34,8 @@
     padding-bottom: 5px;
 
     * {
+      @extend %ws-nowrap;
       flex-wrap: nowrap;
-      white-space: nowrap;
     }
   }
 
