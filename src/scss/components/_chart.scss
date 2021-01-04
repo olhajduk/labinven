@@ -86,5 +86,9 @@
   &-graph {
     @extend %d-flex-al-ctr;
     margin: 63px 92px 19px 19px;
+
+    img {
+      @extend %w-100;
+    }
   }
 }
