@@ -17,9 +17,9 @@ To run the process issue this command from the root of this repository:
 
 * for development
   ```
-  npm build / npm watch
+  npm run build / npm run watch
   ```
 * for production
   ```
-  npm prod
+  npm run prod
   ```
