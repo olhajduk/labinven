@@ -3,11 +3,7 @@
 * [Task requirements](./docs/test_requirements.md)
 * [Page](https://olhajduk.github.io/labinven/)
 
-## Local development installation guide
-```
-git@github.com:olhajduk/labinven.git
-```
-### Package installation (after install node.js)
+## Package installation
 ```
 npm i
 ```
