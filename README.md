@@ -1,4 +1,4 @@
-# Test task for [Labinvent](http://labinvent.com/)
+# Laboratory information management system page (simplified)
 
 * [Task requirements](./docs/test_requirements.md)
 * [Page](https://olhajduk.github.io/labinven/)
